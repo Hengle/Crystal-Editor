@@ -1,0 +1,307 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="label1.Text" xml:space="preserve">
+    <value>Welcome to the first beta release of Crystal Editor. A project born from 
+years of pain and suffering over wanting better, easier to understand tools. 
+I started as someone just wanting more editors to exist, then someone 
+wanting a better way to turn learned knowledge into a game editor, 
+and then finally into someone wanting a better community in general.
+So as usual, after being refused help at every turn, I decided to do it myself. 
+
+While a good amount of it is for passion, some parts of it are from hatred as well.
+From community after community that is to lazy to make the bare minimum,
+frustrated time and again from people just telling me "it's so easy" or being told
+to google the answer because "It's obvious". After dealing with infuriating 
+people with superiority complexes for years who all refuse to teach anything,
+always insisting users learn everything themselfs the hardest possible way,
+through terrible documentation and abyssmal tools, I made crystal editor.
+
+Crystal Editor is an all in one modding headquarters. The intent is to have 
+everything a person would ever need to mod a game, all in one place.
+Every tool, every document, everything, all together in one program.
+
+With crystal editor, users can make workshops, editors, and mode, add tools,
+and share everything easily. Modding a game has never been so easy. Simply
+enter a workshop for a game you want, and away you go.
+
+If this is your first time, i recommend you follow the tutorials. As this is a beta,
+features will change, or be added from time to time, and these tutorials will
+become outdated. If you see something wrong, feel free to tell me on the
+discord.
+
+To continue along, please click the next tutorial on the left sidebar.</value>
+  </data>
+  <data name="label3.Text" xml:space="preserve">
+    <value>Note: This tutorial, as with various other ones, has a scroll bar.
+Try not to forget about it, it can be a really bad feeling :(
+
+Crystal Editor's Library of information is broken into 4 catagories.
+
+Type 1 - Basic Lessons
+Tutorials in this section will go over everything a user needs to know, if all
+you want to do is create a mod for a game, using things that already exist.
+These tutorials are aimed at someone trying to mod a game already 
+supported by crystal editor. Modding games is easy, and after completing
+the basic lessons course, you to can mod any game supported by 
+crystal editor! It's so easy, a child can do it!
+
+Type 2 - Advanced Lessons
+If a user is willing to learn a little more, we also teach you how to create your
+own editors from scratch. You will learn about reverse engineering step by
+step. Every tool needed, technique used, and more will all be given and 
+taught step by step in a way thats easy to understand and follow along. 
+These tutorials were intensionally designed for forgetful people with memory 
+problems, so even if you struggle to retain information your supposed to be 
+learning, so long as you can follow basic instructions, you will make mods 
+for a game  of your choice in no time!
+
+Type 3 - Tools
+Crystal Editor doesn't stop at teaching you about itself. It also includes 
+some seriously good tutorials on how to use a number of useful
+programs people often tell you to use when modding games. Best of all,
+most of the programs themself are included in crystal editor, so you don't
+even need to search the internet to download them.
+
+The Dictionary
+Aside from direct tutorials, sometimes when your reading over material
+you just really need a reminder on what some word means, or what
+was taught to you a few moments ago, or maybe you just lack some
+internet culture and have no idea what some basic word means.
+When going through tutorials, some words will be color coated and
+underlined. When this happens, you can click on the word, and an
+explanation will appear on the right sidebar. This is a great way to keep
+cross reference information, with what your currently learning.
+
+Some of the definitions in the dictionary simply explain what something
+is, usually when you only need to know something exists. Othertimes, it
+includes instructions, or detailed lists of relevant information. Very useful
+when your trying to complete something, and you don't want to waste
+5~20 minutes on google hoping to get an answer in a timely manner.
+
+Alright, thats all for this part. To continue, click the next tutorial in the
+left sidebar.</value>
+  </data>
+  <data name="label5.Text" xml:space="preserve">
+    <value>An example line showing how much text space there is per line.
+Code generally refers to the text that is written into specific 
+software that a computer will read, and execute.
+
+Generally speaking, coding is considered very difficult to
+understand, and is the cause of near endless confusion
+and stress. People who learn to code and become good
+at it are called Coders, and tend to lose sight a little on what
+is considered simple or complicated. Due to this, it can be
+difficult to recieve help from a coder.
+
+Below is an example of some code.
+
+
+
+
+namespace HelloWorld
+{
+    class Hello {         
+        static void Main(string[] args)
+        {
+            System.Console.WriteLine("Hello World!");
+        }
+    }
+}
+
+
+
+
+Crystal Editor was made, along with all it's tutorials, with
+a guiding principle to *never* make a user require coding
+knowledge to use the program, or create editors.</value>
+  </data>
+  <data name="label9.Text" xml:space="preserve">
+    <value>To open command prompt, in the windows search bar,
+type "cmd". Note that a decent amount of apps will
+want you to run it in administraitor mode as well.
+
+Command Prompt is one of the most basic ways to tell the
+computer to do something. It is ugly, doesn't help the user 
+even a little bit in understanding how to use it, and is generally
+just garbage. It is difficult to find a program somehow less
+enjoyable to use. Any kind of normal user tends to hate using 
+it, but it's a favorite of developers with a complex to force users
+to use it, and then call them stupid when they ask for help.
+
+One of the worst things about being forced to use it, is the
+moment you open it, if the developer was to lazy to make
+a UI, their often to lazy to properly explain what to even do.
+Working with command prompt is often a nightmare, pushed
+by creators who just insist that users should spend hours or
+even days trying to learn completly unnecessary information
+just to finally get something going properly.
+
+In some modding circles, developers intentionally release
+applications meant to make things easy, for use with
+command prompt in order to force people to ask for
+help on a discord server, artifically driving up server traffic.
+
+If anyone reading this is a developer who releases things
+expecting users to run things in command prompt, you are
+part of the problem and every single person who has to
+go through hell to figure out what to do hates you for it.</value>
+  </data>
+  <data name="label17.Text" xml:space="preserve">
+    <value>An editor is a computer program, that when the user selects
+a file, or more specifically, a game file or video game, that
+an interface appears making it easy to change anything the
+user wants about a game. 
+
+For example, an "Enemy Editor" would let you change the stats
+like HP, Gold, EXP, Magic Resistance, Held Items, etc of any
+enemy in a game. A "Skill Editor" would let you make attacks
+stronger or weaker, or cost more MP, or inflict a new ailment.
+
+An annoying amount of newbies to game modding don't
+actually know what an editor is, hense why this dictionary
+entry exists. Many games have editors if you just google
+"X game editor" you may find one online. Still, most games
+don't have any editors. 
+
+Part of crystal editor is to make it easy to learn how to find
+where a game stores these types of information, and how to
+easily turn what you know into an editor. </value>
+  </data>
+  <data name="label19.Text" xml:space="preserve">
+    <value>A "Mod" is any type of change to a game. Even something as
+simple as changeing a single weapon for deal 10 more damage
+is a mod. 
+
+More specifically, a mod is generally refered to as the new file
+that says that weapon deals 10 more damage. When people
+are talking about mods, they are actually talking about the
+altered files that are diffrent from the origonal game. 
+
+Mod files are often uploaded online, for others to download
+from sites dedicated to hosting game mods. Example websites
+include Romhacking.net, GameBanana, NexusMods, and 
+although limited, even Steam via the Steam Workshop. 
+
+Mods are often made using an            Editors are an easy way
+to create tons of mods, and editors are also often uploaded
+to those same websites. Crystal Editor is a type of program that
+both includes editors, and makes it easy to create new ones.</value>
+  </data>
+</root>
