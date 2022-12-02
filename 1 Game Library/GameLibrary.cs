@@ -21,19 +21,16 @@ namespace Crystal_Editor
     {
         
 
-        //public static string selectedFolder = "DummyTest (Error)";
-        //public string dummySettings = File.ReadAllText(Properties.Settings.Default.settingBetaGamesFolder + "\\Persona 4 Golden\\Dummy Settings.json");
-
-
         public GameLibrary()
         {
             InitializeComponent();
             DictionaryOfStrings.CrystalPath = Assembly.GetEntryAssembly().Location;            
-            DictionaryOfStrings.CrystalPath = Path.GetFullPath(Path.Combine(DictionaryOfStrings.CrystalPath, @"..\..\..\"));            
+            DictionaryOfStrings.CrystalPath = Path.GetFullPath(Path.Combine(DictionaryOfStrings.CrystalPath, @"..\..\..\"));   
+            
             ScanForWorkshops();
 
-            //tabControlWorkshopInfo
 
+            //This next bit just hides the tab buttons from tab control.
             tabControlWorkshopInfo.Appearance = TabAppearance.FlatButtons;
             tabControlWorkshopInfo.ItemSize = new Size(0, 1);
             tabControlWorkshopInfo.SizeMode = TabSizeMode.Fixed;
@@ -46,14 +43,14 @@ namespace Crystal_Editor
 
         }
 
-        private void button1_Click(object sender, EventArgs e) //Button: Launch Workshop
+
+        private void buttonLaunchWorkshop_Click(object sender, EventArgs e)
         {
             ModdingWorkshop f2 = new ModdingWorkshop();
             f2.Show();
-            //this.Close();
         }
-        
-        
+
+
 
         private void ScanForWorkshops() 
         {
@@ -103,15 +100,9 @@ namespace Crystal_Editor
             labelBestEmulator.Text = File.ReadAllText(DictionaryOfStrings.CrystalPath + "\\Workshops\\" + GameLibrary.libraryNodeName + "\\Best Emulator.txt");
             labelGamePlatform.Text = File.ReadAllText(DictionaryOfStrings.CrystalPath + "\\Workshops\\" + GameLibrary.libraryNodeName + "\\Game Platform.txt");
             tabControlWorkshopInfo.SelectedTab = tabControlWorkshopInfo.TabPages["tabPagePatchNotes"];
-            button1.Enabled = true;
-            button1.BackColor = Color.FromArgb(35, 35, 35);
+            buttonLaunchWorkshop.Enabled = true;
+            buttonLaunchWorkshop.BackColor = Color.FromArgb(35, 35, 35);
         }   
-
-        private void buttonTutorial_Click(object sender, EventArgs e) //Button: Tutorial
-        {
-            Tutorial f2 = new Tutorial();
-            f2.Show();
-        }
 
         
         
@@ -132,8 +123,6 @@ namespace Crystal_Editor
             comboBoxGamePlatform.Text = File.ReadAllText(DictionaryOfStrings.CrystalPath + "\\Workshops\\" + libraryNodeName + "\\Game Platform.txt");
             comboBoxGameRegion.Text = File.ReadAllText(DictionaryOfStrings.CrystalPath + "\\Workshops\\" + libraryNodeName + "\\Game Region.txt");
             comboBoxBestEmulator.Text = File.ReadAllText(DictionaryOfStrings.CrystalPath + "\\Workshops\\" + libraryNodeName + "\\Best Emulator.txt");
-
-
 
         }
 
@@ -163,11 +152,6 @@ namespace Crystal_Editor
             }
             if (button4.Text == "Save Workshop")
             {
-
-                
-                //labelGameRegion.Text = File.ReadAllText(DictionaryOfStrings.CrystalPath + "\\Workshops\\" + GameLibrary.libraryNodeName + "\\Game Region.txt");
-                //labelBestEmulator.Text = File.ReadAllText(DictionaryOfStrings.CrystalPath + "\\Workshops\\" + GameLibrary.libraryNodeName + "\\Best Emulator.txt");
-                //labelGamePlatform.Text = File.ReadAllText(DictionaryOfStrings.CrystalPath + "\\Workshops\\" + GameLibrary.libraryNodeName + "\\Game Platform.txt");
                 
                 string oldFolderName = DictionaryOfStrings.CrystalPath + "\\Workshops\\" + libraryNodeName;
                 string newFolderName = DictionaryOfStrings.CrystalPath + "\\Workshops\\" + richTextBoxGameName.Text;
@@ -186,8 +170,8 @@ namespace Crystal_Editor
                 File.WriteAllText(DictionaryOfStrings.CrystalPath + "\\Workshops\\" + richTextBoxGameName.Text + "\\Game Name.txt", richTextBoxGameName.Text); //Overwrites, Or creates file if it does not exist. Needs location permissions for admin folders.
 
                 SaveWorkshop();
-                button1.Enabled = false;
-                button1.BackColor = Color.Gray;
+                buttonLaunchWorkshop.Enabled = false;
+                buttonLaunchWorkshop.BackColor = Color.Gray;
             }
         }
 
@@ -203,6 +187,14 @@ namespace Crystal_Editor
         private void buttonCancel_Click(object sender, EventArgs e)//Button: (Tab) Cancel (Aka go to Patchnotes tab)
         {
             tabControlWorkshopInfo.SelectedTab = tabControlWorkshopInfo.TabPages["tabPagePatchNotes"];
+        }
+
+
+
+        private void buttonTutorial_Click(object sender, EventArgs e) //Button: Tutorial
+        {
+            Tutorial f2 = new Tutorial();
+            f2.Show();
         }
         //System.IO.Path.GetDirectoryName(Application.ExecutablePath);
 

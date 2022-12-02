@@ -29,11 +29,36 @@ namespace Crystal_Editor._3_Editor_Board
         public EditorBoard()
         {
             InitializeComponent();
-
             richTextBoxWidth.Text = "3"; //Used temporarily in loading a dummy file.
             LoadDummyFile();
 
 
+        }
+
+        private void enemyTree_AfterSelect(object sender, TreeViewEventArgs e)
+        {
+
+            richTextBox1.Text = HexFile[HexOffset + (CollectionTree.SelectedNode.Index * HexWidth) + 0].ToString("D");//#1 is offset, #2 is Row Width, #3 is byte in row.
+            richTextBox2.Text = HexFile[HexOffset + (CollectionTree.SelectedNode.Index * HexWidth) + 1].ToString("D");//Value 1 is distance / offset from the start of the file to the start of the array ("Start" in 010) (The first byte is 0) 
+            richTextBox3.Text = HexFile[HexOffset + (CollectionTree.SelectedNode.Index * HexWidth) + 2].ToString("D");
+            labelSelectedName.Text = CollectionTree.SelectedNode.Text;
+            GiveEntrysHex2Dec();
+        }
+
+        private void button2_Click(object sender, EventArgs e) //Button: Save Dummy File
+        {
+            int ListInt = 0;
+
+            foreach (Control TextBox in TextBoxlist)
+            {
+                Byte.TryParse(TextBoxlist[ListInt].Text, out byte value8);
+                {
+                    ByteManager.ByteWriter(value8, HexFile, HexOffset + (CollectionTree.SelectedNode.Index * HexWidth) + ListInt);
+                } //First 1 byte save
+
+                ListInt++;
+
+            }
         }
 
         private void buttonHex_Click(object sender, EventArgs e) //Button: Load Dummy File
@@ -58,19 +83,10 @@ namespace Crystal_Editor._3_Editor_Board
             CollectionTree.SelectedNode = nodeCollect[0];
             HexWidth = Convert.ToInt16(richTextBoxWidth.Text); //Used temporarily in loading a dummy file. Later this would be loaded from a file on the PC.
             //MakeTextBoxes();
-            MakeNewEditor();
+            MakeNewEntry();
         }
 
-        private void enemyTree_AfterSelect(object sender, TreeViewEventArgs e)
-        {
-
-            richTextBox1.Text = HexFile[HexOffset + (CollectionTree.SelectedNode.Index * HexWidth) + 0].ToString("D");
-            richTextBox2.Text = HexFile[HexOffset + (CollectionTree.SelectedNode.Index * HexWidth) + 1].ToString("D");
-            richTextBox3.Text = HexFile[HexOffset + (CollectionTree.SelectedNode.Index * HexWidth) + 2].ToString("D");
-            //richTextBox1.Text = BitConverter.ToUInt32(HexFile, 0 + (enemyTree.SelectedNode.Index * 0) + 0).ToString("D");  //Value 1 is distance / offset from the start of the file to the start of the array ("Start" in 010) (The first byte is 0) 
-            labelSelectedName.Text = CollectionTree.SelectedNode.Text;
-            GiveEntrysHex2Dec();
-        }
+        
 
 
 
@@ -86,7 +102,7 @@ namespace Crystal_Editor._3_Editor_Board
 
 
 
-        private void MakeNewEditor() //Right now this just makes the entrys, and adds a NameBox and a TextBox
+        private void MakeNewEntry() //Right now this just makes the entrys, and adds a NameBox and a TextBox
         {
             int YPos = 0;
             //var i = HexWidth;
@@ -98,29 +114,19 @@ namespace Crystal_Editor._3_Editor_Board
                 newEntry.Location = new Point(8, YPos + 8); //dictionary.Ex, dictionary.Ey
                 newEntry.Size = new Size(250, 37);
                 YPos = YPos + 42;
-                //newEntry.Name = ListOfEditorNames[i];
-                //newEntry.Text = HexFile[0 + (enemyTree.SelectedNode.Index * HexWidth) + 0].ToString("D"); //#1 is offset, #2 is Row Width, #3 is byte in row.
                 newEntry.BackColor = Color.FromArgb(48, 48, 48);
                 newEntry.ForeColor = Color.White;
                 newEntry.Font = new Font(newEntry.Font.FontFamily, 13, FontStyle.Regular);
-                //newEntry.FlatStyle = FlatStyle.Flat;
-                //newEntry.FlatAppearance.BorderColor = Color.FromArgb(150, 150, 150);
-                //newEntry.FlatAppearance.MouseDownBackColor = Color.FromArgb(30, 30, 30);
-                //newEntry.FlatAppearance.MouseOverBackColor = Color.FromArgb(45, 45, 45);
                 newEntry.Click += delegate
                 {
-                    // Your code                
-
-                    //var _form = new Form1();************************************************************************************************************************************************************************************************************************************************************************************************************************************************************
-                    //DictionaryOfStrings.SelectedEditorDirectory = DictionaryOfStrings.CrystalPath + "\\Workshops\\" + GameLibrary.libraryNodeName + "\\Editors\\" + newButton.Name; //in real setup, final addition is 'Selected Editor Name' aka the folder.
-                    //var loadTest = _form.LoadEditorFully();
+                    // Code goes here
+                    
                 };
                 tabControl1.TabPages[0].Controls.Add(newEntry);
                 //panel8.Controls.Add(newEntry);
 
                 EntryList.Add(newEntry);
             }
-            //panel1
 
             MakeEntryNameBoxes();
             MakeEntryTextBoxes();
@@ -151,11 +157,9 @@ namespace Crystal_Editor._3_Editor_Board
                 //newTextBox.FlatAppearance.MouseOverBackColor = Color.FromArgb(45, 45, 45);
                 newTextBox.Click += delegate
                 {
-                    // Your code                
+                    // Your code               
 
-                    //var _form = new Form1();************************************************************************************************************************************************************************************************************************************************************************************************************************************************************
-                    //DictionaryOfStrings.SelectedEditorDirectory = DictionaryOfStrings.CrystalPath + "\\Workshops\\" + GameLibrary.libraryNodeName + "\\Editors\\" + newButton.Name; //in real setup, final addition is 'Selected Editor Name' aka the folder.
-                    //var loadTest = _form.LoadEditorFully();
+                    
                 };
 
                 //panel1.Controls.Add(newTextBox);
@@ -163,8 +167,6 @@ namespace Crystal_Editor._3_Editor_Board
                 newTextBox.Text = "Entry " + EntryCount.ToString();
                 EntryCount++;
                 //TextBoxlist.Add(newTextBox);
-
-
 
                 //richTextBox4.AppendText("\nHeyo");
                 //TextBoxlist[EntryCount].Text = HexFile[0 + (enemyTree.SelectedNode.Index * HexWidth) + EntryCount].ToString("D"); //#1 is offset, #2 is Row Width, #3 is byte in row.
@@ -183,8 +185,7 @@ namespace Crystal_Editor._3_Editor_Board
             {
                 
                 TextBox newTextBox = new TextBox();
-                //panel1
-
+                
                 newTextBox.Location = new Point(128, 3); //dictionary.Ex, dictionary.Ey
                 newTextBox.Size = new Size(100, 24);
                 //newTextBox.Name = ListOfEditorNames[i];
@@ -198,11 +199,8 @@ namespace Crystal_Editor._3_Editor_Board
                 //newTextBox.FlatAppearance.MouseOverBackColor = Color.FromArgb(45, 45, 45);
                 newTextBox.Click += delegate
                 {
-                    // Your code                
-
-                    //var _form = new Form1();************************************************************************************************************************************************************************************************************************************************************************************************************************************************************
-                    //DictionaryOfStrings.SelectedEditorDirectory = DictionaryOfStrings.CrystalPath + "\\Workshops\\" + GameLibrary.libraryNodeName + "\\Editors\\" + newButton.Name; //in real setup, final addition is 'Selected Editor Name' aka the folder.
-                    //var loadTest = _form.LoadEditorFully();
+                    // Your code 
+                    
                 };
 
                 //panel1.Controls.Add(newTextBox);
@@ -221,7 +219,6 @@ namespace Crystal_Editor._3_Editor_Board
         }
 
 
-        
 
 
 
@@ -229,6 +226,16 @@ namespace Crystal_Editor._3_Editor_Board
 
 
 
+        private void button3_Click(object sender, EventArgs e) //Button Add Tab
+        {
+            TabPage tp = new TabPage("New Tab");
+            tabControl1.TabPages.Add(tp);
+        }
+
+        private void button10_Click(object sender, EventArgs e) //Button Rename Current Tab
+        {
+            tabControl1.SelectedTab.Text = richTextBox8.Text;
+        }
 
 
 
@@ -254,45 +261,13 @@ namespace Crystal_Editor._3_Editor_Board
             }
         }
 
-        private void button2_Click(object sender, EventArgs e) //Button: Save
-        {
-            int ListInt = 0;
+        
 
-            foreach (Control TextBox in TextBoxlist)
-            {
-                Byte.TryParse(TextBoxlist[ListInt].Text, out byte value8);
-                { 
-                    ByteManager.ByteWriter(value8, HexFile, HexOffset + (CollectionTree.SelectedNode.Index * HexWidth) + ListInt);
-                } //First 1 byte save
+        
 
-                ListInt++;
 
-            }
-        }
 
-        private void button3_Click(object sender, EventArgs e) //Button Add Tab
-        {
-            TabPage tp = new TabPage("New Tab");
-            tabControl1.TabPages.Add(tp);
-        }
-
-        private void button5_Click(object sender, EventArgs e) //Button Save Editor
-        {
-
-        }
-
-        private void button6_Click(object sender, EventArgs e) //Button Load Editor
-        {
-
-        }
-
-        private void button7_Click(object sender, EventArgs e) //Button Make XML2
-        {
-            
-            
-        }
-
-        private void button8_Click(object sender, EventArgs e) //Button Make XML1
+        private void button8_Click(object sender, EventArgs e) //Button Make Editor XML
         {
             XmlWriterSettings settings = new XmlWriterSettings();
             settings.Indent = true;
@@ -330,13 +305,13 @@ namespace Crystal_Editor._3_Editor_Board
         private void button9_Click(object sender, EventArgs e) //Button Load Editor XML
         {
             XmlDocument EditXml = new XmlDocument();
-            EditXml.Load("E:\\D Clone\\Crystal Editor Project\\Crystal Editor\\bin\\Debug\\net7.0-windows\\Editor.xml");
+            EditXml.Load(DictionaryOfStrings.CrystalPath + "Debug\\net7.0-windows\\Editor.xml");
             XmlNodeList Tab = EditXml.GetElementsByTagName("Tab");
             XmlNodeList Name = EditXml.GetElementsByTagName("Name");
             richTextBoxLoadXML.Text = "Name: " + Tab[0].InnerText;
             richTextBox9.Text = "Name: " + Name[0].InnerText;
 
-            //textBox2.Text = Tab.Count;
+
             tabControl1.TabPages[0].Text = Tab[0].InnerText;
             textBox2.Text = Tab.Count.ToString();
             for (int i = Tab.Count - 1; i > 0;) 
@@ -348,9 +323,6 @@ namespace Crystal_Editor._3_Editor_Board
             }
         }
 
-        private void button10_Click(object sender, EventArgs e) //Button Rename Current Tab
-        {
-            tabControl1.SelectedTab.Text = richTextBox8.Text;
-        }
+        
     }
 }

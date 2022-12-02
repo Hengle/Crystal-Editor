@@ -39,26 +39,26 @@ namespace Crystal_Editor
             richTextBoxDocumentName.Hide();
             pictureBoxDiscord.Image = Image.FromFile(DictionaryOfStrings.CrystalPath + "\\Other\\Images\\DiscordLogo.png");
 
+            //This counts how many editor folders there are, we later display this as buttons to open those editors.
             countDirectories = System.IO.Directory.GetDirectories(DictionaryOfStrings.CrystalPath + "\\Workshops\\" + GameLibrary.libraryNodeName + "\\Editors", "*", SearchOption.TopDirectoryOnly).Count();
             
 
-            string checkFileExist = DictionaryOfStrings.CrystalPath + "\\Workshops\\" + GameLibrary.libraryNodeName + "\\LibraryBanner.png";
-            if (File.Exists(checkFileExist))
-            {
+            //string checkFileExist = DictionaryOfStrings.CrystalPath + "\\Workshops\\" + GameLibrary.libraryNodeName + "\\LibraryBanner.png";
+            //if (File.Exists(checkFileExist))
+            //{
                 
                 
-            }
-            if (!File.Exists(checkFileExist))
-            {
+            //}
+            //if (!File.Exists(checkFileExist))
+            //{
                 
-            }
+            //}
 
             CreateEditors();
             StartDocuments();
 
 
-            //This checks the project folder on launch
-            //richTextBoxProjectFolder.Text = System.IO.File.ReadAllText(Properties.Settings.Default.settingCrystalCoreFolder + "\\" + GameLibrary.libraryNodeName + "\\Project Location.txt");
+            
         }
 
         private void StartDocuments() 
@@ -67,17 +67,7 @@ namespace Crystal_Editor
             CreateDocumentation();
             ListOfDocumentButtons.Sort((x, y) => String.Compare(x.Name, y.Name)); //Sort the Document Buttons list by Order
         }
-               
-
-        private void button3_Click(object sender, EventArgs e) //Button: Editor Launcher
-        {
-            //Form1 f2 = new Form1();****************************************************************************************************************************************************************************************************************************************
-            //f2.Show();
-        }
-
-
-        //private Form1 _form;****************************************************************************************************************************************************************************************************************************************
-        //Form1.UseExistingPath = "D:\\Crystal Editor\\Crystal Editor Beta\\Beta Games\\Persona 4 Golden\\Editors\\Item Editor 1";
+                
 
         public static string savePath = "";
 
@@ -104,8 +94,6 @@ namespace Crystal_Editor
             
 
             Button newButton = new Button();
-
-
             
             newButton.Location = new Point(dictionary.Ex, dictionary.Ey);
             newButton.Size = new Size(190, 30);            
@@ -127,7 +115,6 @@ namespace Crystal_Editor
                 //var loadTest = _form.LoadEditorFully();
             };
 
-            
             panelEditors.Controls.Add(newButton);
             i = i + 1;
         }
@@ -154,7 +141,7 @@ namespace Crystal_Editor
                 ListOfDocumentNames.Add(Path.GetFileName(Docs[i2]).ToString());
                 CreateDocumentation2();
             }
-            //CreateEditors2();
+            
 
         }
         public void CreateDocumentation2()
@@ -205,9 +192,7 @@ namespace Crystal_Editor
             
             Directory.CreateDirectory(DictionaryOfStrings.CrystalPath + "\\Workshops\\" + GameLibrary.libraryNodeName + "\\Editors\\" + richTextBox1.Text);
             DictionaryOfStrings.CreateEditorFolder = DictionaryOfStrings.CrystalPath + "\\Workshops\\" + GameLibrary.libraryNodeName + "\\Editors\\" + richTextBox1.Text + "\\";
-            //var _form = new Form1();*******************************************************************************************************************************************************************************************************************************************************
-            //DictionaryOfStrings.SelectedEditorDirectory = DictionaryOfStrings.CrystalPath + "\\Workshops\\" + GameLibrary.libraryNodeName + "\\Editors\\" + newButton.Name; //in real setup, final addition is 'Selected Editor Name' aka the folder.
-            //_form.MakeEditor();
+            
         }
 
         private void button2_Click(object sender, EventArgs e) //Button: New Document
@@ -340,19 +325,7 @@ namespace Crystal_Editor
             ListOfDocumentButtons.Sort((x, y) => String.Compare(x.Name, y.Name)); //Sort the Document Buttons list by Order
         }
 
-        private void button4_Click(object sender, EventArgs e) //Button HxD
-        {
-            Process yourProcess = new Process();
-            yourProcess.StartInfo.FileName = @DictionaryOfStrings.CrystalPath + "\\Tools\\General\\Hex Editor - HxD\\HxD64.exe";
-            yourProcess.Start();
-        }
-
-        private void button5_Click(object sender, EventArgs e) //Button: Hex Editor 010
-        {
-            Process yourProcess = new Process();
-            yourProcess.StartInfo.FileName = @DictionaryOfStrings.CrystalPath + "\\Tools\\General\\Hex Editor - 010\\010EditorPortable.exe";
-            yourProcess.Start();
-        }
+        
 
 
         private void buttonProject_Click(object sender, EventArgs e) //Button: Set Project Folder
@@ -371,10 +344,7 @@ namespace Crystal_Editor
                     writer.Write(savePath);
                 }
             }
-
-            
-
-            //richTextBoxProjectFolder.Text = System.IO.File.ReadAllText(Properties.Settings.Default.settingCrystalCoreFolder + "\\" + GameLibrary.libraryNodeName + "\\Project Location.txt");
+                        
 
         }
 
@@ -384,6 +354,10 @@ namespace Crystal_Editor
             System.Diagnostics.Process.Start("https://discord.gg/mhrZqjRyKx");
         }
 
+        private void pictureBoxDiscord_MouseEnter(object sender, EventArgs e)
+        {
+            pictureBoxDiscord.BackColor = Color.FromArgb(80, 80, 80);
+        }
         private void pictureBoxDiscord_MouseLeave(object sender, EventArgs e)
         {
             pictureBoxDiscord.BackColor = Color.Transparent;
@@ -396,15 +370,24 @@ namespace Crystal_Editor
             yourProcess.Start();
         }
 
-        private void pictureBoxDiscord_MouseEnter(object sender, EventArgs e)
-        {
-            pictureBoxDiscord.BackColor = Color.FromArgb(80, 80, 80);
-        }
-
-        private void button8_Click(object sender, EventArgs e) //Button DS Buff
+        private void button8_Click(object sender, EventArgs e) //Button: (Tool) DS Buff
         {
             Process yourProcess = new Process();
             yourProcess.StartInfo.FileName = @DictionaryOfStrings.CrystalPath + "\\Tools\\Console\\Nintendo DS\\File Converter - DSBuff\\dsbuff.exe";
+            yourProcess.Start();
+        }
+
+        private void button4_Click(object sender, EventArgs e) //Button: (Tool) HxD
+        {
+            Process yourProcess = new Process();
+            yourProcess.StartInfo.FileName = @DictionaryOfStrings.CrystalPath + "\\Tools\\General\\Hex Editor - HxD\\HxD64.exe";
+            yourProcess.Start();
+        }
+
+        private void button5_Click(object sender, EventArgs e) //Button: (Tool) Hex Editor 010
+        {
+            Process yourProcess = new Process();
+            yourProcess.StartInfo.FileName = @DictionaryOfStrings.CrystalPath + "\\Tools\\General\\Hex Editor - 010\\010EditorPortable.exe";
             yourProcess.Start();
         }
 

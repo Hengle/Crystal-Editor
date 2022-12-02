@@ -30,14 +30,13 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ModdingWorkshop));
             this.panelEditors = new System.Windows.Forms.Panel();
-            this.button3 = new System.Windows.Forms.Button();
             this.button10 = new System.Windows.Forms.Button();
             this.panelDocumentation = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.buttonDocumentMode = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
-            this.button7 = new System.Windows.Forms.Button();
+            this.buttonDocumentMode = new System.Windows.Forms.Button();
             this.richTextBoxDocumentName = new System.Windows.Forms.RichTextBox();
+            this.button7 = new System.Windows.Forms.Button();
             this.button6 = new System.Windows.Forms.Button();
             this.panel3 = new System.Windows.Forms.Panel();
             this.button11 = new System.Windows.Forms.Button();
@@ -70,24 +69,6 @@
             this.panelEditors.Name = "panelEditors";
             this.panelEditors.Size = new System.Drawing.Size(206, 539);
             this.panelEditors.TabIndex = 0;
-            // 
-            // button3
-            // 
-            this.button3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(35)))), ((int)(((byte)(35)))));
-            this.button3.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(150)))), ((int)(((byte)(150)))), ((int)(((byte)(150)))));
-            this.button3.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
-            this.button3.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(45)))));
-            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.button3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.button3.Location = new System.Drawing.Point(699, 5);
-            this.button3.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(123, 35);
-            this.button3.TabIndex = 9;
-            this.button3.Text = "Old Launcher";
-            this.button3.UseVisualStyleBackColor = false;
-            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // button10
             // 
@@ -130,6 +111,24 @@
             this.panel2.Size = new System.Drawing.Size(218, 88);
             this.panel2.TabIndex = 28;
             // 
+            // button2
+            // 
+            this.button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(35)))), ((int)(((byte)(35)))));
+            this.button2.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(150)))), ((int)(((byte)(150)))), ((int)(((byte)(150)))));
+            this.button2.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
+            this.button2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(45)))));
+            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.button2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.button2.Location = new System.Drawing.Point(4, 44);
+            this.button2.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(175, 39);
+            this.button2.TabIndex = 39;
+            this.button2.Text = "Create New Document";
+            this.button2.UseVisualStyleBackColor = false;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
+            // 
             // buttonDocumentMode
             // 
             this.buttonDocumentMode.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(35)))), ((int)(((byte)(35)))));
@@ -148,23 +147,18 @@
             this.buttonDocumentMode.UseVisualStyleBackColor = false;
             this.buttonDocumentMode.Click += new System.EventHandler(this.buttonDocumentMode_Click);
             // 
-            // button2
+            // richTextBoxDocumentName
             // 
-            this.button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(35)))), ((int)(((byte)(35)))));
-            this.button2.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(150)))), ((int)(((byte)(150)))), ((int)(((byte)(150)))));
-            this.button2.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
-            this.button2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(45)))));
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.button2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.button2.Location = new System.Drawing.Point(4, 44);
-            this.button2.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(175, 39);
-            this.button2.TabIndex = 39;
-            this.button2.Text = "Create New Document";
-            this.button2.UseVisualStyleBackColor = false;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
+            this.richTextBoxDocumentName.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(35)))), ((int)(((byte)(35)))));
+            this.richTextBoxDocumentName.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.richTextBoxDocumentName.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.richTextBoxDocumentName.Location = new System.Drawing.Point(4, 49);
+            this.richTextBoxDocumentName.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.richTextBoxDocumentName.Multiline = false;
+            this.richTextBoxDocumentName.Name = "richTextBoxDocumentName";
+            this.richTextBoxDocumentName.Size = new System.Drawing.Size(175, 30);
+            this.richTextBoxDocumentName.TabIndex = 38;
+            this.richTextBoxDocumentName.Text = "";
             // 
             // button7
             // 
@@ -184,19 +178,6 @@
             this.button7.Text = "↓";
             this.button7.UseVisualStyleBackColor = false;
             this.button7.Click += new System.EventHandler(this.button7_Click);
-            // 
-            // richTextBoxDocumentName
-            // 
-            this.richTextBoxDocumentName.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(35)))), ((int)(((byte)(35)))));
-            this.richTextBoxDocumentName.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.richTextBoxDocumentName.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.richTextBoxDocumentName.Location = new System.Drawing.Point(4, 49);
-            this.richTextBoxDocumentName.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.richTextBoxDocumentName.Multiline = false;
-            this.richTextBoxDocumentName.Name = "richTextBoxDocumentName";
-            this.richTextBoxDocumentName.Size = new System.Drawing.Size(175, 30);
-            this.richTextBoxDocumentName.TabIndex = 38;
-            this.richTextBoxDocumentName.Text = "";
             // 
             // button6
             // 
@@ -497,7 +478,6 @@
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.pictureBoxDiscord);
             this.Controls.Add(this.button13);
-            this.Controls.Add(this.button3);
             this.Controls.Add(this.buttonProject);
             this.Controls.Add(this.button12);
             this.Controls.Add(this.button5);
@@ -523,7 +503,6 @@
         #endregion
 
         private System.Windows.Forms.Panel panelEditors;
-        private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button button10;
         private System.Windows.Forms.Panel panelDocumentation;
         private System.Windows.Forms.Panel panel2;

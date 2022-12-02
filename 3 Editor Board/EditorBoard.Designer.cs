@@ -73,14 +73,13 @@
             this.panelOverview = new System.Windows.Forms.Panel();
             this.labelSelectedName = new System.Windows.Forms.Label();
             this.panel7 = new System.Windows.Forms.Panel();
+            this.richTextBox9 = new System.Windows.Forms.RichTextBox();
             this.richTextBoxLoadXML = new System.Windows.Forms.RichTextBox();
             this.button9 = new System.Windows.Forms.Button();
             this.button8 = new System.Windows.Forms.Button();
-            this.button7 = new System.Windows.Forms.Button();
-            this.button5 = new System.Windows.Forms.Button();
+            this.buttonSaveEditor = new System.Windows.Forms.Button();
             this.richTextBox7 = new System.Windows.Forms.RichTextBox();
-            this.button6 = new System.Windows.Forms.Button();
-            this.richTextBox9 = new System.Windows.Forms.RichTextBox();
+            this.buttonLoadEditor = new System.Windows.Forms.Button();
             this.panel3.SuspendLayout();
             this.tabControl1.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -121,6 +120,7 @@
             this.TextBox1.Name = "TextBox1";
             this.TextBox1.Size = new System.Drawing.Size(221, 23);
             this.TextBox1.TabIndex = 4;
+            this.TextBox1.Text = "Not Working / Purely Visual";
             // 
             // Label1
             // 
@@ -597,9 +597,9 @@
             this.labelSelectedName.Location = new System.Drawing.Point(23, 10);
             this.labelSelectedName.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.labelSelectedName.Name = "labelSelectedName";
-            this.labelSelectedName.Size = new System.Drawing.Size(58, 22);
+            this.labelSelectedName.Size = new System.Drawing.Size(136, 22);
             this.labelSelectedName.TabIndex = 11;
-            this.labelSelectedName.Text = "label7";
+            this.labelSelectedName.Text = "Selection Name";
             // 
             // panel7
             // 
@@ -609,13 +609,22 @@
             this.panel7.Controls.Add(this.richTextBoxLoadXML);
             this.panel7.Controls.Add(this.button9);
             this.panel7.Controls.Add(this.button8);
-            this.panel7.Controls.Add(this.button7);
             this.panel7.Controls.Add(this.tabControl4);
             this.panel7.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel7.Location = new System.Drawing.Point(762, 0);
             this.panel7.Name = "panel7";
             this.panel7.Size = new System.Drawing.Size(299, 796);
             this.panel7.TabIndex = 23;
+            // 
+            // richTextBox9
+            // 
+            this.richTextBox9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(35)))), ((int)(((byte)(35)))));
+            this.richTextBox9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.richTextBox9.Location = new System.Drawing.Point(4, 741);
+            this.richTextBox9.Name = "richTextBox9";
+            this.richTextBox9.Size = new System.Drawing.Size(288, 53);
+            this.richTextBox9.TabIndex = 35;
+            this.richTextBox9.Text = "";
             // 
             // richTextBoxLoadXML
             // 
@@ -644,75 +653,50 @@
             // 
             this.button8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(35)))), ((int)(((byte)(35)))));
             this.button8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.button8.Location = new System.Drawing.Point(56, 520);
+            this.button8.Location = new System.Drawing.Point(56, 582);
             this.button8.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.button8.Name = "button8";
             this.button8.Size = new System.Drawing.Size(160, 40);
             this.button8.TabIndex = 33;
-            this.button8.Text = "Make XML1";
+            this.button8.Text = "Make Editor XML";
             this.button8.UseVisualStyleBackColor = false;
             this.button8.Click += new System.EventHandler(this.button8_Click);
             // 
-            // button7
+            // buttonSaveEditor
             // 
-            this.button7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(35)))), ((int)(((byte)(35)))));
-            this.button7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.button7.Location = new System.Drawing.Point(56, 566);
-            this.button7.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.button7.Name = "button7";
-            this.button7.Size = new System.Drawing.Size(160, 40);
-            this.button7.TabIndex = 32;
-            this.button7.Text = "Make XML??";
-            this.button7.UseVisualStyleBackColor = false;
-            this.button7.Click += new System.EventHandler(this.button7_Click);
-            // 
-            // button5
-            // 
-            this.button5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(35)))), ((int)(((byte)(35)))));
-            this.button5.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.button5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.button5.Location = new System.Drawing.Point(1421, 761);
-            this.button5.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(131, 30);
-            this.button5.TabIndex = 29;
-            this.button5.Text = "Save Editor";
-            this.button5.UseVisualStyleBackColor = false;
-            this.button5.Click += new System.EventHandler(this.button5_Click);
+            this.buttonSaveEditor.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(35)))), ((int)(((byte)(35)))));
+            this.buttonSaveEditor.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.buttonSaveEditor.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.buttonSaveEditor.Location = new System.Drawing.Point(1421, 761);
+            this.buttonSaveEditor.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.buttonSaveEditor.Name = "buttonSaveEditor";
+            this.buttonSaveEditor.Size = new System.Drawing.Size(157, 30);
+            this.buttonSaveEditor.TabIndex = 29;
+            this.buttonSaveEditor.Text = "Save Editor (Empty)";
+            this.buttonSaveEditor.UseVisualStyleBackColor = false;
             // 
             // richTextBox7
             // 
             this.richTextBox7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(35)))), ((int)(((byte)(35)))));
             this.richTextBox7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.richTextBox7.Location = new System.Drawing.Point(1420, 718);
+            this.richTextBox7.Location = new System.Drawing.Point(1423, 713);
             this.richTextBox7.Name = "richTextBox7";
-            this.richTextBox7.Size = new System.Drawing.Size(132, 38);
+            this.richTextBox7.Size = new System.Drawing.Size(155, 38);
             this.richTextBox7.TabIndex = 30;
             this.richTextBox7.Text = "";
             // 
-            // button6
+            // buttonLoadEditor
             // 
-            this.button6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(35)))), ((int)(((byte)(35)))));
-            this.button6.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.button6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.button6.Location = new System.Drawing.Point(1421, 677);
-            this.button6.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(131, 30);
-            this.button6.TabIndex = 31;
-            this.button6.Text = "Load Editor";
-            this.button6.UseVisualStyleBackColor = false;
-            this.button6.Click += new System.EventHandler(this.button6_Click);
-            // 
-            // richTextBox9
-            // 
-            this.richTextBox9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(35)))), ((int)(((byte)(35)))));
-            this.richTextBox9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.richTextBox9.Location = new System.Drawing.Point(4, 741);
-            this.richTextBox9.Name = "richTextBox9";
-            this.richTextBox9.Size = new System.Drawing.Size(288, 53);
-            this.richTextBox9.TabIndex = 35;
-            this.richTextBox9.Text = "";
+            this.buttonLoadEditor.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(35)))), ((int)(((byte)(35)))));
+            this.buttonLoadEditor.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.buttonLoadEditor.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.buttonLoadEditor.Location = new System.Drawing.Point(1421, 677);
+            this.buttonLoadEditor.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.buttonLoadEditor.Name = "buttonLoadEditor";
+            this.buttonLoadEditor.Size = new System.Drawing.Size(157, 30);
+            this.buttonLoadEditor.TabIndex = 31;
+            this.buttonLoadEditor.Text = "Load Editor (Empty)";
+            this.buttonLoadEditor.UseVisualStyleBackColor = false;
             // 
             // EditorBoard
             // 
@@ -720,9 +704,9 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(35)))), ((int)(((byte)(35)))));
             this.ClientSize = new System.Drawing.Size(1590, 796);
-            this.Controls.Add(this.button6);
+            this.Controls.Add(this.buttonLoadEditor);
             this.Controls.Add(this.richTextBox7);
-            this.Controls.Add(this.button5);
+            this.Controls.Add(this.buttonSaveEditor);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.panel7);
             this.Controls.Add(this.panel5);
@@ -809,10 +793,9 @@
         private Label label13;
         private Panel panel6;
         private Panel MyPanel;
-        private Button button5;
+        private Button buttonSaveEditor;
         private RichTextBox richTextBox7;
-        private Button button6;
-        private Button button7;
+        private Button buttonLoadEditor;
         private Button button8;
         private Button button9;
         private Button button10;

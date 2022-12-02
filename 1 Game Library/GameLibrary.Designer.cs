@@ -32,7 +32,7 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel2 = new System.Windows.Forms.Panel();
             this.libraryTreeView = new System.Windows.Forms.TreeView();
-            this.button1 = new System.Windows.Forms.Button();
+            this.buttonLaunchWorkshop = new System.Windows.Forms.Button();
             this.button5 = new System.Windows.Forms.Button();
             this.buttonTutorial = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
@@ -123,24 +123,24 @@
             this.libraryTreeView.TabIndex = 10;
             this.libraryTreeView.AfterSelect += new System.Windows.Forms.TreeViewEventHandler(this.libraryTreeView_AfterSelect);
             // 
-            // button1
+            // buttonLaunchWorkshop
             // 
-            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(35)))), ((int)(((byte)(35)))));
-            this.button1.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(150)))), ((int)(((byte)(150)))), ((int)(((byte)(150)))));
-            this.button1.FlatAppearance.BorderSize = 2;
-            this.button1.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
-            this.button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(41)))), ((int)(((byte)(41)))));
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.button1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.button1.Location = new System.Drawing.Point(300, 116);
-            this.button1.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(148, 55);
-            this.button1.TabIndex = 4;
-            this.button1.Text = "Launch Workshop";
-            this.button1.UseVisualStyleBackColor = false;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.buttonLaunchWorkshop.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(35)))), ((int)(((byte)(35)))));
+            this.buttonLaunchWorkshop.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(150)))), ((int)(((byte)(150)))), ((int)(((byte)(150)))));
+            this.buttonLaunchWorkshop.FlatAppearance.BorderSize = 2;
+            this.buttonLaunchWorkshop.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
+            this.buttonLaunchWorkshop.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(41)))), ((int)(((byte)(41)))));
+            this.buttonLaunchWorkshop.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonLaunchWorkshop.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.buttonLaunchWorkshop.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.buttonLaunchWorkshop.Location = new System.Drawing.Point(300, 116);
+            this.buttonLaunchWorkshop.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.buttonLaunchWorkshop.Name = "buttonLaunchWorkshop";
+            this.buttonLaunchWorkshop.Size = new System.Drawing.Size(148, 55);
+            this.buttonLaunchWorkshop.TabIndex = 4;
+            this.buttonLaunchWorkshop.Text = "Launch Workshop";
+            this.buttonLaunchWorkshop.UseVisualStyleBackColor = false;
+            this.buttonLaunchWorkshop.Click += new System.EventHandler(this.buttonLaunchWorkshop_Click);
             // 
             // button5
             // 
@@ -737,7 +737,7 @@
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.buttonTutorial);
             this.Controls.Add(this.button5);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.buttonLaunchWorkshop);
             this.Controls.Add(this.panel2);
             this.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.Name = "GameLibrary";
@@ -769,7 +769,7 @@
 
         #endregion
         private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button buttonLaunchWorkshop;
         private System.Windows.Forms.Button button5;
         private System.Windows.Forms.Button buttonTutorial;
         private System.Windows.Forms.PictureBox pictureBox1;
