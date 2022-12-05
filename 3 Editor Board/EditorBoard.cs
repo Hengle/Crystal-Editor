@@ -276,53 +276,82 @@ namespace Crystal_Editor._3_Editor_Board
             settings.OmitXmlDeclaration = true;
             using (XmlWriter writer = XmlWriter.Create("Editor.xml", settings))
             {
-                writer.WriteStartElement("BoardInfo");
-                writer.WriteStartElement("EditorForm");
-                writer.WriteStartElement("Tabs");
+                writer.WriteStartElement("EditBoard");
+                //writer.WriteStartElement("EditorForm");
+                
 
                 //TabPage page = tabControl1.SelectedTab;
                 //var controls = page.Controls;
                 //var Pages = tabControl1.TabPages;
                 foreach (TabPage tab in tabControl1.TabPages)
                 {
-                    writer.WriteElementString("Tab", tab.Text);
+                    writer.WriteStartElement("TabPage", tab.Text);
+                    writer.WriteElementString("Name", tab.Text);
+                    writer.WriteEndElement(); //TabPage
                 }
-                
-                writer.WriteEndElement();
-                writer.WriteEndElement();
-                writer.WriteStartElement("Entry");
-                writer.WriteElementString("Name", "Entry ");
-                writer.WriteElementString("Folder", "0");
-                writer.WriteElementString("Order", "2");
-                writer.WriteElementString("ByteSize", "1");
-                writer.WriteElementString("DataType", "Number");
-                writer.WriteEndElement();
-                writer.WriteEndElement();
+                //writer.WriteStartElement("PanelCore");
+                //writer.WriteStartElement("PanelRow");
+                //writer.WriteStartElement("PanelColumn");
+                //writer.WriteStartElement("Entry");
+                ////writer.WriteElementString("Name", "Entry ");
+                //writer.WriteEndElement(); //Entry
+                //writer.WriteEndElement(); //PanelColumn
+                //writer.WriteEndElement(); //PanelRow
+                //writer.WriteEndElement(); //PanelCore
+
+                //writer.WriteEndElement(); //EditorForm
+
+
+                //writer.WriteStartElement("Entry");
+                //writer.WriteElementString("Name", "Entry ");
+                //writer.WriteElementString("Folder", "0");
+                //writer.WriteElementString("Order", "2");
+                //writer.WriteElementString("ByteSize", "1");
+                //writer.WriteElementString("DataType", "Number");
+                //writer.WriteEndElement(); //Entry
+
+                writer.WriteEndElement(); //BoardInfo
                 writer.Flush();
             }
         }
 
         private void button9_Click(object sender, EventArgs e) //Button Load Editor XML
         {
-            XmlDocument EditXml = new XmlDocument();
-            EditXml.Load(DictionaryOfStrings.CrystalPath + "Debug\\net7.0-windows\\Editor.xml");
-            XmlNodeList Tab = EditXml.GetElementsByTagName("Tab");
-            XmlNodeList Name = EditXml.GetElementsByTagName("Name");
-            richTextBoxLoadXML.Text = "Name: " + Tab[0].InnerText;
-            richTextBox9.Text = "Name: " + Name[0].InnerText;
-
-
-            tabControl1.TabPages[0].Text = Tab[0].InnerText;
-            textBox2.Text = Tab.Count.ToString();
-            for (int i = Tab.Count - 1; i > 0;) 
-            {
-                TabPage tp = new TabPage(Tab[i].InnerText);
-                tabControl1.TabPages.Add(tp);
-                i--;
-                //textBox2.Text = "HELPPP";
-            }
+            LoadXML();  
         }
 
-        
+        private void LoadXML() 
+        {
+            XmlDocument EditXml = new XmlDocument();
+            EditXml.Load(DictionaryOfStrings.CrystalPath + "Debug\\net7.0-windows\\Editor.xml");
+            XmlNodeList Page = EditXml.GetElementsByTagName("Page");
+            XmlNodeList Name = EditXml.GetElementsByTagName("Name");
+            //richTextBoxLoadXML.Text = "Name: " + Tab[0].InnerText;
+            //richTextBox9.Text = "Name: " + Name[0].InnerText;
+
+            
+            //SelectSingleNode
+            //tabControl1.TabPages[0].Text = EditXml.SelectSingleNode("EditBoard/TabPage[0]/Name").InnerText;
+            //richTextBoxLoadXML.Text = EditXml.SelectSingleNode("/EditBoard/TabPage[1]/Name").InnerText;
+            richTextBoxLoadXML.Text = EditXml.SelectSingleNode("/EditBoard/TabPage").LocalName;
+            //richTextBoxLoadXML.Text = EditXml.SelectSingleNode("/EditBoard/11111").LocalName;
+            //textBox2.Text = Page.Count.ToString();
+            //for (int i = Page.Count - 1; i > 0;)
+            //{
+            //    TabPage tp = new TabPage(Page[i].InnerText);
+            //    tabControl1.TabPages.Add(tp);
+            //    i--;
+            //    //textBox2.Text = "HELPPP";
+            //}
+
+        }
+
+
+
+
+        private void button5_Click(object sender, EventArgs e) //Button Add New Row to Page
+        {
+            //tabControl1.
+        }
     }
 }

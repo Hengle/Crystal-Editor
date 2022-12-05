@@ -80,6 +80,8 @@
             this.buttonSaveEditor = new System.Windows.Forms.Button();
             this.richTextBox7 = new System.Windows.Forms.RichTextBox();
             this.buttonLoadEditor = new System.Windows.Forms.Button();
+            this.button5 = new System.Windows.Forms.Button();
+            this.button6 = new System.Windows.Forms.Button();
             this.panel3.SuspendLayout();
             this.tabControl1.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -368,9 +370,10 @@
             // tabPage8
             // 
             this.tabPage8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(35)))), ((int)(((byte)(35)))));
+            this.tabPage8.Controls.Add(this.button6);
+            this.tabPage8.Controls.Add(this.button5);
             this.tabPage8.Controls.Add(this.button10);
             this.tabPage8.Controls.Add(this.richTextBox8);
-            this.tabPage8.Controls.Add(this.label12);
             this.tabPage8.Controls.Add(this.label11);
             this.tabPage8.Controls.Add(this.label10);
             this.tabPage8.Controls.Add(this.label9);
@@ -413,7 +416,7 @@
             this.label12.AutoSize = true;
             this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.label12.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.label12.Location = new System.Drawing.Point(45, 341);
+            this.label12.Location = new System.Drawing.Point(1145, 107);
             this.label12.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(198, 22);
@@ -425,7 +428,7 @@
             this.label11.AutoSize = true;
             this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.label11.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.label11.Location = new System.Drawing.Point(12, 207);
+            this.label11.Location = new System.Drawing.Point(12, 329);
             this.label11.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(97, 22);
@@ -437,7 +440,7 @@
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.label10.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.label10.Location = new System.Drawing.Point(52, 176);
+            this.label10.Location = new System.Drawing.Point(52, 298);
             this.label10.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(191, 22);
@@ -698,6 +701,33 @@
             this.buttonLoadEditor.Text = "Load Editor (Empty)";
             this.buttonLoadEditor.UseVisualStyleBackColor = false;
             // 
+            // button5
+            // 
+            this.button5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(55)))), ((int)(((byte)(35)))), ((int)(((byte)(35)))));
+            this.button5.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.button5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.button5.Location = new System.Drawing.Point(26, 203);
+            this.button5.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.button5.Name = "button5";
+            this.button5.Size = new System.Drawing.Size(244, 30);
+            this.button5.TabIndex = 34;
+            this.button5.Text = "Add new Row to Page";
+            this.button5.UseVisualStyleBackColor = false;
+            this.button5.Click += new System.EventHandler(this.button5_Click);
+            // 
+            // button6
+            // 
+            this.button6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(55)))), ((int)(((byte)(35)))), ((int)(((byte)(35)))));
+            this.button6.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.button6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.button6.Location = new System.Drawing.Point(26, 243);
+            this.button6.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.button6.Name = "button6";
+            this.button6.Size = new System.Drawing.Size(244, 30);
+            this.button6.TabIndex = 35;
+            this.button6.Text = "Add new Column to 1st Row";
+            this.button6.UseVisualStyleBackColor = false;
+            // 
             // EditorBoard
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
@@ -707,6 +737,7 @@
             this.Controls.Add(this.buttonLoadEditor);
             this.Controls.Add(this.richTextBox7);
             this.Controls.Add(this.buttonSaveEditor);
+            this.Controls.Add(this.label12);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.panel7);
             this.Controls.Add(this.panel5);
@@ -802,5 +833,7 @@
         private RichTextBox richTextBox8;
         private RichTextBox richTextBoxLoadXML;
         private RichTextBox richTextBox9;
+        private Button button6;
+        private Button button5;
     }
 }
