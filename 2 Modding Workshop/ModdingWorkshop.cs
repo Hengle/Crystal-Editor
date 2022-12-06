@@ -7,10 +7,11 @@ using System.Diagnostics;
 using System.Drawing;
 using System.IO;
 using System.Linq;
-using System.Reflection.Emit;
+//using System.Reflection.Emit;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Xml.Linq;
 using Crystal_Editor._3_Editor_Board;
 //using Newtonsoft.Json;
 
@@ -29,29 +30,34 @@ namespace Crystal_Editor
         string CurrentDocumentMode = ""; //Used for Edit/Save button, and swapping between the modes.
         string SelectedDocument = ""; //when the user clicks on a document, it becomed the selected document.
         string SelectedDocumentName = ""; //when the user clicks on a document, it becomes the selected document name.
-        int DySpace = 35; 
+        int DySpace = 35;
+
+        string SelectedEditor = "";
+        List<Button> ListOfEditorButtons = new List<Button>();
 
 
         public ModdingWorkshop()
         {
             InitializeComponent();
 
+            SelectedEditor = "EditorHome";
+
             richTextBoxDocumentName.Hide();
             pictureBoxDiscord.Image = Image.FromFile(DictionaryOfStrings.CrystalPath + "\\Other\\Images\\DiscordLogo.png");
 
             //This counts how many editor folders there are, we later display this as buttons to open those editors.
             countDirectories = System.IO.Directory.GetDirectories(DictionaryOfStrings.CrystalPath + "\\Workshops\\" + GameLibrary.libraryNodeName + "\\Editors", "*", SearchOption.TopDirectoryOnly).Count();
-            
+            panelCore.BackColor = Color.FromArgb(32,32,32);
 
             //string checkFileExist = DictionaryOfStrings.CrystalPath + "\\Workshops\\" + GameLibrary.libraryNodeName + "\\LibraryBanner.png";
             //if (File.Exists(checkFileExist))
             //{
-                
-                
+
+
             //}
             //if (!File.Exists(checkFileExist))
             //{
-                
+
             //}
 
             CreateEditors();
@@ -396,8 +402,301 @@ namespace Crystal_Editor
             EditorBoard f2 = new EditorBoard();
             f2.Show();
         }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        byte[] HexFile; //This will be the entire file that we are editing.
+
+
+
+        //
+        //
+        //
+        ///////////////////////General Things////////////////////////
+        //
+        //
+        //
+
+
+
+        private void button3_Click(object sender, EventArgs e) //Button Home
+        {
+            PanelHide();
+            SelectedEditor = "EditorHome";
+            PanelShow();            
+        }
+
+        private void button15_Click(object sender, EventArgs e) //Button Hide Selected Editor
+        {
+            PanelHide();
+        }
+
+        private void PanelHide() 
+        {
+            Controls.Find(SelectedEditor + "Panel", true)[0].Hide();
+        }
+
+        private void PanelShow()
+        {
+            Controls.Find(SelectedEditor + "Panel", true)[0].Show();
+        }
+
+        private void button17_Click(object sender, EventArgs e) //Button: Load Editor?
+        {
+
+        }
+
+        private void button3_Click_1(object sender, EventArgs e) //Button: Load File
+        {
+            string hexpath = DictionaryOfStrings.CrystalPath +  "\\HexFiles\\HexDummy1";  //This defines the path as a string, so i can refer to it by this string/name instead of the full path every time
+            int hexlength = (int)(new FileInfo(hexpath).Length);   //The leagth of the array?
+            HexFile = File.ReadAllBytes(hexpath);  //loads an array with whatever is in the path
+
+
+            //var CollectionTree = Controls.Find(SelectedEditor + "Panel" + "Tree", true)[0];
+            //Controls[SelectedEditor + "Panel" + "Tree"].Controls.Nodes.Add("1 Knight Guard"); ;
+            //Controls[SelectedEditor + "Panel" + "Tree"].Nodes.Add("1 Knight Guard"); ;
+            //Controls.Find(SelectedEditor + "Panel" + "Tree", true)[0].Controls.Nodes.Add("1 Knight Guard");
+            //Controls.Find(SelectedEditor + "Panel" + "Tree", true)[0].Nodes.Add("1 Knight Guard");
+            //CollectionTree.Controls.Nodes.Add("0 Knight Fencer"); //Used temporarily in loading a dummy file. Later this would be loaded from a file on the PC.
+            //CollectionTree.Nodes.Add("1 Knight Guard");
+            //CollectionTree.Nodes.Add("2 Knight Warrior");
+            //CollectionTree.Nodes.Add("HIDDEN Knight Fencer H");
+            //CollectionTree.Nodes.Add("3 Knight Fencer A");
+
+            //Controls["EditortreeePanelTree"].Nodes.Add("1 Knight Guard");
+
+            //TreeNodeCollection nodeCollect = CollectionTree.Nodes;
+            //CollectionTree.SelectedNode = nodeCollect[0];
+
+            //HexWidth = Convert.ToInt16(richTextBoxWidth.Text); //Used temporarily in loading a dummy file. Later this would be loaded from a file on the PC.
+            //MakeTextBoxes();
+            //MakeNewEntry();
+        }
+
+        //
+        //
+        //
+        ///////////////////////New Things////////////////////////
+        //
+        //
+        //
+
+
+        private void button16_Click(object sender, EventArgs e) //Button Create New Editor (new)
+        {
+            PanelHide();
+            MakeEditorPanelNew();
+            MakeDummyLabel();
+            MakeEditorButtonNew();
+            MakeEditorLeftSidebarNew();
+            MakeEditorCollectionTreeNew();
+            MakeEditorPageNew();
+        }
+
+        private void MakeEditorPanelNew() 
+        {
+            Panel newPanel = new Panel();
+
+            //newPanel.Text = ListOfDocumentNames[i2];
+            //newPanel.Text = richTextBox1.Text;
+            newPanel.Name = "Editor" + richTextBox1.Text + "Panel";            
+            newPanel.Dock= DockStyle.Fill;
+            newPanel.BackColor = Color.FromArgb(38, 88, 38);
+            newPanel.ForeColor = Color.Black;            
+            newPanel.Click += delegate
+            {
+                // Your code                
+
+                //richTextBoxDocumentation.Text = File.ReadAllText(DictionaryOfStrings.CrystalPath + "\\Workshops\\" + GameLibrary.libraryNodeName + "\\Documentation\\" + newPanel.Text + "\\Text.txt");
+                //DocumentReset();
+                //SelectedDocument = newPanel.Text;
+                //SelectedDocumentName = newPanel.Name;
+            };
+
+            //ListOfDocumentButtons.Add(newPanel);
+            panelCore.Controls.Add(newPanel);
+            //panelCore.Controls.C
+            //i2 = i2 + 1;
+            MakeDummyLabel();
+
+        }
+
+        private void MakeEditorButtonNew()
+        {
+            Button newButton = new Button();
+            newButton.Text = richTextBox1.Text;
+            newButton.Name = "Editor" + richTextBox1.Text;
+            newButton.Dock = DockStyle.Top;
+            newButton.ForeColor = Color.FromArgb(224,224,224);
+            newButton.BackColor = Color.FromArgb(35,35,35);
+            newButton.FlatStyle= FlatStyle.Flat;
+            newButton.FlatAppearance.BorderColor = Color.FromArgb(150, 150, 150);
+            newButton.FlatAppearance.MouseDownBackColor = Color.FromArgb(30,30,30);
+            newButton.FlatAppearance.MouseOverBackColor = Color.FromArgb(45, 45, 45);
+            newButton.Size = new Size(10,35);            
+            panelEditorList.Controls.Add(newButton);
+            
+
+            newButton.Click += delegate
+            {
+                //SelectedEditor = newButton.Name;
+                //PanelSwap();
+
+                PanelHide();
+                SelectedEditor = newButton.Name;
+                PanelShow();
+            };
+            SelectedEditor = newButton.Name;
+            ListOfEditorButtons.Add(newButton);
+            newButton.BringToFront();
+
+        }
+
+        private void MakeDummyLabel() 
+        {
+            Label newLabel = new Label();
+
+            newLabel.Text = richTextBox1.Text + "Editor";
+            newLabel.Font = new Font("Microsoft Sans Serif", 13);
+            newLabel.Location = new Point(1000, 300);
+            var thinggg = Controls.Find("Editor" + richTextBox1.Text + "Panel", true);
+            thinggg[0].Controls.Add(newLabel);
+
+
+        }
+
+
+        private void MakeEditorLeftSidebarNew() 
+        {
+            Panel newPanel = new Panel();
+
+            newPanel.Name = "Editor" + richTextBox1.Text + "Panel" + "LSB";
+            newPanel.Dock = DockStyle.Left;
+            newPanel.Size = new Size(250,1);
+            newPanel.BackColor = Color.FromArgb(30, 0, 0);
+            newPanel.ForeColor = Color.Black;
+            newPanel.Click += delegate
+            {
+                // Your code                
+
+                //richTextBoxDocumentation.Text = File.ReadAllText(DictionaryOfStrings.CrystalPath + "\\Workshops\\" + GameLibrary.libraryNodeName + "\\Documentation\\" + newPanel.Text + "\\Text.txt");
+                //DocumentReset();
+                //SelectedDocument = newPanel.Text;
+                //SelectedDocumentName = newPanel.Name;
+            };
+
+            //ListOfDocumentButtons.Add(newPanel);
+            //panelCore.Controls.Add(newPanel);
+            Controls.Find(SelectedEditor + "Panel", true)[0].Controls.Add(newPanel);
+            //panelCore.Controls.C
+            //i2 = i2 + 1;
+
+        }
+
+
+        private void MakeEditorCollectionTreeNew() 
+        {
+
+            TreeView newTree = new TreeView();
+            //newTree.Text = richTextBox1.Text + "Wut";
+            newTree.Name = SelectedEditor + "Panel" + "Tree";
+            newTree.Dock = DockStyle.Top;
+            newTree.ForeColor = Color.FromArgb(224, 224, 224);
+            newTree.BackColor = Color.FromArgb(35, 35, 35);
+            newTree.Size = new Size(200,500);
+            newTree.Font = new Font("Segoe UI", 13);
+            newTree.HotTracking = true;
+            newTree.HideSelection = false;
+            newTree.ShowLines = false;
+            newTree.ShowRootLines= false;
+            newTree.FullRowSelect = true;
+
+            //newTree.FlatStyle = FlatStyle.Flat;
+            //newTree.FlatAppearance.BorderColor = Color.FromArgb(150, 150, 150);
+            //newTree.FlatAppearance.MouseDownBackColor = Color.FromArgb(30, 30, 30);
+            //newTree.FlatAppearance.MouseOverBackColor = Color.FromArgb(45, 45, 45);
+            //newTree.Size = new Size(10, 35);
+            //panelEditorList.Controls.Add(newTree);
+            //Controls.Find(SelectedEditor + "Panel", true)[0].Hide();
+            Controls.Find(SelectedEditor + "Panel" + "LSB", true)[0].Controls.Add(newTree);
+
+            newTree.Click += delegate
+            {
+                //SelectedEditor = newTree.Name;
+                //PanelSwap();
+                richTextBox2.Text = newTree.Name;
+
+
+            };
+
+
+            newTree.Nodes.Add("0 Knight Fencer"); //Used temporarily in loading a dummy file. Later this would be loaded from a file on the PC.
+            newTree.Nodes.Add("1 Knight Guard");            
+            newTree.Nodes.Add("2 Knight Warrior");
+            newTree.Nodes.Add("HIDDEN Knight Fencer H");
+            newTree.Nodes.Add("3 Knight Fencer A");
+
+            //ListOfEditorButtons.Add(newTree);
+
+        }
+
+
+
+        private void MakeEditorPageNew() 
+        {
+
+            Panel newPanel = new Panel();
+
+            newPanel.Name = "Editor" + richTextBox1.Text + "Panel" + "Page1";
+            newPanel.Dock = DockStyle.Left;
+            newPanel.Size = new Size(550, 1);
+            newPanel.BackColor = Color.FromArgb(00, 30, 0);
+            newPanel.ForeColor = Color.Black;
+            newPanel.Click += delegate
+            {
+                // Your code                
+
+                //richTextBoxDocumentation.Text = File.ReadAllText(DictionaryOfStrings.CrystalPath + "\\Workshops\\" + GameLibrary.libraryNodeName + "\\Documentation\\" + newPanel.Text + "\\Text.txt");
+                //DocumentReset();
+                //SelectedDocument = newPanel.Text;
+                //SelectedDocumentName = newPanel.Name;
+            };
+
+            //ListOfDocumentButtons.Add(newPanel);
+            //panelCore.Controls.Add(newPanel);
+            Controls.Find(SelectedEditor + "Panel", true)[0].Controls.Add(newPanel);
+            newPanel.BringToFront();
+
+        }
+
+        
     }
 
-    // Root myDeserializedClass = JsonConvert.DeserializeObject<Root>(myJsonResponse);
     
 }

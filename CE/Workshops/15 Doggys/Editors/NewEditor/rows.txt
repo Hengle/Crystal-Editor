@@ -1,0 +1,10 @@
+Potion
+Hi-Potion
+Ether
+Hi-Ether
+Melange Gel
+Megalixer
+Phoenix Down
+Flame Jar
+Ice Jar
+Volt Jar

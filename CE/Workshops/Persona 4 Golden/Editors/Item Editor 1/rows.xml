@@ -1,0 +1,111 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<SaveDataClass xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Groups>
+    <GroupClass>
+      <Name>Invalid</Name>
+      <Order>13</Order>
+      <ID>1</ID>
+      <Collapsed>false</Collapsed>
+    </GroupClass>
+  </Groups>
+  <Rows>
+    <RowClass>
+      <Text>Potion</Text>
+      <Index>0</Index>
+      <Invalid>false</Invalid>
+      <GroupID>0</GroupID>
+      <Order>1</Order>
+    </RowClass>
+    <RowClass>
+      <Text>Flame Jar</Text>
+      <Index>7</Index>
+      <Invalid>false</Invalid>
+      <GroupID>0</GroupID>
+      <Order>2</Order>
+    </RowClass>
+    <RowClass>
+      <Text>Ether</Text>
+      <Index>2</Index>
+      <Invalid>false</Invalid>
+      <GroupID>0</GroupID>
+      <Order>3</Order>
+    </RowClass>
+    <RowClass>
+      <Text>Hi-Potion</Text>
+      <Index>1</Index>
+      <Invalid>false</Invalid>
+      <GroupID>0</GroupID>
+      <Order>4</Order>
+    </RowClass>
+    <RowClass>
+      <Text>Ice Jar</Text>
+      <Index>8</Index>
+      <Invalid>false</Invalid>
+      <GroupID>0</GroupID>
+      <Order>5</Order>
+    </RowClass>
+    <RowClass>
+      <Text>Volt JarMegalixer</Text>
+      <Index>9</Index>
+      <Invalid>false</Invalid>
+      <GroupID>0</GroupID>
+      <Order>6</Order>
+    </RowClass>
+    <RowClass>
+      <Text>Hi-Ether</Text>
+      <Index>3</Index>
+      <Invalid>false</Invalid>
+      <GroupID>0</GroupID>
+      <Order>7</Order>
+    </RowClass>
+    <RowClass>
+      <Text>Melange Gel</Text>
+      <Index>4</Index>
+      <Invalid>false</Invalid>
+      <GroupID>0</GroupID>
+      <Order>8</Order>
+    </RowClass>
+    <RowClass>
+      <Text>Megalixer</Text>
+      <Index>5</Index>
+      <Invalid>false</Invalid>
+      <GroupID>0</GroupID>
+      <Order>9</Order>
+    </RowClass>
+    <RowClass>
+      <Text>Phoenix Down</Text>
+      <Index>6</Index>
+      <Invalid>false</Invalid>
+      <GroupID>0</GroupID>
+      <Order>10</Order>
+    </RowClass>
+    <RowClass>
+      <Text>Flame Jar</Text>
+      <Index>11</Index>
+      <Invalid>true</Invalid>
+      <GroupID>1</GroupID>
+      <Order>1</Order>
+    </RowClass>
+    <RowClass>
+      <Text>Ice Jar</Text>
+      <Index>12</Index>
+      <Invalid>true</Invalid>
+      <GroupID>1</GroupID>
+      <Order>2</Order>
+    </RowClass>
+    <RowClass>
+      <Text>Volt Jar</Text>
+      <Index>13</Index>
+      <Invalid>true</Invalid>
+      <GroupID>1</GroupID>
+      <Order>3</Order>
+    </RowClass>
+    <RowClass>
+      <Text>Phoenix Down</Text>
+      <Index>10</Index>
+      <Invalid>true</Invalid>
+      <GroupID>1</GroupID>
+      <Order>4</Order>
+    </RowClass>
+  </Rows>
+</SaveDataClass>

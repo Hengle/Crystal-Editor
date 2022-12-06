@@ -1,0 +1,2972 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<SaveFileClass xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <FileVersion>1</FileVersion>
+  <EditorSettings>
+    <Base_Address>0</Base_Address>
+    <Row_Length>112</Row_Length>
+    <End_Byte>0</End_Byte>
+    <RawData_FilePath>sys\mind.bin</RawData_FilePath>
+    <EditorName>Spirit Editor (Spells)</EditorName>
+    <ClearListViewFilterOnClick>false</ClearListViewFilterOnClick>
+    <HideValueListTab>false</HideValueListTab>
+  </EditorSettings>
+  <Entries>
+    <EntryClass>
+      <DataType>Byte</DataType>
+      <DisplayName>Reiji Lv</DisplayName>
+      <Order>2</Order>
+      <GroupID>0</GroupID>
+      <InputStyle>TextInput</InputStyle>
+      <Disabled>false</Disabled>
+      <Offset>0</Offset>
+      <Flag_TrueValue>1</Flag_TrueValue>
+      <Flag_FalseValue>0</Flag_FalseValue>
+      <BitNames>
+        <string>Bit 1</string>
+        <string>Bit 2</string>
+        <string>Bit 3</string>
+        <string>Bit 4</string>
+        <string>Bit 5</string>
+        <string>Bit 6</string>
+        <string>Bit 7</string>
+        <string>Bit 8</string>
+      </BitNames>
+      <ValueListData>
+        <StartValue>0</StartValue>
+        <MaxItems>255</MaxItems>
+        <LastVisibleItem>255</LastVisibleItem>
+      </ValueListData>
+    </EntryClass>
+    <EntryClass>
+      <DataType>Byte</DataType>
+      <DisplayName>Reiji SP</DisplayName>
+      <Order>3</Order>
+      <GroupID>0</GroupID>
+      <InputStyle>TextInput</InputStyle>
+      <Disabled>false</Disabled>
+      <Offset>1</Offset>
+      <Flag_TrueValue>1</Flag_TrueValue>
+      <Flag_FalseValue>0</Flag_FalseValue>
+      <BitNames>
+        <string>Bit 1</string>
+        <string>Bit 2</string>
+        <string>Bit 3</string>
+        <string>Bit 4</string>
+        <string>Bit 5</string>
+        <string>Bit 6</string>
+        <string>Bit 7</string>
+        <string>Bit 8</string>
+      </BitNames>
+      <ValueListData>
+        <StartValue>0</StartValue>
+        <MaxItems>255</MaxItems>
+        <LastVisibleItem>255</LastVisibleItem>
+      </ValueListData>
+    </EntryClass>
+    <EntryClass>
+      <DataType>Byte</DataType>
+      <DisplayName>Xiaomu Lv</DisplayName>
+      <Order>4</Order>
+      <GroupID>0</GroupID>
+      <InputStyle>TextInput</InputStyle>
+      <Disabled>false</Disabled>
+      <Offset>2</Offset>
+      <Flag_TrueValue>1</Flag_TrueValue>
+      <Flag_FalseValue>0</Flag_FalseValue>
+      <BitNames>
+        <string>Bit 1</string>
+        <string>Bit 2</string>
+        <string>Bit 3</string>
+        <string>Bit 4</string>
+        <string>Bit 5</string>
+        <string>Bit 6</string>
+        <string>Bit 7</string>
+        <string>Bit 8</string>
+      </BitNames>
+      <ValueListData>
+        <StartValue>0</StartValue>
+        <MaxItems>255</MaxItems>
+        <LastVisibleItem>255</LastVisibleItem>
+      </ValueListData>
+    </EntryClass>
+    <EntryClass>
+      <DataType>Byte</DataType>
+      <DisplayName>Xiaomu SP</DisplayName>
+      <Order>5</Order>
+      <GroupID>0</GroupID>
+      <InputStyle>TextInput</InputStyle>
+      <Disabled>false</Disabled>
+      <Offset>3</Offset>
+      <Flag_TrueValue>1</Flag_TrueValue>
+      <Flag_FalseValue>0</Flag_FalseValue>
+      <BitNames>
+        <string>Bit 1</string>
+        <string>Bit 2</string>
+        <string>Bit 3</string>
+        <string>Bit 4</string>
+        <string>Bit 5</string>
+        <string>Bit 6</string>
+        <string>Bit 7</string>
+        <string>Bit 8</string>
+      </BitNames>
+      <ValueListData>
+        <StartValue>0</StartValue>
+        <MaxItems>255</MaxItems>
+        <LastVisibleItem>255</LastVisibleItem>
+      </ValueListData>
+    </EntryClass>
+    <EntryClass>
+      <DataType>Byte</DataType>
+      <DisplayName>Kos-mos Lv</DisplayName>
+      <Order>6</Order>
+      <GroupID>0</GroupID>
+      <InputStyle>TextInput</InputStyle>
+      <Disabled>false</Disabled>
+      <Offset>4</Offset>
+      <Flag_TrueValue>1</Flag_TrueValue>
+      <Flag_FalseValue>0</Flag_FalseValue>
+      <BitNames>
+        <string>Bit 1</string>
+        <string>Bit 2</string>
+        <string>Bit 3</string>
+        <string>Bit 4</string>
+        <string>Bit 5</string>
+        <string>Bit 6</string>
+        <string>Bit 7</string>
+        <string>Bit 8</string>
+      </BitNames>
+      <ValueListData>
+        <StartValue>0</StartValue>
+        <MaxItems>255</MaxItems>
+        <LastVisibleItem>255</LastVisibleItem>
+      </ValueListData>
+    </EntryClass>
+    <EntryClass>
+      <DataType>Byte</DataType>
+      <DisplayName>Kos-mos SP</DisplayName>
+      <Order>7</Order>
+      <GroupID>0</GroupID>
+      <InputStyle>TextInput</InputStyle>
+      <Disabled>false</Disabled>
+      <Offset>5</Offset>
+      <Flag_TrueValue>1</Flag_TrueValue>
+      <Flag_FalseValue>0</Flag_FalseValue>
+      <BitNames>
+        <string>Bit 1</string>
+        <string>Bit 2</string>
+        <string>Bit 3</string>
+        <string>Bit 4</string>
+        <string>Bit 5</string>
+        <string>Bit 6</string>
+        <string>Bit 7</string>
+        <string>Bit 8</string>
+      </BitNames>
+      <ValueListData>
+        <StartValue>0</StartValue>
+        <MaxItems>255</MaxItems>
+        <LastVisibleItem>255</LastVisibleItem>
+      </ValueListData>
+    </EntryClass>
+    <EntryClass>
+      <DataType>Byte</DataType>
+      <DisplayName>Robos? Lv?</DisplayName>
+      <Order>8</Order>
+      <GroupID>0</GroupID>
+      <InputStyle>TextInput</InputStyle>
+      <Disabled>false</Disabled>
+      <Offset>6</Offset>
+      <Flag_TrueValue>1</Flag_TrueValue>
+      <Flag_FalseValue>0</Flag_FalseValue>
+      <BitNames>
+        <string>Bit 1</string>
+        <string>Bit 2</string>
+        <string>Bit 3</string>
+        <string>Bit 4</string>
+        <string>Bit 5</string>
+        <string>Bit 6</string>
+        <string>Bit 7</string>
+        <string>Bit 8</string>
+      </BitNames>
+      <ValueListData>
+        <StartValue>0</StartValue>
+        <MaxItems>255</MaxItems>
+        <LastVisibleItem>255</LastVisibleItem>
+      </ValueListData>
+    </EntryClass>
+    <EntryClass>
+      <DataType>Byte</DataType>
+      <DisplayName>Robos? SP?</DisplayName>
+      <Order>9</Order>
+      <GroupID>0</GroupID>
+      <InputStyle>TextInput</InputStyle>
+      <Disabled>false</Disabled>
+      <Offset>7</Offset>
+      <Flag_TrueValue>1</Flag_TrueValue>
+      <Flag_FalseValue>0</Flag_FalseValue>
+      <BitNames>
+        <string>Bit 1</string>
+        <string>Bit 2</string>
+        <string>Bit 3</string>
+        <string>Bit 4</string>
+        <string>Bit 5</string>
+        <string>Bit 6</string>
+        <string>Bit 7</string>
+        <string>Bit 8</string>
+      </BitNames>
+      <ValueListData>
+        <StartValue>0</StartValue>
+        <MaxItems>255</MaxItems>
+        <LastVisibleItem>255</LastVisibleItem>
+      </ValueListData>
+    </EntryClass>
+    <EntryClass>
+      <DataType>Byte</DataType>
+      <DisplayName>Sort ID</DisplayName>
+      <Order>1</Order>
+      <GroupID>0</GroupID>
+      <InputStyle>TextInput</InputStyle>
+      <Disabled>false</Disabled>
+      <Offset>8</Offset>
+      <Flag_TrueValue>1</Flag_TrueValue>
+      <Flag_FalseValue>0</Flag_FalseValue>
+      <BitNames>
+        <string>Bit 1</string>
+        <string>Bit 2</string>
+        <string>Bit 3</string>
+        <string>Bit 4</string>
+        <string>Bit 5</string>
+        <string>Bit 6</string>
+        <string>Bit 7</string>
+        <string>Bit 8</string>
+      </BitNames>
+      <ValueListData>
+        <StartValue>0</StartValue>
+        <MaxItems>255</MaxItems>
+        <LastVisibleItem>255</LastVisibleItem>
+      </ValueListData>
+    </EntryClass>
+    <EntryClass>
+      <DataType>Byte</DataType>
+      <DisplayName>Entry 10</DisplayName>
+      <Order>1</Order>
+      <GroupID>2</GroupID>
+      <InputStyle>TextInput</InputStyle>
+      <Disabled>false</Disabled>
+      <Offset>9</Offset>
+      <Flag_TrueValue>1</Flag_TrueValue>
+      <Flag_FalseValue>0</Flag_FalseValue>
+      <BitNames>
+        <string>Bit 1</string>
+        <string>Bit 2</string>
+        <string>Bit 3</string>
+        <string>Bit 4</string>
+        <string>Bit 5</string>
+        <string>Bit 6</string>
+        <string>Bit 7</string>
+        <string>Bit 8</string>
+      </BitNames>
+      <ValueListData>
+        <StartValue>0</StartValue>
+        <MaxItems>255</MaxItems>
+        <LastVisibleItem>255</LastVisibleItem>
+      </ValueListData>
+    </EntryClass>
+    <EntryClass>
+      <DataType>Byte</DataType>
+      <DisplayName>Entry 11</DisplayName>
+      <Order>12</Order>
+      <GroupID>2</GroupID>
+      <InputStyle>TextInput</InputStyle>
+      <Disabled>false</Disabled>
+      <Offset>10</Offset>
+      <Flag_TrueValue>1</Flag_TrueValue>
+      <Flag_FalseValue>0</Flag_FalseValue>
+      <BitNames>
+        <string>Bit 1</string>
+        <string>Bit 2</string>
+        <string>Bit 3</string>
+        <string>Bit 4</string>
+        <string>Bit 5</string>
+        <string>Bit 6</string>
+        <string>Bit 7</string>
+        <string>Bit 8</string>
+      </BitNames>
+      <ValueListData>
+        <StartValue>0</StartValue>
+        <MaxItems>255</MaxItems>
+        <LastVisibleItem>255</LastVisibleItem>
+      </ValueListData>
+    </EntryClass>
+    <EntryClass>
+      <DataType>Byte</DataType>
+      <DisplayName>Entry 12</DisplayName>
+      <Order>13</Order>
+      <GroupID>2</GroupID>
+      <InputStyle>TextInput</InputStyle>
+      <Disabled>false</Disabled>
+      <Offset>11</Offset>
+      <Flag_TrueValue>1</Flag_TrueValue>
+      <Flag_FalseValue>0</Flag_FalseValue>
+      <BitNames>
+        <string>Bit 1</string>
+        <string>Bit 2</string>
+        <string>Bit 3</string>
+        <string>Bit 4</string>
+        <string>Bit 5</string>
+        <string>Bit 6</string>
+        <string>Bit 7</string>
+        <string>Bit 8</string>
+      </BitNames>
+      <ValueListData>
+        <StartValue>0</StartValue>
+        <MaxItems>255</MaxItems>
+        <LastVisibleItem>255</LastVisibleItem>
+      </ValueListData>
+    </EntryClass>
+    <EntryClass>
+      <DataType>Byte</DataType>
+      <DisplayName>Entry 13</DisplayName>
+      <Order>14</Order>
+      <GroupID>2</GroupID>
+      <InputStyle>TextInput</InputStyle>
+      <Disabled>false</Disabled>
+      <Offset>12</Offset>
+      <Flag_TrueValue>1</Flag_TrueValue>
+      <Flag_FalseValue>0</Flag_FalseValue>
+      <BitNames>
+        <string>Bit 1</string>
+        <string>Bit 2</string>
+        <string>Bit 3</string>
+        <string>Bit 4</string>
+        <string>Bit 5</string>
+        <string>Bit 6</string>
+        <string>Bit 7</string>
+        <string>Bit 8</string>
+      </BitNames>
+      <ValueListData>
+        <StartValue>0</StartValue>
+        <MaxItems>255</MaxItems>
+        <LastVisibleItem>255</LastVisibleItem>
+      </ValueListData>
+    </EntryClass>
+    <EntryClass>
+      <DataType>Byte</DataType>
+      <DisplayName>Entry 14</DisplayName>
+      <Order>15</Order>
+      <GroupID>2</GroupID>
+      <InputStyle>TextInput</InputStyle>
+      <Disabled>false</Disabled>
+      <Offset>13</Offset>
+      <Flag_TrueValue>1</Flag_TrueValue>
+      <Flag_FalseValue>0</Flag_FalseValue>
+      <BitNames>
+        <string>Bit 1</string>
+        <string>Bit 2</string>
+        <string>Bit 3</string>
+        <string>Bit 4</string>
+        <string>Bit 5</string>
+        <string>Bit 6</string>
+        <string>Bit 7</string>
+        <string>Bit 8</string>
+      </BitNames>
+      <ValueListData>
+        <StartValue>0</StartValue>
+        <MaxItems>255</MaxItems>
+        <LastVisibleItem>255</LastVisibleItem>
+      </ValueListData>
+    </EntryClass>
+    <EntryClass>
+      <DataType>Byte</DataType>
+      <DisplayName>Entry 15</DisplayName>
+      <Order>16</Order>
+      <GroupID>2</GroupID>
+      <InputStyle>TextInput</InputStyle>
+      <Disabled>false</Disabled>
+      <Offset>14</Offset>
+      <Flag_TrueValue>1</Flag_TrueValue>
+      <Flag_FalseValue>0</Flag_FalseValue>
+      <BitNames>
+        <string>Bit 1</string>
+        <string>Bit 2</string>
+        <string>Bit 3</string>
+        <string>Bit 4</string>
+        <string>Bit 5</string>
+        <string>Bit 6</string>
+        <string>Bit 7</string>
+        <string>Bit 8</string>
+      </BitNames>
+      <ValueListData>
+        <StartValue>0</StartValue>
+        <MaxItems>255</MaxItems>
+        <LastVisibleItem>255</LastVisibleItem>
+      </ValueListData>
+    </EntryClass>
+    <EntryClass>
+      <DataType>Byte</DataType>
+      <DisplayName>Entry 16</DisplayName>
+      <Order>17</Order>
+      <GroupID>2</GroupID>
+      <InputStyle>TextInput</InputStyle>
+      <Disabled>false</Disabled>
+      <Offset>15</Offset>
+      <Flag_TrueValue>1</Flag_TrueValue>
+      <Flag_FalseValue>0</Flag_FalseValue>
+      <BitNames>
+        <string>Bit 1</string>
+        <string>Bit 2</string>
+        <string>Bit 3</string>
+        <string>Bit 4</string>
+        <string>Bit 5</string>
+        <string>Bit 6</string>
+        <string>Bit 7</string>
+        <string>Bit 8</string>
+      </BitNames>
+      <ValueListData>
+        <StartValue>0</StartValue>
+        <MaxItems>255</MaxItems>
+        <LastVisibleItem>255</LastVisibleItem>
+      </ValueListData>
+    </EntryClass>
+    <EntryClass>
+      <DataType>Byte</DataType>
+      <DisplayName>Entry 17</DisplayName>
+      <Order>18</Order>
+      <GroupID>2</GroupID>
+      <InputStyle>TextInput</InputStyle>
+      <Disabled>false</Disabled>
+      <Offset>16</Offset>
+      <Flag_TrueValue>1</Flag_TrueValue>
+      <Flag_FalseValue>0</Flag_FalseValue>
+      <BitNames>
+        <string>Bit 1</string>
+        <string>Bit 2</string>
+        <string>Bit 3</string>
+        <string>Bit 4</string>
+        <string>Bit 5</string>
+        <string>Bit 6</string>
+        <string>Bit 7</string>
+        <string>Bit 8</string>
+      </BitNames>
+      <ValueListData>
+        <StartValue>0</StartValue>
+        <MaxItems>255</MaxItems>
+        <LastVisibleItem>255</LastVisibleItem>
+      </ValueListData>
+    </EntryClass>
+    <EntryClass>
+      <DataType>Byte</DataType>
+      <DisplayName>Entry 18</DisplayName>
+      <Order>1</Order>
+      <GroupID>3</GroupID>
+      <InputStyle>TextInput</InputStyle>
+      <Disabled>false</Disabled>
+      <Offset>17</Offset>
+      <Flag_TrueValue>1</Flag_TrueValue>
+      <Flag_FalseValue>0</Flag_FalseValue>
+      <BitNames>
+        <string>Bit 1</string>
+        <string>Bit 2</string>
+        <string>Bit 3</string>
+        <string>Bit 4</string>
+        <string>Bit 5</string>
+        <string>Bit 6</string>
+        <string>Bit 7</string>
+        <string>Bit 8</string>
+      </BitNames>
+      <ValueListData>
+        <StartValue>0</StartValue>
+        <MaxItems>255</MaxItems>
+        <LastVisibleItem>255</LastVisibleItem>
+      </ValueListData>
+    </EntryClass>
+    <EntryClass>
+      <DataType>Byte</DataType>
+      <DisplayName>Entry 19</DisplayName>
+      <Order>20</Order>
+      <GroupID>3</GroupID>
+      <InputStyle>TextInput</InputStyle>
+      <Disabled>false</Disabled>
+      <Offset>18</Offset>
+      <Flag_TrueValue>1</Flag_TrueValue>
+      <Flag_FalseValue>0</Flag_FalseValue>
+      <BitNames>
+        <string>Bit 1</string>
+        <string>Bit 2</string>
+        <string>Bit 3</string>
+        <string>Bit 4</string>
+        <string>Bit 5</string>
+        <string>Bit 6</string>
+        <string>Bit 7</string>
+        <string>Bit 8</string>
+      </BitNames>
+      <ValueListData>
+        <StartValue>0</StartValue>
+        <MaxItems>255</MaxItems>
+        <LastVisibleItem>255</LastVisibleItem>
+      </ValueListData>
+    </EntryClass>
+    <EntryClass>
+      <DataType>Byte</DataType>
+      <DisplayName>Entry 20</DisplayName>
+      <Order>21</Order>
+      <GroupID>3</GroupID>
+      <InputStyle>TextInput</InputStyle>
+      <Disabled>false</Disabled>
+      <Offset>19</Offset>
+      <Flag_TrueValue>1</Flag_TrueValue>
+      <Flag_FalseValue>0</Flag_FalseValue>
+      <BitNames>
+        <string>Bit 1</string>
+        <string>Bit 2</string>
+        <string>Bit 3</string>
+        <string>Bit 4</string>
+        <string>Bit 5</string>
+        <string>Bit 6</string>
+        <string>Bit 7</string>
+        <string>Bit 8</string>
+      </BitNames>
+      <ValueListData>
+        <StartValue>0</StartValue>
+        <MaxItems>255</MaxItems>
+        <LastVisibleItem>255</LastVisibleItem>
+      </ValueListData>
+    </EntryClass>
+    <EntryClass>
+      <DataType>Byte</DataType>
+      <DisplayName>Entry 21</DisplayName>
+      <Order>22</Order>
+      <GroupID>3</GroupID>
+      <InputStyle>TextInput</InputStyle>
+      <Disabled>false</Disabled>
+      <Offset>20</Offset>
+      <Flag_TrueValue>1</Flag_TrueValue>
+      <Flag_FalseValue>0</Flag_FalseValue>
+      <BitNames>
+        <string>Bit 1</string>
+        <string>Bit 2</string>
+        <string>Bit 3</string>
+        <string>Bit 4</string>
+        <string>Bit 5</string>
+        <string>Bit 6</string>
+        <string>Bit 7</string>
+        <string>Bit 8</string>
+      </BitNames>
+      <ValueListData>
+        <StartValue>0</StartValue>
+        <MaxItems>255</MaxItems>
+        <LastVisibleItem>255</LastVisibleItem>
+      </ValueListData>
+    </EntryClass>
+    <EntryClass>
+      <DataType>Byte</DataType>
+      <DisplayName>Entry 22</DisplayName>
+      <Order>23</Order>
+      <GroupID>3</GroupID>
+      <InputStyle>TextInput</InputStyle>
+      <Disabled>false</Disabled>
+      <Offset>21</Offset>
+      <Flag_TrueValue>1</Flag_TrueValue>
+      <Flag_FalseValue>0</Flag_FalseValue>
+      <BitNames>
+        <string>Bit 1</string>
+        <string>Bit 2</string>
+        <string>Bit 3</string>
+        <string>Bit 4</string>
+        <string>Bit 5</string>
+        <string>Bit 6</string>
+        <string>Bit 7</string>
+        <string>Bit 8</string>
+      </BitNames>
+      <ValueListData>
+        <StartValue>0</StartValue>
+        <MaxItems>255</MaxItems>
+        <LastVisibleItem>255</LastVisibleItem>
+      </ValueListData>
+    </EntryClass>
+    <EntryClass>
+      <DataType>Byte</DataType>
+      <DisplayName>Entry 23</DisplayName>
+      <Order>24</Order>
+      <GroupID>3</GroupID>
+      <InputStyle>TextInput</InputStyle>
+      <Disabled>false</Disabled>
+      <Offset>22</Offset>
+      <Flag_TrueValue>1</Flag_TrueValue>
+      <Flag_FalseValue>0</Flag_FalseValue>
+      <BitNames>
+        <string>Bit 1</string>
+        <string>Bit 2</string>
+        <string>Bit 3</string>
+        <string>Bit 4</string>
+        <string>Bit 5</string>
+        <string>Bit 6</string>
+        <string>Bit 7</string>
+        <string>Bit 8</string>
+      </BitNames>
+      <ValueListData>
+        <StartValue>0</StartValue>
+        <MaxItems>255</MaxItems>
+        <LastVisibleItem>255</LastVisibleItem>
+      </ValueListData>
+    </EntryClass>
+    <EntryClass>
+      <DataType>Byte</DataType>
+      <DisplayName>Entry 24</DisplayName>
+      <Order>25</Order>
+      <GroupID>3</GroupID>
+      <InputStyle>TextInput</InputStyle>
+      <Disabled>false</Disabled>
+      <Offset>23</Offset>
+      <Flag_TrueValue>1</Flag_TrueValue>
+      <Flag_FalseValue>0</Flag_FalseValue>
+      <BitNames>
+        <string>Bit 1</string>
+        <string>Bit 2</string>
+        <string>Bit 3</string>
+        <string>Bit 4</string>
+        <string>Bit 5</string>
+        <string>Bit 6</string>
+        <string>Bit 7</string>
+        <string>Bit 8</string>
+      </BitNames>
+      <ValueListData>
+        <StartValue>0</StartValue>
+        <MaxItems>255</MaxItems>
+        <LastVisibleItem>255</LastVisibleItem>
+      </ValueListData>
+    </EntryClass>
+    <EntryClass>
+      <DataType>Byte</DataType>
+      <DisplayName>Entry 25</DisplayName>
+      <Order>26</Order>
+      <GroupID>3</GroupID>
+      <InputStyle>TextInput</InputStyle>
+      <Disabled>false</Disabled>
+      <Offset>24</Offset>
+      <Flag_TrueValue>1</Flag_TrueValue>
+      <Flag_FalseValue>0</Flag_FalseValue>
+      <BitNames>
+        <string>Bit 1</string>
+        <string>Bit 2</string>
+        <string>Bit 3</string>
+        <string>Bit 4</string>
+        <string>Bit 5</string>
+        <string>Bit 6</string>
+        <string>Bit 7</string>
+        <string>Bit 8</string>
+      </BitNames>
+      <ValueListData>
+        <StartValue>0</StartValue>
+        <MaxItems>255</MaxItems>
+        <LastVisibleItem>255</LastVisibleItem>
+      </ValueListData>
+    </EntryClass>
+    <EntryClass>
+      <DataType>Byte</DataType>
+      <DisplayName>Entry 26</DisplayName>
+      <Order>27</Order>
+      <GroupID>3</GroupID>
+      <InputStyle>TextInput</InputStyle>
+      <Disabled>false</Disabled>
+      <Offset>25</Offset>
+      <Flag_TrueValue>1</Flag_TrueValue>
+      <Flag_FalseValue>0</Flag_FalseValue>
+      <BitNames>
+        <string>Bit 1</string>
+        <string>Bit 2</string>
+        <string>Bit 3</string>
+        <string>Bit 4</string>
+        <string>Bit 5</string>
+        <string>Bit 6</string>
+        <string>Bit 7</string>
+        <string>Bit 8</string>
+      </BitNames>
+      <ValueListData>
+        <StartValue>0</StartValue>
+        <MaxItems>255</MaxItems>
+        <LastVisibleItem>255</LastVisibleItem>
+      </ValueListData>
+    </EntryClass>
+    <EntryClass>
+      <DataType>Byte</DataType>
+      <DisplayName>Entry 27</DisplayName>
+      <Order>28</Order>
+      <GroupID>3</GroupID>
+      <InputStyle>TextInput</InputStyle>
+      <Disabled>false</Disabled>
+      <Offset>26</Offset>
+      <Flag_TrueValue>1</Flag_TrueValue>
+      <Flag_FalseValue>0</Flag_FalseValue>
+      <BitNames>
+        <string>Bit 1</string>
+        <string>Bit 2</string>
+        <string>Bit 3</string>
+        <string>Bit 4</string>
+        <string>Bit 5</string>
+        <string>Bit 6</string>
+        <string>Bit 7</string>
+        <string>Bit 8</string>
+      </BitNames>
+      <ValueListData>
+        <StartValue>0</StartValue>
+        <MaxItems>255</MaxItems>
+        <LastVisibleItem>255</LastVisibleItem>
+      </ValueListData>
+    </EntryClass>
+    <EntryClass>
+      <DataType>Byte</DataType>
+      <DisplayName>Entry 28</DisplayName>
+      <Order>29</Order>
+      <GroupID>3</GroupID>
+      <InputStyle>TextInput</InputStyle>
+      <Disabled>false</Disabled>
+      <Offset>27</Offset>
+      <Flag_TrueValue>1</Flag_TrueValue>
+      <Flag_FalseValue>0</Flag_FalseValue>
+      <BitNames>
+        <string>Bit 1</string>
+        <string>Bit 2</string>
+        <string>Bit 3</string>
+        <string>Bit 4</string>
+        <string>Bit 5</string>
+        <string>Bit 6</string>
+        <string>Bit 7</string>
+        <string>Bit 8</string>
+      </BitNames>
+      <ValueListData>
+        <StartValue>0</StartValue>
+        <MaxItems>255</MaxItems>
+        <LastVisibleItem>255</LastVisibleItem>
+      </ValueListData>
+    </EntryClass>
+    <EntryClass>
+      <DataType>Byte</DataType>
+      <DisplayName>Entry 29</DisplayName>
+      <Order>30</Order>
+      <GroupID>3</GroupID>
+      <InputStyle>TextInput</InputStyle>
+      <Disabled>false</Disabled>
+      <Offset>28</Offset>
+      <Flag_TrueValue>1</Flag_TrueValue>
+      <Flag_FalseValue>0</Flag_FalseValue>
+      <BitNames>
+        <string>Bit 1</string>
+        <string>Bit 2</string>
+        <string>Bit 3</string>
+        <string>Bit 4</string>
+        <string>Bit 5</string>
+        <string>Bit 6</string>
+        <string>Bit 7</string>
+        <string>Bit 8</string>
+      </BitNames>
+      <ValueListData>
+        <StartValue>0</StartValue>
+        <MaxItems>255</MaxItems>
+        <LastVisibleItem>255</LastVisibleItem>
+      </ValueListData>
+    </EntryClass>
+    <EntryClass>
+      <DataType>Byte</DataType>
+      <DisplayName>Entry 30</DisplayName>
+      <Order>31</Order>
+      <GroupID>3</GroupID>
+      <InputStyle>TextInput</InputStyle>
+      <Disabled>false</Disabled>
+      <Offset>29</Offset>
+      <Flag_TrueValue>1</Flag_TrueValue>
+      <Flag_FalseValue>0</Flag_FalseValue>
+      <BitNames>
+        <string>Bit 1</string>
+        <string>Bit 2</string>
+        <string>Bit 3</string>
+        <string>Bit 4</string>
+        <string>Bit 5</string>
+        <string>Bit 6</string>
+        <string>Bit 7</string>
+        <string>Bit 8</string>
+      </BitNames>
+      <ValueListData>
+        <StartValue>0</StartValue>
+        <MaxItems>255</MaxItems>
+        <LastVisibleItem>255</LastVisibleItem>
+      </ValueListData>
+    </EntryClass>
+    <EntryClass>
+      <DataType>Byte</DataType>
+      <DisplayName>Entry 31</DisplayName>
+      <Order>32</Order>
+      <GroupID>3</GroupID>
+      <InputStyle>TextInput</InputStyle>
+      <Disabled>false</Disabled>
+      <Offset>30</Offset>
+      <Flag_TrueValue>1</Flag_TrueValue>
+      <Flag_FalseValue>0</Flag_FalseValue>
+      <BitNames>
+        <string>Bit 1</string>
+        <string>Bit 2</string>
+        <string>Bit 3</string>
+        <string>Bit 4</string>
+        <string>Bit 5</string>
+        <string>Bit 6</string>
+        <string>Bit 7</string>
+        <string>Bit 8</string>
+      </BitNames>
+      <ValueListData>
+        <StartValue>0</StartValue>
+        <MaxItems>255</MaxItems>
+        <LastVisibleItem>255</LastVisibleItem>
+      </ValueListData>
+    </EntryClass>
+    <EntryClass>
+      <DataType>Byte</DataType>
+      <DisplayName>Entry 32</DisplayName>
+      <Order>33</Order>
+      <GroupID>3</GroupID>
+      <InputStyle>TextInput</InputStyle>
+      <Disabled>false</Disabled>
+      <Offset>31</Offset>
+      <Flag_TrueValue>1</Flag_TrueValue>
+      <Flag_FalseValue>0</Flag_FalseValue>
+      <BitNames>
+        <string>Bit 1</string>
+        <string>Bit 2</string>
+        <string>Bit 3</string>
+        <string>Bit 4</string>
+        <string>Bit 5</string>
+        <string>Bit 6</string>
+        <string>Bit 7</string>
+        <string>Bit 8</string>
+      </BitNames>
+      <ValueListData>
+        <StartValue>0</StartValue>
+        <MaxItems>255</MaxItems>
+        <LastVisibleItem>255</LastVisibleItem>
+      </ValueListData>
+    </EntryClass>
+    <EntryClass>
+      <DataType>Byte</DataType>
+      <DisplayName>Entry 33</DisplayName>
+      <Order>34</Order>
+      <GroupID>3</GroupID>
+      <InputStyle>TextInput</InputStyle>
+      <Disabled>false</Disabled>
+      <Offset>32</Offset>
+      <Flag_TrueValue>1</Flag_TrueValue>
+      <Flag_FalseValue>0</Flag_FalseValue>
+      <BitNames>
+        <string>Bit 1</string>
+        <string>Bit 2</string>
+        <string>Bit 3</string>
+        <string>Bit 4</string>
+        <string>Bit 5</string>
+        <string>Bit 6</string>
+        <string>Bit 7</string>
+        <string>Bit 8</string>
+      </BitNames>
+      <ValueListData>
+        <StartValue>0</StartValue>
+        <MaxItems>255</MaxItems>
+        <LastVisibleItem>255</LastVisibleItem>
+      </ValueListData>
+    </EntryClass>
+    <EntryClass>
+      <DataType>Byte</DataType>
+      <DisplayName>Entry 34</DisplayName>
+      <Order>35</Order>
+      <GroupID>3</GroupID>
+      <InputStyle>TextInput</InputStyle>
+      <Disabled>false</Disabled>
+      <Offset>33</Offset>
+      <Flag_TrueValue>1</Flag_TrueValue>
+      <Flag_FalseValue>0</Flag_FalseValue>
+      <BitNames>
+        <string>Bit 1</string>
+        <string>Bit 2</string>
+        <string>Bit 3</string>
+        <string>Bit 4</string>
+        <string>Bit 5</string>
+        <string>Bit 6</string>
+        <string>Bit 7</string>
+        <string>Bit 8</string>
+      </BitNames>
+      <ValueListData>
+        <StartValue>0</StartValue>
+        <MaxItems>255</MaxItems>
+        <LastVisibleItem>255</LastVisibleItem>
+      </ValueListData>
+    </EntryClass>
+    <EntryClass>
+      <DataType>Byte</DataType>
+      <DisplayName>Entry 35</DisplayName>
+      <Order>36</Order>
+      <GroupID>3</GroupID>
+      <InputStyle>TextInput</InputStyle>
+      <Disabled>false</Disabled>
+      <Offset>34</Offset>
+      <Flag_TrueValue>1</Flag_TrueValue>
+      <Flag_FalseValue>0</Flag_FalseValue>
+      <BitNames>
+        <string>Bit 1</string>
+        <string>Bit 2</string>
+        <string>Bit 3</string>
+        <string>Bit 4</string>
+        <string>Bit 5</string>
+        <string>Bit 6</string>
+        <string>Bit 7</string>
+        <string>Bit 8</string>
+      </BitNames>
+      <ValueListData>
+        <StartValue>0</StartValue>
+        <MaxItems>255</MaxItems>
+        <LastVisibleItem>255</LastVisibleItem>
+      </ValueListData>
+    </EntryClass>
+    <EntryClass>
+      <DataType>Byte</DataType>
+      <DisplayName>Entry 36</DisplayName>
+      <Order>37</Order>
+      <GroupID>3</GroupID>
+      <InputStyle>TextInput</InputStyle>
+      <Disabled>false</Disabled>
+      <Offset>35</Offset>
+      <Flag_TrueValue>1</Flag_TrueValue>
+      <Flag_FalseValue>0</Flag_FalseValue>
+      <BitNames>
+        <string>Bit 1</string>
+        <string>Bit 2</string>
+        <string>Bit 3</string>
+        <string>Bit 4</string>
+        <string>Bit 5</string>
+        <string>Bit 6</string>
+        <string>Bit 7</string>
+        <string>Bit 8</string>
+      </BitNames>
+      <ValueListData>
+        <StartValue>0</StartValue>
+        <MaxItems>255</MaxItems>
+        <LastVisibleItem>255</LastVisibleItem>
+      </ValueListData>
+    </EntryClass>
+    <EntryClass>
+      <DataType>Byte</DataType>
+      <DisplayName>Entry 37</DisplayName>
+      <Order>38</Order>
+      <GroupID>3</GroupID>
+      <InputStyle>TextInput</InputStyle>
+      <Disabled>false</Disabled>
+      <Offset>36</Offset>
+      <Flag_TrueValue>1</Flag_TrueValue>
+      <Flag_FalseValue>0</Flag_FalseValue>
+      <BitNames>
+        <string>Bit 1</string>
+        <string>Bit 2</string>
+        <string>Bit 3</string>
+        <string>Bit 4</string>
+        <string>Bit 5</string>
+        <string>Bit 6</string>
+        <string>Bit 7</string>
+        <string>Bit 8</string>
+      </BitNames>
+      <ValueListData>
+        <StartValue>0</StartValue>
+        <MaxItems>255</MaxItems>
+        <LastVisibleItem>255</LastVisibleItem>
+      </ValueListData>
+    </EntryClass>
+    <EntryClass>
+      <DataType>Byte</DataType>
+      <DisplayName>Entry 38</DisplayName>
+      <Order>39</Order>
+      <GroupID>3</GroupID>
+      <InputStyle>TextInput</InputStyle>
+      <Disabled>false</Disabled>
+      <Offset>37</Offset>
+      <Flag_TrueValue>1</Flag_TrueValue>
+      <Flag_FalseValue>0</Flag_FalseValue>
+      <BitNames>
+        <string>Bit 1</string>
+        <string>Bit 2</string>
+        <string>Bit 3</string>
+        <string>Bit 4</string>
+        <string>Bit 5</string>
+        <string>Bit 6</string>
+        <string>Bit 7</string>
+        <string>Bit 8</string>
+      </BitNames>
+      <ValueListData>
+        <StartValue>0</StartValue>
+        <MaxItems>255</MaxItems>
+        <LastVisibleItem>255</LastVisibleItem>
+      </ValueListData>
+    </EntryClass>
+    <EntryClass>
+      <DataType>Byte</DataType>
+      <DisplayName>Entry 39</DisplayName>
+      <Order>40</Order>
+      <GroupID>3</GroupID>
+      <InputStyle>TextInput</InputStyle>
+      <Disabled>false</Disabled>
+      <Offset>38</Offset>
+      <Flag_TrueValue>1</Flag_TrueValue>
+      <Flag_FalseValue>0</Flag_FalseValue>
+      <BitNames>
+        <string>Bit 1</string>
+        <string>Bit 2</string>
+        <string>Bit 3</string>
+        <string>Bit 4</string>
+        <string>Bit 5</string>
+        <string>Bit 6</string>
+        <string>Bit 7</string>
+        <string>Bit 8</string>
+      </BitNames>
+      <ValueListData>
+        <StartValue>0</StartValue>
+        <MaxItems>255</MaxItems>
+        <LastVisibleItem>255</LastVisibleItem>
+      </ValueListData>
+    </EntryClass>
+    <EntryClass>
+      <DataType>Byte</DataType>
+      <DisplayName>Entry 40</DisplayName>
+      <Order>41</Order>
+      <GroupID>3</GroupID>
+      <InputStyle>TextInput</InputStyle>
+      <Disabled>false</Disabled>
+      <Offset>39</Offset>
+      <Flag_TrueValue>1</Flag_TrueValue>
+      <Flag_FalseValue>0</Flag_FalseValue>
+      <BitNames>
+        <string>Bit 1</string>
+        <string>Bit 2</string>
+        <string>Bit 3</string>
+        <string>Bit 4</string>
+        <string>Bit 5</string>
+        <string>Bit 6</string>
+        <string>Bit 7</string>
+        <string>Bit 8</string>
+      </BitNames>
+      <ValueListData>
+        <StartValue>0</StartValue>
+        <MaxItems>255</MaxItems>
+        <LastVisibleItem>255</LastVisibleItem>
+      </ValueListData>
+    </EntryClass>
+    <EntryClass>
+      <DataType>Byte</DataType>
+      <DisplayName>Entry 41</DisplayName>
+      <Order>43</Order>
+      <GroupID>3</GroupID>
+      <InputStyle>TextInput</InputStyle>
+      <Disabled>false</Disabled>
+      <Offset>40</Offset>
+      <Flag_TrueValue>1</Flag_TrueValue>
+      <Flag_FalseValue>0</Flag_FalseValue>
+      <BitNames>
+        <string>Bit 1</string>
+        <string>Bit 2</string>
+        <string>Bit 3</string>
+        <string>Bit 4</string>
+        <string>Bit 5</string>
+        <string>Bit 6</string>
+        <string>Bit 7</string>
+        <string>Bit 8</string>
+      </BitNames>
+      <ValueListData>
+        <StartValue>0</StartValue>
+        <MaxItems>255</MaxItems>
+        <LastVisibleItem>255</LastVisibleItem>
+      </ValueListData>
+    </EntryClass>
+    <EntryClass>
+      <DataType>Byte</DataType>
+      <DisplayName>Entry 42</DisplayName>
+      <Order>44</Order>
+      <GroupID>3</GroupID>
+      <InputStyle>TextInput</InputStyle>
+      <Disabled>false</Disabled>
+      <Offset>41</Offset>
+      <Flag_TrueValue>1</Flag_TrueValue>
+      <Flag_FalseValue>0</Flag_FalseValue>
+      <BitNames>
+        <string>Bit 1</string>
+        <string>Bit 2</string>
+        <string>Bit 3</string>
+        <string>Bit 4</string>
+        <string>Bit 5</string>
+        <string>Bit 6</string>
+        <string>Bit 7</string>
+        <string>Bit 8</string>
+      </BitNames>
+      <ValueListData>
+        <StartValue>0</StartValue>
+        <MaxItems>255</MaxItems>
+        <LastVisibleItem>255</LastVisibleItem>
+      </ValueListData>
+    </EntryClass>
+    <EntryClass>
+      <DataType>Byte</DataType>
+      <DisplayName>Entry 43</DisplayName>
+      <Order>45</Order>
+      <GroupID>3</GroupID>
+      <InputStyle>TextInput</InputStyle>
+      <Disabled>false</Disabled>
+      <Offset>42</Offset>
+      <Flag_TrueValue>1</Flag_TrueValue>
+      <Flag_FalseValue>0</Flag_FalseValue>
+      <BitNames>
+        <string>Bit 1</string>
+        <string>Bit 2</string>
+        <string>Bit 3</string>
+        <string>Bit 4</string>
+        <string>Bit 5</string>
+        <string>Bit 6</string>
+        <string>Bit 7</string>
+        <string>Bit 8</string>
+      </BitNames>
+      <ValueListData>
+        <StartValue>0</StartValue>
+        <MaxItems>255</MaxItems>
+        <LastVisibleItem>255</LastVisibleItem>
+      </ValueListData>
+    </EntryClass>
+    <EntryClass>
+      <DataType>Byte</DataType>
+      <DisplayName>Entry 44</DisplayName>
+      <Order>46</Order>
+      <GroupID>3</GroupID>
+      <InputStyle>TextInput</InputStyle>
+      <Disabled>false</Disabled>
+      <Offset>43</Offset>
+      <Flag_TrueValue>1</Flag_TrueValue>
+      <Flag_FalseValue>0</Flag_FalseValue>
+      <BitNames>
+        <string>Bit 1</string>
+        <string>Bit 2</string>
+        <string>Bit 3</string>
+        <string>Bit 4</string>
+        <string>Bit 5</string>
+        <string>Bit 6</string>
+        <string>Bit 7</string>
+        <string>Bit 8</string>
+      </BitNames>
+      <ValueListData>
+        <StartValue>0</StartValue>
+        <MaxItems>255</MaxItems>
+        <LastVisibleItem>255</LastVisibleItem>
+      </ValueListData>
+    </EntryClass>
+    <EntryClass>
+      <DataType>Byte</DataType>
+      <DisplayName>Entry 45</DisplayName>
+      <Order>47</Order>
+      <GroupID>3</GroupID>
+      <InputStyle>TextInput</InputStyle>
+      <Disabled>false</Disabled>
+      <Offset>44</Offset>
+      <Flag_TrueValue>1</Flag_TrueValue>
+      <Flag_FalseValue>0</Flag_FalseValue>
+      <BitNames>
+        <string>Bit 1</string>
+        <string>Bit 2</string>
+        <string>Bit 3</string>
+        <string>Bit 4</string>
+        <string>Bit 5</string>
+        <string>Bit 6</string>
+        <string>Bit 7</string>
+        <string>Bit 8</string>
+      </BitNames>
+      <ValueListData>
+        <StartValue>0</StartValue>
+        <MaxItems>255</MaxItems>
+        <LastVisibleItem>255</LastVisibleItem>
+      </ValueListData>
+    </EntryClass>
+    <EntryClass>
+      <DataType>Byte</DataType>
+      <DisplayName>Entry 46</DisplayName>
+      <Order>48</Order>
+      <GroupID>3</GroupID>
+      <InputStyle>TextInput</InputStyle>
+      <Disabled>false</Disabled>
+      <Offset>45</Offset>
+      <Flag_TrueValue>1</Flag_TrueValue>
+      <Flag_FalseValue>0</Flag_FalseValue>
+      <BitNames>
+        <string>Bit 1</string>
+        <string>Bit 2</string>
+        <string>Bit 3</string>
+        <string>Bit 4</string>
+        <string>Bit 5</string>
+        <string>Bit 6</string>
+        <string>Bit 7</string>
+        <string>Bit 8</string>
+      </BitNames>
+      <ValueListData>
+        <StartValue>0</StartValue>
+        <MaxItems>255</MaxItems>
+        <LastVisibleItem>255</LastVisibleItem>
+      </ValueListData>
+    </EntryClass>
+    <EntryClass>
+      <DataType>Byte</DataType>
+      <DisplayName>Entry 47</DisplayName>
+      <Order>49</Order>
+      <GroupID>3</GroupID>
+      <InputStyle>TextInput</InputStyle>
+      <Disabled>false</Disabled>
+      <Offset>46</Offset>
+      <Flag_TrueValue>1</Flag_TrueValue>
+      <Flag_FalseValue>0</Flag_FalseValue>
+      <BitNames>
+        <string>Bit 1</string>
+        <string>Bit 2</string>
+        <string>Bit 3</string>
+        <string>Bit 4</string>
+        <string>Bit 5</string>
+        <string>Bit 6</string>
+        <string>Bit 7</string>
+        <string>Bit 8</string>
+      </BitNames>
+      <ValueListData>
+        <StartValue>0</StartValue>
+        <MaxItems>255</MaxItems>
+        <LastVisibleItem>255</LastVisibleItem>
+      </ValueListData>
+    </EntryClass>
+    <EntryClass>
+      <DataType>Byte</DataType>
+      <DisplayName>Entry 48</DisplayName>
+      <Order>50</Order>
+      <GroupID>3</GroupID>
+      <InputStyle>TextInput</InputStyle>
+      <Disabled>false</Disabled>
+      <Offset>47</Offset>
+      <Flag_TrueValue>1</Flag_TrueValue>
+      <Flag_FalseValue>0</Flag_FalseValue>
+      <BitNames>
+        <string>Bit 1</string>
+        <string>Bit 2</string>
+        <string>Bit 3</string>
+        <string>Bit 4</string>
+        <string>Bit 5</string>
+        <string>Bit 6</string>
+        <string>Bit 7</string>
+        <string>Bit 8</string>
+      </BitNames>
+      <ValueListData>
+        <StartValue>0</StartValue>
+        <MaxItems>255</MaxItems>
+        <LastVisibleItem>255</LastVisibleItem>
+      </ValueListData>
+    </EntryClass>
+    <EntryClass>
+      <DataType>Byte</DataType>
+      <DisplayName>Entry 49</DisplayName>
+      <Order>51</Order>
+      <GroupID>3</GroupID>
+      <InputStyle>TextInput</InputStyle>
+      <Disabled>false</Disabled>
+      <Offset>48</Offset>
+      <Flag_TrueValue>1</Flag_TrueValue>
+      <Flag_FalseValue>0</Flag_FalseValue>
+      <BitNames>
+        <string>Bit 1</string>
+        <string>Bit 2</string>
+        <string>Bit 3</string>
+        <string>Bit 4</string>
+        <string>Bit 5</string>
+        <string>Bit 6</string>
+        <string>Bit 7</string>
+        <string>Bit 8</string>
+      </BitNames>
+      <ValueListData>
+        <StartValue>0</StartValue>
+        <MaxItems>255</MaxItems>
+        <LastVisibleItem>255</LastVisibleItem>
+      </ValueListData>
+    </EntryClass>
+    <EntryClass>
+      <DataType>Byte</DataType>
+      <DisplayName>Entry 50</DisplayName>
+      <Order>52</Order>
+      <GroupID>3</GroupID>
+      <InputStyle>TextInput</InputStyle>
+      <Disabled>false</Disabled>
+      <Offset>49</Offset>
+      <Flag_TrueValue>1</Flag_TrueValue>
+      <Flag_FalseValue>0</Flag_FalseValue>
+      <BitNames>
+        <string>Bit 1</string>
+        <string>Bit 2</string>
+        <string>Bit 3</string>
+        <string>Bit 4</string>
+        <string>Bit 5</string>
+        <string>Bit 6</string>
+        <string>Bit 7</string>
+        <string>Bit 8</string>
+      </BitNames>
+      <ValueListData>
+        <StartValue>0</StartValue>
+        <MaxItems>255</MaxItems>
+        <LastVisibleItem>255</LastVisibleItem>
+      </ValueListData>
+    </EntryClass>
+    <EntryClass>
+      <DataType>Byte</DataType>
+      <DisplayName>Entry 51</DisplayName>
+      <Order>53</Order>
+      <GroupID>3</GroupID>
+      <InputStyle>TextInput</InputStyle>
+      <Disabled>false</Disabled>
+      <Offset>50</Offset>
+      <Flag_TrueValue>1</Flag_TrueValue>
+      <Flag_FalseValue>0</Flag_FalseValue>
+      <BitNames>
+        <string>Bit 1</string>
+        <string>Bit 2</string>
+        <string>Bit 3</string>
+        <string>Bit 4</string>
+        <string>Bit 5</string>
+        <string>Bit 6</string>
+        <string>Bit 7</string>
+        <string>Bit 8</string>
+      </BitNames>
+      <ValueListData>
+        <StartValue>0</StartValue>
+        <MaxItems>255</MaxItems>
+        <LastVisibleItem>255</LastVisibleItem>
+      </ValueListData>
+    </EntryClass>
+    <EntryClass>
+      <DataType>Byte</DataType>
+      <DisplayName>Entry 52</DisplayName>
+      <Order>54</Order>
+      <GroupID>3</GroupID>
+      <InputStyle>TextInput</InputStyle>
+      <Disabled>false</Disabled>
+      <Offset>51</Offset>
+      <Flag_TrueValue>1</Flag_TrueValue>
+      <Flag_FalseValue>0</Flag_FalseValue>
+      <BitNames>
+        <string>Bit 1</string>
+        <string>Bit 2</string>
+        <string>Bit 3</string>
+        <string>Bit 4</string>
+        <string>Bit 5</string>
+        <string>Bit 6</string>
+        <string>Bit 7</string>
+        <string>Bit 8</string>
+      </BitNames>
+      <ValueListData>
+        <StartValue>0</StartValue>
+        <MaxItems>255</MaxItems>
+        <LastVisibleItem>255</LastVisibleItem>
+      </ValueListData>
+    </EntryClass>
+    <EntryClass>
+      <DataType>Byte</DataType>
+      <DisplayName>Entry 53</DisplayName>
+      <Order>55</Order>
+      <GroupID>3</GroupID>
+      <InputStyle>TextInput</InputStyle>
+      <Disabled>false</Disabled>
+      <Offset>52</Offset>
+      <Flag_TrueValue>1</Flag_TrueValue>
+      <Flag_FalseValue>0</Flag_FalseValue>
+      <BitNames>
+        <string>Bit 1</string>
+        <string>Bit 2</string>
+        <string>Bit 3</string>
+        <string>Bit 4</string>
+        <string>Bit 5</string>
+        <string>Bit 6</string>
+        <string>Bit 7</string>
+        <string>Bit 8</string>
+      </BitNames>
+      <ValueListData>
+        <StartValue>0</StartValue>
+        <MaxItems>255</MaxItems>
+        <LastVisibleItem>255</LastVisibleItem>
+      </ValueListData>
+    </EntryClass>
+    <EntryClass>
+      <DataType>Byte</DataType>
+      <DisplayName>Entry 54</DisplayName>
+      <Order>56</Order>
+      <GroupID>3</GroupID>
+      <InputStyle>TextInput</InputStyle>
+      <Disabled>false</Disabled>
+      <Offset>53</Offset>
+      <Flag_TrueValue>1</Flag_TrueValue>
+      <Flag_FalseValue>0</Flag_FalseValue>
+      <BitNames>
+        <string>Bit 1</string>
+        <string>Bit 2</string>
+        <string>Bit 3</string>
+        <string>Bit 4</string>
+        <string>Bit 5</string>
+        <string>Bit 6</string>
+        <string>Bit 7</string>
+        <string>Bit 8</string>
+      </BitNames>
+      <ValueListData>
+        <StartValue>0</StartValue>
+        <MaxItems>255</MaxItems>
+        <LastVisibleItem>255</LastVisibleItem>
+      </ValueListData>
+    </EntryClass>
+    <EntryClass>
+      <DataType>Byte</DataType>
+      <DisplayName>Entry 55</DisplayName>
+      <Order>57</Order>
+      <GroupID>3</GroupID>
+      <InputStyle>TextInput</InputStyle>
+      <Disabled>false</Disabled>
+      <Offset>54</Offset>
+      <Flag_TrueValue>1</Flag_TrueValue>
+      <Flag_FalseValue>0</Flag_FalseValue>
+      <BitNames>
+        <string>Bit 1</string>
+        <string>Bit 2</string>
+        <string>Bit 3</string>
+        <string>Bit 4</string>
+        <string>Bit 5</string>
+        <string>Bit 6</string>
+        <string>Bit 7</string>
+        <string>Bit 8</string>
+      </BitNames>
+      <ValueListData>
+        <StartValue>0</StartValue>
+        <MaxItems>255</MaxItems>
+        <LastVisibleItem>255</LastVisibleItem>
+      </ValueListData>
+    </EntryClass>
+    <EntryClass>
+      <DataType>Byte</DataType>
+      <DisplayName>Entry 56</DisplayName>
+      <Order>58</Order>
+      <GroupID>3</GroupID>
+      <InputStyle>TextInput</InputStyle>
+      <Disabled>false</Disabled>
+      <Offset>55</Offset>
+      <Flag_TrueValue>1</Flag_TrueValue>
+      <Flag_FalseValue>0</Flag_FalseValue>
+      <BitNames>
+        <string>Bit 1</string>
+        <string>Bit 2</string>
+        <string>Bit 3</string>
+        <string>Bit 4</string>
+        <string>Bit 5</string>
+        <string>Bit 6</string>
+        <string>Bit 7</string>
+        <string>Bit 8</string>
+      </BitNames>
+      <ValueListData>
+        <StartValue>0</StartValue>
+        <MaxItems>255</MaxItems>
+        <LastVisibleItem>255</LastVisibleItem>
+      </ValueListData>
+    </EntryClass>
+    <EntryClass>
+      <DataType>Byte</DataType>
+      <DisplayName>Entry 57</DisplayName>
+      <Order>59</Order>
+      <GroupID>3</GroupID>
+      <InputStyle>TextInput</InputStyle>
+      <Disabled>false</Disabled>
+      <Offset>56</Offset>
+      <Flag_TrueValue>1</Flag_TrueValue>
+      <Flag_FalseValue>0</Flag_FalseValue>
+      <BitNames>
+        <string>Bit 1</string>
+        <string>Bit 2</string>
+        <string>Bit 3</string>
+        <string>Bit 4</string>
+        <string>Bit 5</string>
+        <string>Bit 6</string>
+        <string>Bit 7</string>
+        <string>Bit 8</string>
+      </BitNames>
+      <ValueListData>
+        <StartValue>0</StartValue>
+        <MaxItems>255</MaxItems>
+        <LastVisibleItem>255</LastVisibleItem>
+      </ValueListData>
+    </EntryClass>
+    <EntryClass>
+      <DataType>Byte</DataType>
+      <DisplayName>Entry 58</DisplayName>
+      <Order>60</Order>
+      <GroupID>3</GroupID>
+      <InputStyle>TextInput</InputStyle>
+      <Disabled>false</Disabled>
+      <Offset>57</Offset>
+      <Flag_TrueValue>1</Flag_TrueValue>
+      <Flag_FalseValue>0</Flag_FalseValue>
+      <BitNames>
+        <string>Bit 1</string>
+        <string>Bit 2</string>
+        <string>Bit 3</string>
+        <string>Bit 4</string>
+        <string>Bit 5</string>
+        <string>Bit 6</string>
+        <string>Bit 7</string>
+        <string>Bit 8</string>
+      </BitNames>
+      <ValueListData>
+        <StartValue>0</StartValue>
+        <MaxItems>255</MaxItems>
+        <LastVisibleItem>255</LastVisibleItem>
+      </ValueListData>
+    </EntryClass>
+    <EntryClass>
+      <DataType>Byte</DataType>
+      <DisplayName>Entry 59</DisplayName>
+      <Order>61</Order>
+      <GroupID>3</GroupID>
+      <InputStyle>TextInput</InputStyle>
+      <Disabled>false</Disabled>
+      <Offset>58</Offset>
+      <Flag_TrueValue>1</Flag_TrueValue>
+      <Flag_FalseValue>0</Flag_FalseValue>
+      <BitNames>
+        <string>Bit 1</string>
+        <string>Bit 2</string>
+        <string>Bit 3</string>
+        <string>Bit 4</string>
+        <string>Bit 5</string>
+        <string>Bit 6</string>
+        <string>Bit 7</string>
+        <string>Bit 8</string>
+      </BitNames>
+      <ValueListData>
+        <StartValue>0</StartValue>
+        <MaxItems>255</MaxItems>
+        <LastVisibleItem>255</LastVisibleItem>
+      </ValueListData>
+    </EntryClass>
+    <EntryClass>
+      <DataType>Byte</DataType>
+      <DisplayName>Entry 60</DisplayName>
+      <Order>62</Order>
+      <GroupID>3</GroupID>
+      <InputStyle>TextInput</InputStyle>
+      <Disabled>false</Disabled>
+      <Offset>59</Offset>
+      <Flag_TrueValue>1</Flag_TrueValue>
+      <Flag_FalseValue>0</Flag_FalseValue>
+      <BitNames>
+        <string>Bit 1</string>
+        <string>Bit 2</string>
+        <string>Bit 3</string>
+        <string>Bit 4</string>
+        <string>Bit 5</string>
+        <string>Bit 6</string>
+        <string>Bit 7</string>
+        <string>Bit 8</string>
+      </BitNames>
+      <ValueListData>
+        <StartValue>0</StartValue>
+        <MaxItems>255</MaxItems>
+        <LastVisibleItem>255</LastVisibleItem>
+      </ValueListData>
+    </EntryClass>
+    <EntryClass>
+      <DataType>Byte</DataType>
+      <DisplayName>Entry 61</DisplayName>
+      <Order>63</Order>
+      <GroupID>3</GroupID>
+      <InputStyle>TextInput</InputStyle>
+      <Disabled>false</Disabled>
+      <Offset>60</Offset>
+      <Flag_TrueValue>1</Flag_TrueValue>
+      <Flag_FalseValue>0</Flag_FalseValue>
+      <BitNames>
+        <string>Bit 1</string>
+        <string>Bit 2</string>
+        <string>Bit 3</string>
+        <string>Bit 4</string>
+        <string>Bit 5</string>
+        <string>Bit 6</string>
+        <string>Bit 7</string>
+        <string>Bit 8</string>
+      </BitNames>
+      <ValueListData>
+        <StartValue>0</StartValue>
+        <MaxItems>255</MaxItems>
+        <LastVisibleItem>255</LastVisibleItem>
+      </ValueListData>
+    </EntryClass>
+    <EntryClass>
+      <DataType>Byte</DataType>
+      <DisplayName>Entry 62</DisplayName>
+      <Order>64</Order>
+      <GroupID>3</GroupID>
+      <InputStyle>TextInput</InputStyle>
+      <Disabled>false</Disabled>
+      <Offset>61</Offset>
+      <Flag_TrueValue>1</Flag_TrueValue>
+      <Flag_FalseValue>0</Flag_FalseValue>
+      <BitNames>
+        <string>Bit 1</string>
+        <string>Bit 2</string>
+        <string>Bit 3</string>
+        <string>Bit 4</string>
+        <string>Bit 5</string>
+        <string>Bit 6</string>
+        <string>Bit 7</string>
+        <string>Bit 8</string>
+      </BitNames>
+      <ValueListData>
+        <StartValue>0</StartValue>
+        <MaxItems>255</MaxItems>
+        <LastVisibleItem>255</LastVisibleItem>
+      </ValueListData>
+    </EntryClass>
+    <EntryClass>
+      <DataType>Byte</DataType>
+      <DisplayName>Entry 63</DisplayName>
+      <Order>65</Order>
+      <GroupID>3</GroupID>
+      <InputStyle>TextInput</InputStyle>
+      <Disabled>false</Disabled>
+      <Offset>62</Offset>
+      <Flag_TrueValue>1</Flag_TrueValue>
+      <Flag_FalseValue>0</Flag_FalseValue>
+      <BitNames>
+        <string>Bit 1</string>
+        <string>Bit 2</string>
+        <string>Bit 3</string>
+        <string>Bit 4</string>
+        <string>Bit 5</string>
+        <string>Bit 6</string>
+        <string>Bit 7</string>
+        <string>Bit 8</string>
+      </BitNames>
+      <ValueListData>
+        <StartValue>0</StartValue>
+        <MaxItems>255</MaxItems>
+        <LastVisibleItem>255</LastVisibleItem>
+      </ValueListData>
+    </EntryClass>
+    <EntryClass>
+      <DataType>Byte</DataType>
+      <DisplayName>Entry 64</DisplayName>
+      <Order>66</Order>
+      <GroupID>3</GroupID>
+      <InputStyle>TextInput</InputStyle>
+      <Disabled>false</Disabled>
+      <Offset>63</Offset>
+      <Flag_TrueValue>1</Flag_TrueValue>
+      <Flag_FalseValue>0</Flag_FalseValue>
+      <BitNames>
+        <string>Bit 1</string>
+        <string>Bit 2</string>
+        <string>Bit 3</string>
+        <string>Bit 4</string>
+        <string>Bit 5</string>
+        <string>Bit 6</string>
+        <string>Bit 7</string>
+        <string>Bit 8</string>
+      </BitNames>
+      <ValueListData>
+        <StartValue>0</StartValue>
+        <MaxItems>255</MaxItems>
+        <LastVisibleItem>255</LastVisibleItem>
+      </ValueListData>
+    </EntryClass>
+    <EntryClass>
+      <DataType>Byte</DataType>
+      <DisplayName>Entry 65</DisplayName>
+      <Order>67</Order>
+      <GroupID>3</GroupID>
+      <InputStyle>TextInput</InputStyle>
+      <Disabled>false</Disabled>
+      <Offset>64</Offset>
+      <Flag_TrueValue>1</Flag_TrueValue>
+      <Flag_FalseValue>0</Flag_FalseValue>
+      <BitNames>
+        <string>Bit 1</string>
+        <string>Bit 2</string>
+        <string>Bit 3</string>
+        <string>Bit 4</string>
+        <string>Bit 5</string>
+        <string>Bit 6</string>
+        <string>Bit 7</string>
+        <string>Bit 8</string>
+      </BitNames>
+      <ValueListData>
+        <StartValue>0</StartValue>
+        <MaxItems>255</MaxItems>
+        <LastVisibleItem>255</LastVisibleItem>
+      </ValueListData>
+    </EntryClass>
+    <EntryClass>
+      <DataType>Byte</DataType>
+      <DisplayName>Entry 66</DisplayName>
+      <Order>68</Order>
+      <GroupID>3</GroupID>
+      <InputStyle>TextInput</InputStyle>
+      <Disabled>false</Disabled>
+      <Offset>65</Offset>
+      <Flag_TrueValue>1</Flag_TrueValue>
+      <Flag_FalseValue>0</Flag_FalseValue>
+      <BitNames>
+        <string>Bit 1</string>
+        <string>Bit 2</string>
+        <string>Bit 3</string>
+        <string>Bit 4</string>
+        <string>Bit 5</string>
+        <string>Bit 6</string>
+        <string>Bit 7</string>
+        <string>Bit 8</string>
+      </BitNames>
+      <ValueListData>
+        <StartValue>0</StartValue>
+        <MaxItems>255</MaxItems>
+        <LastVisibleItem>255</LastVisibleItem>
+      </ValueListData>
+    </EntryClass>
+    <EntryClass>
+      <DataType>Byte</DataType>
+      <DisplayName>Entry 67</DisplayName>
+      <Order>69</Order>
+      <GroupID>3</GroupID>
+      <InputStyle>TextInput</InputStyle>
+      <Disabled>false</Disabled>
+      <Offset>66</Offset>
+      <Flag_TrueValue>1</Flag_TrueValue>
+      <Flag_FalseValue>0</Flag_FalseValue>
+      <BitNames>
+        <string>Bit 1</string>
+        <string>Bit 2</string>
+        <string>Bit 3</string>
+        <string>Bit 4</string>
+        <string>Bit 5</string>
+        <string>Bit 6</string>
+        <string>Bit 7</string>
+        <string>Bit 8</string>
+      </BitNames>
+      <ValueListData>
+        <StartValue>0</StartValue>
+        <MaxItems>255</MaxItems>
+        <LastVisibleItem>255</LastVisibleItem>
+      </ValueListData>
+    </EntryClass>
+    <EntryClass>
+      <DataType>Byte</DataType>
+      <DisplayName>Entry 68</DisplayName>
+      <Order>70</Order>
+      <GroupID>3</GroupID>
+      <InputStyle>TextInput</InputStyle>
+      <Disabled>false</Disabled>
+      <Offset>67</Offset>
+      <Flag_TrueValue>1</Flag_TrueValue>
+      <Flag_FalseValue>0</Flag_FalseValue>
+      <BitNames>
+        <string>Bit 1</string>
+        <string>Bit 2</string>
+        <string>Bit 3</string>
+        <string>Bit 4</string>
+        <string>Bit 5</string>
+        <string>Bit 6</string>
+        <string>Bit 7</string>
+        <string>Bit 8</string>
+      </BitNames>
+      <ValueListData>
+        <StartValue>0</StartValue>
+        <MaxItems>255</MaxItems>
+        <LastVisibleItem>255</LastVisibleItem>
+      </ValueListData>
+    </EntryClass>
+    <EntryClass>
+      <DataType>Byte</DataType>
+      <DisplayName>Entry 69</DisplayName>
+      <Order>71</Order>
+      <GroupID>3</GroupID>
+      <InputStyle>TextInput</InputStyle>
+      <Disabled>false</Disabled>
+      <Offset>68</Offset>
+      <Flag_TrueValue>1</Flag_TrueValue>
+      <Flag_FalseValue>0</Flag_FalseValue>
+      <BitNames>
+        <string>Bit 1</string>
+        <string>Bit 2</string>
+        <string>Bit 3</string>
+        <string>Bit 4</string>
+        <string>Bit 5</string>
+        <string>Bit 6</string>
+        <string>Bit 7</string>
+        <string>Bit 8</string>
+      </BitNames>
+      <ValueListData>
+        <StartValue>0</StartValue>
+        <MaxItems>255</MaxItems>
+        <LastVisibleItem>255</LastVisibleItem>
+      </ValueListData>
+    </EntryClass>
+    <EntryClass>
+      <DataType>Byte</DataType>
+      <DisplayName>Entry 70</DisplayName>
+      <Order>72</Order>
+      <GroupID>3</GroupID>
+      <InputStyle>TextInput</InputStyle>
+      <Disabled>false</Disabled>
+      <Offset>69</Offset>
+      <Flag_TrueValue>1</Flag_TrueValue>
+      <Flag_FalseValue>0</Flag_FalseValue>
+      <BitNames>
+        <string>Bit 1</string>
+        <string>Bit 2</string>
+        <string>Bit 3</string>
+        <string>Bit 4</string>
+        <string>Bit 5</string>
+        <string>Bit 6</string>
+        <string>Bit 7</string>
+        <string>Bit 8</string>
+      </BitNames>
+      <ValueListData>
+        <StartValue>0</StartValue>
+        <MaxItems>255</MaxItems>
+        <LastVisibleItem>255</LastVisibleItem>
+      </ValueListData>
+    </EntryClass>
+    <EntryClass>
+      <DataType>Byte</DataType>
+      <DisplayName>Entry 71</DisplayName>
+      <Order>73</Order>
+      <GroupID>3</GroupID>
+      <InputStyle>TextInput</InputStyle>
+      <Disabled>false</Disabled>
+      <Offset>70</Offset>
+      <Flag_TrueValue>1</Flag_TrueValue>
+      <Flag_FalseValue>0</Flag_FalseValue>
+      <BitNames>
+        <string>Bit 1</string>
+        <string>Bit 2</string>
+        <string>Bit 3</string>
+        <string>Bit 4</string>
+        <string>Bit 5</string>
+        <string>Bit 6</string>
+        <string>Bit 7</string>
+        <string>Bit 8</string>
+      </BitNames>
+      <ValueListData>
+        <StartValue>0</StartValue>
+        <MaxItems>255</MaxItems>
+        <LastVisibleItem>255</LastVisibleItem>
+      </ValueListData>
+    </EntryClass>
+    <EntryClass>
+      <DataType>Byte</DataType>
+      <DisplayName>Entry 72</DisplayName>
+      <Order>74</Order>
+      <GroupID>3</GroupID>
+      <InputStyle>TextInput</InputStyle>
+      <Disabled>false</Disabled>
+      <Offset>71</Offset>
+      <Flag_TrueValue>1</Flag_TrueValue>
+      <Flag_FalseValue>0</Flag_FalseValue>
+      <BitNames>
+        <string>Bit 1</string>
+        <string>Bit 2</string>
+        <string>Bit 3</string>
+        <string>Bit 4</string>
+        <string>Bit 5</string>
+        <string>Bit 6</string>
+        <string>Bit 7</string>
+        <string>Bit 8</string>
+      </BitNames>
+      <ValueListData>
+        <StartValue>0</StartValue>
+        <MaxItems>255</MaxItems>
+        <LastVisibleItem>255</LastVisibleItem>
+      </ValueListData>
+    </EntryClass>
+    <EntryClass>
+      <DataType>Byte</DataType>
+      <DisplayName>Entry 73</DisplayName>
+      <Order>75</Order>
+      <GroupID>3</GroupID>
+      <InputStyle>TextInput</InputStyle>
+      <Disabled>false</Disabled>
+      <Offset>72</Offset>
+      <Flag_TrueValue>1</Flag_TrueValue>
+      <Flag_FalseValue>0</Flag_FalseValue>
+      <BitNames>
+        <string>Bit 1</string>
+        <string>Bit 2</string>
+        <string>Bit 3</string>
+        <string>Bit 4</string>
+        <string>Bit 5</string>
+        <string>Bit 6</string>
+        <string>Bit 7</string>
+        <string>Bit 8</string>
+      </BitNames>
+      <ValueListData>
+        <StartValue>0</StartValue>
+        <MaxItems>255</MaxItems>
+        <LastVisibleItem>255</LastVisibleItem>
+      </ValueListData>
+    </EntryClass>
+    <EntryClass>
+      <DataType>Byte</DataType>
+      <DisplayName>Entry 74</DisplayName>
+      <Order>76</Order>
+      <GroupID>3</GroupID>
+      <InputStyle>TextInput</InputStyle>
+      <Disabled>false</Disabled>
+      <Offset>73</Offset>
+      <Flag_TrueValue>1</Flag_TrueValue>
+      <Flag_FalseValue>0</Flag_FalseValue>
+      <BitNames>
+        <string>Bit 1</string>
+        <string>Bit 2</string>
+        <string>Bit 3</string>
+        <string>Bit 4</string>
+        <string>Bit 5</string>
+        <string>Bit 6</string>
+        <string>Bit 7</string>
+        <string>Bit 8</string>
+      </BitNames>
+      <ValueListData>
+        <StartValue>0</StartValue>
+        <MaxItems>255</MaxItems>
+        <LastVisibleItem>255</LastVisibleItem>
+      </ValueListData>
+    </EntryClass>
+    <EntryClass>
+      <DataType>Byte</DataType>
+      <DisplayName>Entry 75</DisplayName>
+      <Order>77</Order>
+      <GroupID>3</GroupID>
+      <InputStyle>TextInput</InputStyle>
+      <Disabled>false</Disabled>
+      <Offset>74</Offset>
+      <Flag_TrueValue>1</Flag_TrueValue>
+      <Flag_FalseValue>0</Flag_FalseValue>
+      <BitNames>
+        <string>Bit 1</string>
+        <string>Bit 2</string>
+        <string>Bit 3</string>
+        <string>Bit 4</string>
+        <string>Bit 5</string>
+        <string>Bit 6</string>
+        <string>Bit 7</string>
+        <string>Bit 8</string>
+      </BitNames>
+      <ValueListData>
+        <StartValue>0</StartValue>
+        <MaxItems>255</MaxItems>
+        <LastVisibleItem>255</LastVisibleItem>
+      </ValueListData>
+    </EntryClass>
+    <EntryClass>
+      <DataType>Byte</DataType>
+      <DisplayName>Entry 76</DisplayName>
+      <Order>78</Order>
+      <GroupID>3</GroupID>
+      <InputStyle>TextInput</InputStyle>
+      <Disabled>false</Disabled>
+      <Offset>75</Offset>
+      <Flag_TrueValue>1</Flag_TrueValue>
+      <Flag_FalseValue>0</Flag_FalseValue>
+      <BitNames>
+        <string>Bit 1</string>
+        <string>Bit 2</string>
+        <string>Bit 3</string>
+        <string>Bit 4</string>
+        <string>Bit 5</string>
+        <string>Bit 6</string>
+        <string>Bit 7</string>
+        <string>Bit 8</string>
+      </BitNames>
+      <ValueListData>
+        <StartValue>0</StartValue>
+        <MaxItems>255</MaxItems>
+        <LastVisibleItem>255</LastVisibleItem>
+      </ValueListData>
+    </EntryClass>
+    <EntryClass>
+      <DataType>Byte</DataType>
+      <DisplayName>Entry 77</DisplayName>
+      <Order>79</Order>
+      <GroupID>3</GroupID>
+      <InputStyle>TextInput</InputStyle>
+      <Disabled>false</Disabled>
+      <Offset>76</Offset>
+      <Flag_TrueValue>1</Flag_TrueValue>
+      <Flag_FalseValue>0</Flag_FalseValue>
+      <BitNames>
+        <string>Bit 1</string>
+        <string>Bit 2</string>
+        <string>Bit 3</string>
+        <string>Bit 4</string>
+        <string>Bit 5</string>
+        <string>Bit 6</string>
+        <string>Bit 7</string>
+        <string>Bit 8</string>
+      </BitNames>
+      <ValueListData>
+        <StartValue>0</StartValue>
+        <MaxItems>255</MaxItems>
+        <LastVisibleItem>255</LastVisibleItem>
+      </ValueListData>
+    </EntryClass>
+    <EntryClass>
+      <DataType>Byte</DataType>
+      <DisplayName>Entry 78</DisplayName>
+      <Order>80</Order>
+      <GroupID>3</GroupID>
+      <InputStyle>TextInput</InputStyle>
+      <Disabled>false</Disabled>
+      <Offset>77</Offset>
+      <Flag_TrueValue>1</Flag_TrueValue>
+      <Flag_FalseValue>0</Flag_FalseValue>
+      <BitNames>
+        <string>Bit 1</string>
+        <string>Bit 2</string>
+        <string>Bit 3</string>
+        <string>Bit 4</string>
+        <string>Bit 5</string>
+        <string>Bit 6</string>
+        <string>Bit 7</string>
+        <string>Bit 8</string>
+      </BitNames>
+      <ValueListData>
+        <StartValue>0</StartValue>
+        <MaxItems>255</MaxItems>
+        <LastVisibleItem>255</LastVisibleItem>
+      </ValueListData>
+    </EntryClass>
+    <EntryClass>
+      <DataType>Byte</DataType>
+      <DisplayName>Entry 79</DisplayName>
+      <Order>81</Order>
+      <GroupID>3</GroupID>
+      <InputStyle>TextInput</InputStyle>
+      <Disabled>false</Disabled>
+      <Offset>78</Offset>
+      <Flag_TrueValue>1</Flag_TrueValue>
+      <Flag_FalseValue>0</Flag_FalseValue>
+      <BitNames>
+        <string>Bit 1</string>
+        <string>Bit 2</string>
+        <string>Bit 3</string>
+        <string>Bit 4</string>
+        <string>Bit 5</string>
+        <string>Bit 6</string>
+        <string>Bit 7</string>
+        <string>Bit 8</string>
+      </BitNames>
+      <ValueListData>
+        <StartValue>0</StartValue>
+        <MaxItems>255</MaxItems>
+        <LastVisibleItem>255</LastVisibleItem>
+      </ValueListData>
+    </EntryClass>
+    <EntryClass>
+      <DataType>Byte</DataType>
+      <DisplayName>Entry 80</DisplayName>
+      <Order>82</Order>
+      <GroupID>3</GroupID>
+      <InputStyle>TextInput</InputStyle>
+      <Disabled>false</Disabled>
+      <Offset>79</Offset>
+      <Flag_TrueValue>1</Flag_TrueValue>
+      <Flag_FalseValue>0</Flag_FalseValue>
+      <BitNames>
+        <string>Bit 1</string>
+        <string>Bit 2</string>
+        <string>Bit 3</string>
+        <string>Bit 4</string>
+        <string>Bit 5</string>
+        <string>Bit 6</string>
+        <string>Bit 7</string>
+        <string>Bit 8</string>
+      </BitNames>
+      <ValueListData>
+        <StartValue>0</StartValue>
+        <MaxItems>255</MaxItems>
+        <LastVisibleItem>255</LastVisibleItem>
+      </ValueListData>
+    </EntryClass>
+    <EntryClass>
+      <DataType>Byte</DataType>
+      <DisplayName>Entry 81</DisplayName>
+      <Order>83</Order>
+      <GroupID>3</GroupID>
+      <InputStyle>TextInput</InputStyle>
+      <Disabled>false</Disabled>
+      <Offset>80</Offset>
+      <Flag_TrueValue>1</Flag_TrueValue>
+      <Flag_FalseValue>0</Flag_FalseValue>
+      <BitNames>
+        <string>Bit 1</string>
+        <string>Bit 2</string>
+        <string>Bit 3</string>
+        <string>Bit 4</string>
+        <string>Bit 5</string>
+        <string>Bit 6</string>
+        <string>Bit 7</string>
+        <string>Bit 8</string>
+      </BitNames>
+      <ValueListData>
+        <StartValue>0</StartValue>
+        <MaxItems>255</MaxItems>
+        <LastVisibleItem>255</LastVisibleItem>
+      </ValueListData>
+    </EntryClass>
+    <EntryClass>
+      <DataType>Byte</DataType>
+      <DisplayName>Entry 82</DisplayName>
+      <Order>84</Order>
+      <GroupID>3</GroupID>
+      <InputStyle>TextInput</InputStyle>
+      <Disabled>false</Disabled>
+      <Offset>81</Offset>
+      <Flag_TrueValue>1</Flag_TrueValue>
+      <Flag_FalseValue>0</Flag_FalseValue>
+      <BitNames>
+        <string>Bit 1</string>
+        <string>Bit 2</string>
+        <string>Bit 3</string>
+        <string>Bit 4</string>
+        <string>Bit 5</string>
+        <string>Bit 6</string>
+        <string>Bit 7</string>
+        <string>Bit 8</string>
+      </BitNames>
+      <ValueListData>
+        <StartValue>0</StartValue>
+        <MaxItems>255</MaxItems>
+        <LastVisibleItem>255</LastVisibleItem>
+      </ValueListData>
+    </EntryClass>
+    <EntryClass>
+      <DataType>Byte</DataType>
+      <DisplayName>Entry 83</DisplayName>
+      <Order>85</Order>
+      <GroupID>3</GroupID>
+      <InputStyle>TextInput</InputStyle>
+      <Disabled>false</Disabled>
+      <Offset>82</Offset>
+      <Flag_TrueValue>1</Flag_TrueValue>
+      <Flag_FalseValue>0</Flag_FalseValue>
+      <BitNames>
+        <string>Bit 1</string>
+        <string>Bit 2</string>
+        <string>Bit 3</string>
+        <string>Bit 4</string>
+        <string>Bit 5</string>
+        <string>Bit 6</string>
+        <string>Bit 7</string>
+        <string>Bit 8</string>
+      </BitNames>
+      <ValueListData>
+        <StartValue>0</StartValue>
+        <MaxItems>255</MaxItems>
+        <LastVisibleItem>255</LastVisibleItem>
+      </ValueListData>
+    </EntryClass>
+    <EntryClass>
+      <DataType>Byte</DataType>
+      <DisplayName>Entry 84</DisplayName>
+      <Order>86</Order>
+      <GroupID>3</GroupID>
+      <InputStyle>TextInput</InputStyle>
+      <Disabled>false</Disabled>
+      <Offset>83</Offset>
+      <Flag_TrueValue>1</Flag_TrueValue>
+      <Flag_FalseValue>0</Flag_FalseValue>
+      <BitNames>
+        <string>Bit 1</string>
+        <string>Bit 2</string>
+        <string>Bit 3</string>
+        <string>Bit 4</string>
+        <string>Bit 5</string>
+        <string>Bit 6</string>
+        <string>Bit 7</string>
+        <string>Bit 8</string>
+      </BitNames>
+      <ValueListData>
+        <StartValue>0</StartValue>
+        <MaxItems>255</MaxItems>
+        <LastVisibleItem>255</LastVisibleItem>
+      </ValueListData>
+    </EntryClass>
+    <EntryClass>
+      <DataType>Byte</DataType>
+      <DisplayName>Entry 85</DisplayName>
+      <Order>87</Order>
+      <GroupID>3</GroupID>
+      <InputStyle>TextInput</InputStyle>
+      <Disabled>false</Disabled>
+      <Offset>84</Offset>
+      <Flag_TrueValue>1</Flag_TrueValue>
+      <Flag_FalseValue>0</Flag_FalseValue>
+      <BitNames>
+        <string>Bit 1</string>
+        <string>Bit 2</string>
+        <string>Bit 3</string>
+        <string>Bit 4</string>
+        <string>Bit 5</string>
+        <string>Bit 6</string>
+        <string>Bit 7</string>
+        <string>Bit 8</string>
+      </BitNames>
+      <ValueListData>
+        <StartValue>0</StartValue>
+        <MaxItems>255</MaxItems>
+        <LastVisibleItem>255</LastVisibleItem>
+      </ValueListData>
+    </EntryClass>
+    <EntryClass>
+      <DataType>Byte</DataType>
+      <DisplayName>Entry 86</DisplayName>
+      <Order>88</Order>
+      <GroupID>3</GroupID>
+      <InputStyle>TextInput</InputStyle>
+      <Disabled>false</Disabled>
+      <Offset>85</Offset>
+      <Flag_TrueValue>1</Flag_TrueValue>
+      <Flag_FalseValue>0</Flag_FalseValue>
+      <BitNames>
+        <string>Bit 1</string>
+        <string>Bit 2</string>
+        <string>Bit 3</string>
+        <string>Bit 4</string>
+        <string>Bit 5</string>
+        <string>Bit 6</string>
+        <string>Bit 7</string>
+        <string>Bit 8</string>
+      </BitNames>
+      <ValueListData>
+        <StartValue>0</StartValue>
+        <MaxItems>255</MaxItems>
+        <LastVisibleItem>255</LastVisibleItem>
+      </ValueListData>
+    </EntryClass>
+    <EntryClass>
+      <DataType>Byte</DataType>
+      <DisplayName>Entry 87</DisplayName>
+      <Order>89</Order>
+      <GroupID>3</GroupID>
+      <InputStyle>TextInput</InputStyle>
+      <Disabled>false</Disabled>
+      <Offset>86</Offset>
+      <Flag_TrueValue>1</Flag_TrueValue>
+      <Flag_FalseValue>0</Flag_FalseValue>
+      <BitNames>
+        <string>Bit 1</string>
+        <string>Bit 2</string>
+        <string>Bit 3</string>
+        <string>Bit 4</string>
+        <string>Bit 5</string>
+        <string>Bit 6</string>
+        <string>Bit 7</string>
+        <string>Bit 8</string>
+      </BitNames>
+      <ValueListData>
+        <StartValue>0</StartValue>
+        <MaxItems>255</MaxItems>
+        <LastVisibleItem>255</LastVisibleItem>
+      </ValueListData>
+    </EntryClass>
+    <EntryClass>
+      <DataType>Byte</DataType>
+      <DisplayName>Entry 88</DisplayName>
+      <Order>90</Order>
+      <GroupID>3</GroupID>
+      <InputStyle>TextInput</InputStyle>
+      <Disabled>false</Disabled>
+      <Offset>87</Offset>
+      <Flag_TrueValue>1</Flag_TrueValue>
+      <Flag_FalseValue>0</Flag_FalseValue>
+      <BitNames>
+        <string>Bit 1</string>
+        <string>Bit 2</string>
+        <string>Bit 3</string>
+        <string>Bit 4</string>
+        <string>Bit 5</string>
+        <string>Bit 6</string>
+        <string>Bit 7</string>
+        <string>Bit 8</string>
+      </BitNames>
+      <ValueListData>
+        <StartValue>0</StartValue>
+        <MaxItems>255</MaxItems>
+        <LastVisibleItem>255</LastVisibleItem>
+      </ValueListData>
+    </EntryClass>
+    <EntryClass>
+      <DataType>Byte</DataType>
+      <DisplayName>Entry 89</DisplayName>
+      <Order>91</Order>
+      <GroupID>3</GroupID>
+      <InputStyle>TextInput</InputStyle>
+      <Disabled>false</Disabled>
+      <Offset>88</Offset>
+      <Flag_TrueValue>1</Flag_TrueValue>
+      <Flag_FalseValue>0</Flag_FalseValue>
+      <BitNames>
+        <string>Bit 1</string>
+        <string>Bit 2</string>
+        <string>Bit 3</string>
+        <string>Bit 4</string>
+        <string>Bit 5</string>
+        <string>Bit 6</string>
+        <string>Bit 7</string>
+        <string>Bit 8</string>
+      </BitNames>
+      <ValueListData>
+        <StartValue>0</StartValue>
+        <MaxItems>255</MaxItems>
+        <LastVisibleItem>255</LastVisibleItem>
+      </ValueListData>
+    </EntryClass>
+    <EntryClass>
+      <DataType>Byte</DataType>
+      <DisplayName>Entry 90</DisplayName>
+      <Order>92</Order>
+      <GroupID>3</GroupID>
+      <InputStyle>TextInput</InputStyle>
+      <Disabled>false</Disabled>
+      <Offset>89</Offset>
+      <Flag_TrueValue>1</Flag_TrueValue>
+      <Flag_FalseValue>0</Flag_FalseValue>
+      <BitNames>
+        <string>Bit 1</string>
+        <string>Bit 2</string>
+        <string>Bit 3</string>
+        <string>Bit 4</string>
+        <string>Bit 5</string>
+        <string>Bit 6</string>
+        <string>Bit 7</string>
+        <string>Bit 8</string>
+      </BitNames>
+      <ValueListData>
+        <StartValue>0</StartValue>
+        <MaxItems>255</MaxItems>
+        <LastVisibleItem>255</LastVisibleItem>
+      </ValueListData>
+    </EntryClass>
+    <EntryClass>
+      <DataType>Byte</DataType>
+      <DisplayName>Entry 91</DisplayName>
+      <Order>93</Order>
+      <GroupID>3</GroupID>
+      <InputStyle>TextInput</InputStyle>
+      <Disabled>false</Disabled>
+      <Offset>90</Offset>
+      <Flag_TrueValue>1</Flag_TrueValue>
+      <Flag_FalseValue>0</Flag_FalseValue>
+      <BitNames>
+        <string>Bit 1</string>
+        <string>Bit 2</string>
+        <string>Bit 3</string>
+        <string>Bit 4</string>
+        <string>Bit 5</string>
+        <string>Bit 6</string>
+        <string>Bit 7</string>
+        <string>Bit 8</string>
+      </BitNames>
+      <ValueListData>
+        <StartValue>0</StartValue>
+        <MaxItems>255</MaxItems>
+        <LastVisibleItem>255</LastVisibleItem>
+      </ValueListData>
+    </EntryClass>
+    <EntryClass>
+      <DataType>Byte</DataType>
+      <DisplayName>Entry 92</DisplayName>
+      <Order>94</Order>
+      <GroupID>3</GroupID>
+      <InputStyle>TextInput</InputStyle>
+      <Disabled>false</Disabled>
+      <Offset>91</Offset>
+      <Flag_TrueValue>1</Flag_TrueValue>
+      <Flag_FalseValue>0</Flag_FalseValue>
+      <BitNames>
+        <string>Bit 1</string>
+        <string>Bit 2</string>
+        <string>Bit 3</string>
+        <string>Bit 4</string>
+        <string>Bit 5</string>
+        <string>Bit 6</string>
+        <string>Bit 7</string>
+        <string>Bit 8</string>
+      </BitNames>
+      <ValueListData>
+        <StartValue>0</StartValue>
+        <MaxItems>255</MaxItems>
+        <LastVisibleItem>255</LastVisibleItem>
+      </ValueListData>
+    </EntryClass>
+    <EntryClass>
+      <DataType>Byte</DataType>
+      <DisplayName>Entry 93</DisplayName>
+      <Order>95</Order>
+      <GroupID>3</GroupID>
+      <InputStyle>TextInput</InputStyle>
+      <Disabled>false</Disabled>
+      <Offset>92</Offset>
+      <Flag_TrueValue>1</Flag_TrueValue>
+      <Flag_FalseValue>0</Flag_FalseValue>
+      <BitNames>
+        <string>Bit 1</string>
+        <string>Bit 2</string>
+        <string>Bit 3</string>
+        <string>Bit 4</string>
+        <string>Bit 5</string>
+        <string>Bit 6</string>
+        <string>Bit 7</string>
+        <string>Bit 8</string>
+      </BitNames>
+      <ValueListData>
+        <StartValue>0</StartValue>
+        <MaxItems>255</MaxItems>
+        <LastVisibleItem>255</LastVisibleItem>
+      </ValueListData>
+    </EntryClass>
+    <EntryClass>
+      <DataType>Byte</DataType>
+      <DisplayName>Entry 94</DisplayName>
+      <Order>96</Order>
+      <GroupID>3</GroupID>
+      <InputStyle>TextInput</InputStyle>
+      <Disabled>false</Disabled>
+      <Offset>93</Offset>
+      <Flag_TrueValue>1</Flag_TrueValue>
+      <Flag_FalseValue>0</Flag_FalseValue>
+      <BitNames>
+        <string>Bit 1</string>
+        <string>Bit 2</string>
+        <string>Bit 3</string>
+        <string>Bit 4</string>
+        <string>Bit 5</string>
+        <string>Bit 6</string>
+        <string>Bit 7</string>
+        <string>Bit 8</string>
+      </BitNames>
+      <ValueListData>
+        <StartValue>0</StartValue>
+        <MaxItems>255</MaxItems>
+        <LastVisibleItem>255</LastVisibleItem>
+      </ValueListData>
+    </EntryClass>
+    <EntryClass>
+      <DataType>Byte</DataType>
+      <DisplayName>Entry 95</DisplayName>
+      <Order>97</Order>
+      <GroupID>3</GroupID>
+      <InputStyle>TextInput</InputStyle>
+      <Disabled>false</Disabled>
+      <Offset>94</Offset>
+      <Flag_TrueValue>1</Flag_TrueValue>
+      <Flag_FalseValue>0</Flag_FalseValue>
+      <BitNames>
+        <string>Bit 1</string>
+        <string>Bit 2</string>
+        <string>Bit 3</string>
+        <string>Bit 4</string>
+        <string>Bit 5</string>
+        <string>Bit 6</string>
+        <string>Bit 7</string>
+        <string>Bit 8</string>
+      </BitNames>
+      <ValueListData>
+        <StartValue>0</StartValue>
+        <MaxItems>255</MaxItems>
+        <LastVisibleItem>255</LastVisibleItem>
+      </ValueListData>
+    </EntryClass>
+    <EntryClass>
+      <DataType>Byte</DataType>
+      <DisplayName>Entry 96</DisplayName>
+      <Order>98</Order>
+      <GroupID>3</GroupID>
+      <InputStyle>TextInput</InputStyle>
+      <Disabled>false</Disabled>
+      <Offset>95</Offset>
+      <Flag_TrueValue>1</Flag_TrueValue>
+      <Flag_FalseValue>0</Flag_FalseValue>
+      <BitNames>
+        <string>Bit 1</string>
+        <string>Bit 2</string>
+        <string>Bit 3</string>
+        <string>Bit 4</string>
+        <string>Bit 5</string>
+        <string>Bit 6</string>
+        <string>Bit 7</string>
+        <string>Bit 8</string>
+      </BitNames>
+      <ValueListData>
+        <StartValue>0</StartValue>
+        <MaxItems>255</MaxItems>
+        <LastVisibleItem>255</LastVisibleItem>
+      </ValueListData>
+    </EntryClass>
+    <EntryClass>
+      <DataType>Byte</DataType>
+      <DisplayName>Entry 97</DisplayName>
+      <Order>1</Order>
+      <GroupID>7</GroupID>
+      <InputStyle>TextInput</InputStyle>
+      <Disabled>false</Disabled>
+      <Offset>96</Offset>
+      <Flag_TrueValue>1</Flag_TrueValue>
+      <Flag_FalseValue>0</Flag_FalseValue>
+      <BitNames>
+        <string>Bit 1</string>
+        <string>Bit 2</string>
+        <string>Bit 3</string>
+        <string>Bit 4</string>
+        <string>Bit 5</string>
+        <string>Bit 6</string>
+        <string>Bit 7</string>
+        <string>Bit 8</string>
+      </BitNames>
+      <ValueListData>
+        <StartValue>0</StartValue>
+        <MaxItems>255</MaxItems>
+        <LastVisibleItem>255</LastVisibleItem>
+      </ValueListData>
+    </EntryClass>
+    <EntryClass>
+      <DataType>Byte</DataType>
+      <DisplayName>Entry 98</DisplayName>
+      <Order>99</Order>
+      <GroupID>7</GroupID>
+      <InputStyle>TextInput</InputStyle>
+      <Disabled>false</Disabled>
+      <Offset>97</Offset>
+      <Flag_TrueValue>1</Flag_TrueValue>
+      <Flag_FalseValue>0</Flag_FalseValue>
+      <BitNames>
+        <string>Bit 1</string>
+        <string>Bit 2</string>
+        <string>Bit 3</string>
+        <string>Bit 4</string>
+        <string>Bit 5</string>
+        <string>Bit 6</string>
+        <string>Bit 7</string>
+        <string>Bit 8</string>
+      </BitNames>
+      <ValueListData>
+        <StartValue>0</StartValue>
+        <MaxItems>255</MaxItems>
+        <LastVisibleItem>255</LastVisibleItem>
+      </ValueListData>
+    </EntryClass>
+    <EntryClass>
+      <DataType>Byte</DataType>
+      <DisplayName>Entry 99</DisplayName>
+      <Order>100</Order>
+      <GroupID>7</GroupID>
+      <InputStyle>TextInput</InputStyle>
+      <Disabled>false</Disabled>
+      <Offset>98</Offset>
+      <Flag_TrueValue>1</Flag_TrueValue>
+      <Flag_FalseValue>0</Flag_FalseValue>
+      <BitNames>
+        <string>Bit 1</string>
+        <string>Bit 2</string>
+        <string>Bit 3</string>
+        <string>Bit 4</string>
+        <string>Bit 5</string>
+        <string>Bit 6</string>
+        <string>Bit 7</string>
+        <string>Bit 8</string>
+      </BitNames>
+      <ValueListData>
+        <StartValue>0</StartValue>
+        <MaxItems>255</MaxItems>
+        <LastVisibleItem>255</LastVisibleItem>
+      </ValueListData>
+    </EntryClass>
+    <EntryClass>
+      <DataType>Byte</DataType>
+      <DisplayName>Entry 100</DisplayName>
+      <Order>101</Order>
+      <GroupID>7</GroupID>
+      <InputStyle>TextInput</InputStyle>
+      <Disabled>false</Disabled>
+      <Offset>99</Offset>
+      <Flag_TrueValue>1</Flag_TrueValue>
+      <Flag_FalseValue>0</Flag_FalseValue>
+      <BitNames>
+        <string>Bit 1</string>
+        <string>Bit 2</string>
+        <string>Bit 3</string>
+        <string>Bit 4</string>
+        <string>Bit 5</string>
+        <string>Bit 6</string>
+        <string>Bit 7</string>
+        <string>Bit 8</string>
+      </BitNames>
+      <ValueListData>
+        <StartValue>0</StartValue>
+        <MaxItems>255</MaxItems>
+        <LastVisibleItem>255</LastVisibleItem>
+      </ValueListData>
+    </EntryClass>
+    <EntryClass>
+      <DataType>Byte</DataType>
+      <DisplayName>Entry 101</DisplayName>
+      <Order>102</Order>
+      <GroupID>7</GroupID>
+      <InputStyle>TextInput</InputStyle>
+      <Disabled>false</Disabled>
+      <Offset>100</Offset>
+      <Flag_TrueValue>1</Flag_TrueValue>
+      <Flag_FalseValue>0</Flag_FalseValue>
+      <BitNames>
+        <string>Bit 1</string>
+        <string>Bit 2</string>
+        <string>Bit 3</string>
+        <string>Bit 4</string>
+        <string>Bit 5</string>
+        <string>Bit 6</string>
+        <string>Bit 7</string>
+        <string>Bit 8</string>
+      </BitNames>
+      <ValueListData>
+        <StartValue>0</StartValue>
+        <MaxItems>255</MaxItems>
+        <LastVisibleItem>255</LastVisibleItem>
+      </ValueListData>
+    </EntryClass>
+    <EntryClass>
+      <DataType>Byte</DataType>
+      <DisplayName>Entry 102</DisplayName>
+      <Order>103</Order>
+      <GroupID>7</GroupID>
+      <InputStyle>TextInput</InputStyle>
+      <Disabled>false</Disabled>
+      <Offset>101</Offset>
+      <Flag_TrueValue>1</Flag_TrueValue>
+      <Flag_FalseValue>0</Flag_FalseValue>
+      <BitNames>
+        <string>Bit 1</string>
+        <string>Bit 2</string>
+        <string>Bit 3</string>
+        <string>Bit 4</string>
+        <string>Bit 5</string>
+        <string>Bit 6</string>
+        <string>Bit 7</string>
+        <string>Bit 8</string>
+      </BitNames>
+      <ValueListData>
+        <StartValue>0</StartValue>
+        <MaxItems>255</MaxItems>
+        <LastVisibleItem>255</LastVisibleItem>
+      </ValueListData>
+    </EntryClass>
+    <EntryClass>
+      <DataType>Byte</DataType>
+      <DisplayName>Entry 103</DisplayName>
+      <Order>104</Order>
+      <GroupID>7</GroupID>
+      <InputStyle>TextInput</InputStyle>
+      <Disabled>false</Disabled>
+      <Offset>102</Offset>
+      <Flag_TrueValue>1</Flag_TrueValue>
+      <Flag_FalseValue>0</Flag_FalseValue>
+      <BitNames>
+        <string>Bit 1</string>
+        <string>Bit 2</string>
+        <string>Bit 3</string>
+        <string>Bit 4</string>
+        <string>Bit 5</string>
+        <string>Bit 6</string>
+        <string>Bit 7</string>
+        <string>Bit 8</string>
+      </BitNames>
+      <ValueListData>
+        <StartValue>0</StartValue>
+        <MaxItems>255</MaxItems>
+        <LastVisibleItem>255</LastVisibleItem>
+      </ValueListData>
+    </EntryClass>
+    <EntryClass>
+      <DataType>Byte</DataType>
+      <DisplayName>Entry 104</DisplayName>
+      <Order>105</Order>
+      <GroupID>7</GroupID>
+      <InputStyle>TextInput</InputStyle>
+      <Disabled>false</Disabled>
+      <Offset>103</Offset>
+      <Flag_TrueValue>1</Flag_TrueValue>
+      <Flag_FalseValue>0</Flag_FalseValue>
+      <BitNames>
+        <string>Bit 1</string>
+        <string>Bit 2</string>
+        <string>Bit 3</string>
+        <string>Bit 4</string>
+        <string>Bit 5</string>
+        <string>Bit 6</string>
+        <string>Bit 7</string>
+        <string>Bit 8</string>
+      </BitNames>
+      <ValueListData>
+        <StartValue>0</StartValue>
+        <MaxItems>255</MaxItems>
+        <LastVisibleItem>255</LastVisibleItem>
+      </ValueListData>
+    </EntryClass>
+    <EntryClass>
+      <DataType>Byte</DataType>
+      <DisplayName>Lv Learned</DisplayName>
+      <Order>1</Order>
+      <GroupID>9</GroupID>
+      <InputStyle>TextInput</InputStyle>
+      <Disabled>false</Disabled>
+      <Offset>104</Offset>
+      <Flag_TrueValue>1</Flag_TrueValue>
+      <Flag_FalseValue>0</Flag_FalseValue>
+      <BitNames>
+        <string>Bit 1</string>
+        <string>Bit 2</string>
+        <string>Bit 3</string>
+        <string>Bit 4</string>
+        <string>Bit 5</string>
+        <string>Bit 6</string>
+        <string>Bit 7</string>
+        <string>Bit 8</string>
+      </BitNames>
+      <ValueListData>
+        <StartValue>0</StartValue>
+        <MaxItems>255</MaxItems>
+        <LastVisibleItem>255</LastVisibleItem>
+      </ValueListData>
+    </EntryClass>
+    <EntryClass>
+      <DataType>Byte</DataType>
+      <DisplayName>SP Cost</DisplayName>
+      <Order>107</Order>
+      <GroupID>9</GroupID>
+      <InputStyle>TextInput</InputStyle>
+      <Disabled>false</Disabled>
+      <Offset>105</Offset>
+      <Flag_TrueValue>1</Flag_TrueValue>
+      <Flag_FalseValue>0</Flag_FalseValue>
+      <BitNames>
+        <string>Bit 1</string>
+        <string>Bit 2</string>
+        <string>Bit 3</string>
+        <string>Bit 4</string>
+        <string>Bit 5</string>
+        <string>Bit 6</string>
+        <string>Bit 7</string>
+        <string>Bit 8</string>
+      </BitNames>
+      <ValueListData>
+        <StartValue>0</StartValue>
+        <MaxItems>255</MaxItems>
+        <LastVisibleItem>255</LastVisibleItem>
+      </ValueListData>
+    </EntryClass>
+    <EntryClass>
+      <DataType>Byte</DataType>
+      <DisplayName>Lv Learned</DisplayName>
+      <Order>1</Order>
+      <GroupID>10</GroupID>
+      <InputStyle>TextInput</InputStyle>
+      <Disabled>false</Disabled>
+      <Offset>106</Offset>
+      <Flag_TrueValue>1</Flag_TrueValue>
+      <Flag_FalseValue>0</Flag_FalseValue>
+      <BitNames>
+        <string>Bit 1</string>
+        <string>Bit 2</string>
+        <string>Bit 3</string>
+        <string>Bit 4</string>
+        <string>Bit 5</string>
+        <string>Bit 6</string>
+        <string>Bit 7</string>
+        <string>Bit 8</string>
+      </BitNames>
+      <ValueListData>
+        <StartValue>0</StartValue>
+        <MaxItems>255</MaxItems>
+        <LastVisibleItem>255</LastVisibleItem>
+      </ValueListData>
+    </EntryClass>
+    <EntryClass>
+      <DataType>Byte</DataType>
+      <DisplayName>SP Cost</DisplayName>
+      <Order>109</Order>
+      <GroupID>10</GroupID>
+      <InputStyle>TextInput</InputStyle>
+      <Disabled>false</Disabled>
+      <Offset>107</Offset>
+      <Flag_TrueValue>1</Flag_TrueValue>
+      <Flag_FalseValue>0</Flag_FalseValue>
+      <BitNames>
+        <string>Bit 1</string>
+        <string>Bit 2</string>
+        <string>Bit 3</string>
+        <string>Bit 4</string>
+        <string>Bit 5</string>
+        <string>Bit 6</string>
+        <string>Bit 7</string>
+        <string>Bit 8</string>
+      </BitNames>
+      <ValueListData>
+        <StartValue>0</StartValue>
+        <MaxItems>255</MaxItems>
+        <LastVisibleItem>255</LastVisibleItem>
+      </ValueListData>
+    </EntryClass>
+    <EntryClass>
+      <DataType>Byte</DataType>
+      <DisplayName>Lv Learned</DisplayName>
+      <Order>1</Order>
+      <GroupID>11</GroupID>
+      <InputStyle>TextInput</InputStyle>
+      <Disabled>false</Disabled>
+      <Offset>108</Offset>
+      <Flag_TrueValue>1</Flag_TrueValue>
+      <Flag_FalseValue>0</Flag_FalseValue>
+      <BitNames>
+        <string>Bit 1</string>
+        <string>Bit 2</string>
+        <string>Bit 3</string>
+        <string>Bit 4</string>
+        <string>Bit 5</string>
+        <string>Bit 6</string>
+        <string>Bit 7</string>
+        <string>Bit 8</string>
+      </BitNames>
+      <ValueListData>
+        <StartValue>0</StartValue>
+        <MaxItems>255</MaxItems>
+        <LastVisibleItem>255</LastVisibleItem>
+      </ValueListData>
+    </EntryClass>
+    <EntryClass>
+      <DataType>Byte</DataType>
+      <DisplayName>SP Cost</DisplayName>
+      <Order>111</Order>
+      <GroupID>11</GroupID>
+      <InputStyle>TextInput</InputStyle>
+      <Disabled>false</Disabled>
+      <Offset>109</Offset>
+      <Flag_TrueValue>1</Flag_TrueValue>
+      <Flag_FalseValue>0</Flag_FalseValue>
+      <BitNames>
+        <string>Bit 1</string>
+        <string>Bit 2</string>
+        <string>Bit 3</string>
+        <string>Bit 4</string>
+        <string>Bit 5</string>
+        <string>Bit 6</string>
+        <string>Bit 7</string>
+        <string>Bit 8</string>
+      </BitNames>
+      <ValueListData>
+        <StartValue>0</StartValue>
+        <MaxItems>255</MaxItems>
+        <LastVisibleItem>255</LastVisibleItem>
+      </ValueListData>
+    </EntryClass>
+    <EntryClass>
+      <DataType>Byte</DataType>
+      <DisplayName>Lv Learned</DisplayName>
+      <Order>1</Order>
+      <GroupID>12</GroupID>
+      <InputStyle>TextInput</InputStyle>
+      <Disabled>false</Disabled>
+      <Offset>110</Offset>
+      <Flag_TrueValue>1</Flag_TrueValue>
+      <Flag_FalseValue>0</Flag_FalseValue>
+      <BitNames>
+        <string>Bit 1</string>
+        <string>Bit 2</string>
+        <string>Bit 3</string>
+        <string>Bit 4</string>
+        <string>Bit 5</string>
+        <string>Bit 6</string>
+        <string>Bit 7</string>
+        <string>Bit 8</string>
+      </BitNames>
+      <ValueListData>
+        <StartValue>0</StartValue>
+        <MaxItems>255</MaxItems>
+        <LastVisibleItem>255</LastVisibleItem>
+      </ValueListData>
+    </EntryClass>
+    <EntryClass>
+      <DataType>Byte</DataType>
+      <DisplayName>SP Cost</DisplayName>
+      <Order>113</Order>
+      <GroupID>12</GroupID>
+      <InputStyle>TextInput</InputStyle>
+      <Disabled>false</Disabled>
+      <Offset>111</Offset>
+      <Flag_TrueValue>1</Flag_TrueValue>
+      <Flag_FalseValue>0</Flag_FalseValue>
+      <BitNames>
+        <string>Bit 1</string>
+        <string>Bit 2</string>
+        <string>Bit 3</string>
+        <string>Bit 4</string>
+        <string>Bit 5</string>
+        <string>Bit 6</string>
+        <string>Bit 7</string>
+        <string>Bit 8</string>
+      </BitNames>
+      <ValueListData>
+        <StartValue>0</StartValue>
+        <MaxItems>255</MaxItems>
+        <LastVisibleItem>255</LastVisibleItem>
+      </ValueListData>
+    </EntryClass>
+  </Entries>
+  <Groups>
+    <GroupClass>
+      <Name>Haken</Name>
+      <Order>113</Order>
+      <ID>9</ID>
+      <Collapsed>false</Collapsed>
+    </GroupClass>
+    <GroupClass>
+      <Name>Aschen</Name>
+      <Order>113</Order>
+      <ID>10</ID>
+      <Collapsed>false</Collapsed>
+    </GroupClass>
+    <GroupClass>
+      <Name>Kaguya</Name>
+      <Order>113</Order>
+      <ID>11</ID>
+      <Collapsed>false</Collapsed>
+    </GroupClass>
+    <GroupClass>
+      <Name>Suzuka</Name>
+      <Order>113</Order>
+      <ID>12</ID>
+      <Collapsed>false</Collapsed>
+    </GroupClass>
+    <GroupClass>
+      <Name>Spirit Name</Name>
+      <Order>113</Order>
+      <ID>2</ID>
+      <Collapsed>true</Collapsed>
+    </GroupClass>
+    <GroupClass>
+      <Name>Spirit Description</Name>
+      <Order>113</Order>
+      <ID>3</ID>
+      <Collapsed>true</Collapsed>
+    </GroupClass>
+    <GroupClass>
+      <Name>Unknown Stuff</Name>
+      <Order>113</Order>
+      <ID>7</ID>
+      <Collapsed>true</Collapsed>
+    </GroupClass>
+  </Groups>
+  <GroupIDCounter>13</GroupIDCounter>
+</SaveFileClass>

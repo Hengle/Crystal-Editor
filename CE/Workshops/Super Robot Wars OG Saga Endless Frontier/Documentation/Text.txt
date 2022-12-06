@@ -1,0 +1,1 @@
+Desmume lags with fastforward, use MelonDS.

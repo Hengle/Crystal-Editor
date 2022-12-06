@@ -25,7 +25,7 @@ namespace Crystal_Editor
         {
             InitializeComponent();
             DictionaryOfStrings.CrystalPath = Assembly.GetEntryAssembly().Location;            
-            DictionaryOfStrings.CrystalPath = Path.GetFullPath(Path.Combine(DictionaryOfStrings.CrystalPath, @"..\..\..\"));   
+            DictionaryOfStrings.CrystalPath = Path.GetFullPath(Path.Combine(DictionaryOfStrings.CrystalPath, @"..\..\..\..\CE"));   
             
             ScanForWorkshops();
 
