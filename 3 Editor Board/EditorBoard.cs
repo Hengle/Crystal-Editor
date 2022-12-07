@@ -68,7 +68,7 @@ namespace Crystal_Editor._3_Editor_Board
 
         private void LoadDummyFile() 
         {
-            string hexpath = "E:\\D Clone\\Crystal Editor Project\\Crystal Editor\\bin\\HexFiles\\HexDummy1";  //This defines the path as a string, so i can refer to it by this string/name instead of the full path every time
+            string hexpath = DictionaryOfStrings.CrystalPath + "\\HexFiles\\HexDummy1";  //This defines the path as a string, so i can refer to it by this string/name instead of the full path every time
             int hexlength = (int)(new FileInfo(hexpath).Length);   //The leagth of the array?
             HexFile = File.ReadAllBytes(hexpath);  //loads an array with whatever is in the path
 

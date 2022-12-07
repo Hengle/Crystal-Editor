@@ -64,6 +64,8 @@
             this.button17 = new System.Windows.Forms.Button();
             this.button15 = new System.Windows.Forms.Button();
             this.panel7 = new System.Windows.Forms.Panel();
+            this.label4 = new System.Windows.Forms.Label();
+            this.richTextBoxHexWidth = new System.Windows.Forms.RichTextBox();
             this.button3 = new System.Windows.Forms.Button();
             this.button16 = new System.Windows.Forms.Button();
             this.EditorHome = new System.Windows.Forms.Button();
@@ -72,6 +74,8 @@
             this.EditorHomePanel = new System.Windows.Forms.Panel();
             this.label3 = new System.Windows.Forms.Label();
             this.richTextBox2 = new System.Windows.Forms.RichTextBox();
+            this.richTextBox3 = new System.Windows.Forms.RichTextBox();
+            this.label5 = new System.Windows.Forms.Label();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxDiscord)).BeginInit();
@@ -443,7 +447,7 @@
             this.richTextBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(35)))), ((int)(((byte)(35)))));
             this.richTextBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.richTextBox1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.richTextBox1.Location = new System.Drawing.Point(4, 563);
+            this.richTextBox1.Location = new System.Drawing.Point(6, 573);
             this.richTextBox1.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.richTextBox1.Name = "richTextBox1";
             this.richTextBox1.Size = new System.Drawing.Size(178, 37);
@@ -608,6 +612,9 @@
             // 
             this.panel7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(32)))), ((int)(((byte)(52)))));
             this.panel7.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel7.Controls.Add(this.label5);
+            this.panel7.Controls.Add(this.label4);
+            this.panel7.Controls.Add(this.richTextBoxHexWidth);
             this.panel7.Controls.Add(this.button3);
             this.panel7.Controls.Add(this.button16);
             this.panel7.Controls.Add(this.panelEditorList);
@@ -619,6 +626,30 @@
             this.panel7.Size = new System.Drawing.Size(191, 929);
             this.panel7.TabIndex = 52;
             // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Segoe UI", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.label4.Location = new System.Drawing.Point(42, 474);
+            this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(120, 25);
+            this.label4.TabIndex = 54;
+            this.label4.Text = "Hex Width (3)";
+            // 
+            // richTextBoxHexWidth
+            // 
+            this.richTextBoxHexWidth.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(35)))), ((int)(((byte)(35)))));
+            this.richTextBoxHexWidth.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.richTextBoxHexWidth.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.richTextBoxHexWidth.Location = new System.Drawing.Point(6, 503);
+            this.richTextBoxHexWidth.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.richTextBoxHexWidth.Name = "richTextBoxHexWidth";
+            this.richTextBoxHexWidth.Size = new System.Drawing.Size(178, 37);
+            this.richTextBoxHexWidth.TabIndex = 54;
+            this.richTextBoxHexWidth.Text = "";
+            // 
             // button3
             // 
             this.button3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(35)))), ((int)(((byte)(35)))));
@@ -626,14 +657,14 @@
             this.button3.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
             this.button3.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(45)))));
             this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.button3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.button3.Location = new System.Drawing.Point(3, 606);
+            this.button3.Location = new System.Drawing.Point(6, 758);
             this.button3.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(179, 29);
             this.button3.TabIndex = 53;
-            this.button3.Text = "Load File";
+            this.button3.Text = "Load File (Add Tree Name)";
             this.button3.UseVisualStyleBackColor = false;
             this.button3.Click += new System.EventHandler(this.button3_Click_1);
             // 
@@ -646,7 +677,7 @@
             this.button16.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button16.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.button16.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.button16.Location = new System.Drawing.Point(3, 470);
+            this.button16.Location = new System.Drawing.Point(6, 616);
             this.button16.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.button16.Name = "button16";
             this.button16.Size = new System.Drawing.Size(179, 42);
@@ -720,9 +751,29 @@
             // 
             this.richTextBox2.Location = new System.Drawing.Point(1768, 772);
             this.richTextBox2.Name = "richTextBox2";
-            this.richTextBox2.Size = new System.Drawing.Size(100, 96);
+            this.richTextBox2.Size = new System.Drawing.Size(100, 73);
             this.richTextBox2.TabIndex = 54;
             this.richTextBox2.Text = "";
+            // 
+            // richTextBox3
+            // 
+            this.richTextBox3.Location = new System.Drawing.Point(1768, 873);
+            this.richTextBox3.Name = "richTextBox3";
+            this.richTextBox3.Size = new System.Drawing.Size(140, 47);
+            this.richTextBox3.TabIndex = 55;
+            this.richTextBox3.Text = "";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Segoe UI", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.label5.Location = new System.Drawing.Point(-1, 543);
+            this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(198, 25);
+            this.label5.TabIndex = 55;
+            this.label5.Text = "Editor Name (Anything)";
             // 
             // ModdingWorkshop
             // 
@@ -730,6 +781,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(32)))), ((int)(((byte)(12)))));
             this.ClientSize = new System.Drawing.Size(1920, 1017);
+            this.Controls.Add(this.richTextBox3);
             this.Controls.Add(this.richTextBox2);
             this.Controls.Add(this.panelCore);
             this.Controls.Add(this.panel7);
@@ -753,6 +805,7 @@
             this.panel6.ResumeLayout(false);
             this.panel6.PerformLayout();
             this.panel7.ResumeLayout(false);
+            this.panel7.PerformLayout();
             this.panelCore.ResumeLayout(false);
             this.EditorHomePanel.ResumeLayout(false);
             this.EditorHomePanel.PerformLayout();
@@ -805,5 +858,9 @@
         private Button button18;
         private Button button3;
         private RichTextBox richTextBox2;
+        internal Label label4;
+        private RichTextBox richTextBoxHexWidth;
+        private RichTextBox richTextBox3;
+        internal Label label5;
     }
 }

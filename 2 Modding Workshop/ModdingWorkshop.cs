@@ -13,7 +13,6 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Xml.Linq;
 using Crystal_Editor._3_Editor_Board;
-//using Newtonsoft.Json;
 
 
 namespace Crystal_Editor
@@ -32,14 +31,22 @@ namespace Crystal_Editor
         string SelectedDocumentName = ""; //when the user clicks on a document, it becomes the selected document name.
         int DySpace = 35;
 
+
+
         string SelectedEditor = "";
         List<Button> ListOfEditorButtons = new List<Button>();
+        List<List<Control>> ListOfLists = new List<List<Control>>();
+        public List<Control> ListEdit0 = new List<Control>();
+        public List<Control> ListEdit1 = new List<Control>();
+        public List<Control> ListEdit2 = new List<Control>();
+        public List<Control> ListEdit3 = new List<Control>();
+        int ListE = 0;
 
 
         public ModdingWorkshop()
         {
             InitializeComponent();
-
+            ListE = 0;
             SelectedEditor = "EditorHome";
 
             richTextBoxDocumentName.Hide();
@@ -431,7 +438,9 @@ namespace Crystal_Editor
 
 
         byte[] HexFile; //This will be the entire file that we are editing.
-
+        int HexWidth;
+        List<Control> EntryList = new List<Control>(); //A list of all textboxes we make, that the user uses to edit the hex values.
+        List<Control> TextBoxlist = new List<Control>(); //A list of all textboxes we make, that the user uses to edit the hex values.
 
 
         //
@@ -477,24 +486,35 @@ namespace Crystal_Editor
             int hexlength = (int)(new FileInfo(hexpath).Length);   //The leagth of the array?
             HexFile = File.ReadAllBytes(hexpath);  //loads an array with whatever is in the path
 
+            //if (richTextBox1.Text == "0") 
+            //{
+            //    Controls.ListEdit0[0].Nodes
+            //}
 
-            //var CollectionTree = Controls.Find(SelectedEditor + "Panel" + "Tree", true)[0];
-            //Controls[SelectedEditor + "Panel" + "Tree"].Controls.Nodes.Add("1 Knight Guard"); ;
-            //Controls[SelectedEditor + "Panel" + "Tree"].Nodes.Add("1 Knight Guard"); ;
+            var CollectionTree = Controls.Find(SelectedEditor + "Panel" + "Tree", true)[0] as TreeView;
+            //Controls[SelectedEditor + "Panel" + "Tree"].Controls.Nodes.Add("1 Knight Guard");
+            //Controls[SelectedEditor + "Panel" + "Tree"].Nodes.Add("1 Knight Guard");
+
             //Controls.Find(SelectedEditor + "Panel" + "Tree", true)[0].Controls.Nodes.Add("1 Knight Guard");
             //Controls.Find(SelectedEditor + "Panel" + "Tree", true)[0].Nodes.Add("1 Knight Guard");
             //CollectionTree.Controls.Nodes.Add("0 Knight Fencer"); //Used temporarily in loading a dummy file. Later this would be loaded from a file on the PC.
-            //CollectionTree.Nodes.Add("1 Knight Guard");
+            //Controls["EditorRedPanelTree"].Nodes.Add("1 Knight Guard");
+            //Controls.CollectionTree.Nodes.Add("1 Knight Guard");
+            //Controls.CollectionTree.Nodes.Add("1 Knight Guard");
+            CollectionTree.Nodes.Add(richTextBox1.Text);
+
+
+
             //CollectionTree.Nodes.Add("2 Knight Warrior");
             //CollectionTree.Nodes.Add("HIDDEN Knight Fencer H");
             //CollectionTree.Nodes.Add("3 Knight Fencer A");
 
             //Controls["EditortreeePanelTree"].Nodes.Add("1 Knight Guard");
 
-            //TreeNodeCollection nodeCollect = CollectionTree.Nodes;
-            //CollectionTree.SelectedNode = nodeCollect[0];
+            TreeNodeCollection nodeCollect = CollectionTree.Nodes;
+            CollectionTree.SelectedNode = nodeCollect[0];
 
-            //HexWidth = Convert.ToInt16(richTextBoxWidth.Text); //Used temporarily in loading a dummy file. Later this would be loaded from a file on the PC.
+            HexWidth = Convert.ToInt16(richTextBoxHexWidth.Text); //Used temporarily in loading a dummy file. Later this would be loaded from a file on the PC.
             //MakeTextBoxes();
             //MakeNewEntry();
         }
@@ -507,16 +527,42 @@ namespace Crystal_Editor
         //
         //
 
-
         private void button16_Click(object sender, EventArgs e) //Button Create New Editor (new)
         {
+            if (ListE == 3)
+            {
+                ListOfLists.Add(ListEdit0);
+                ListE++;
+            }
+            if (ListE == 2)
+            {
+                ListOfLists.Add(ListEdit0);
+                ListE++;
+            }
+            if (ListE == 1)
+            {
+                ListOfLists.Add(ListEdit0);
+                ListE++;
+            }
+            if (ListE == 0) 
+            {
+                ListOfLists.Add(ListEdit0);
+                ListE++;
+            }
+
+            
+            //List<Button> ListOfEditorButtons = new List<Button>();
+            //List<List<string>> ListOfLists = new List<List<string>>();
             PanelHide();
+            MakeEditorButtonNew();
             MakeEditorPanelNew();
             MakeDummyLabel();
-            MakeEditorButtonNew();
             MakeEditorLeftSidebarNew();
             MakeEditorCollectionTreeNew();
             MakeEditorPageNew();
+            HexWidth = Convert.ToInt16(richTextBoxHexWidth.Text); //Used temporarily in loading a dummy file. Later this would be loaded from a file on the PC.
+
+            MakeNewEntry();
         }
 
         private void MakeEditorPanelNew() 
@@ -543,7 +589,6 @@ namespace Crystal_Editor
             panelCore.Controls.Add(newPanel);
             //panelCore.Controls.C
             //i2 = i2 + 1;
-            MakeDummyLabel();
 
         }
 
@@ -636,7 +681,7 @@ namespace Crystal_Editor
             newTree.ShowLines = false;
             newTree.ShowRootLines= false;
             newTree.FullRowSelect = true;
-
+            
             //newTree.FlatStyle = FlatStyle.Flat;
             //newTree.FlatAppearance.BorderColor = Color.FromArgb(150, 150, 150);
             //newTree.FlatAppearance.MouseDownBackColor = Color.FromArgb(30, 30, 30);
@@ -661,7 +706,23 @@ namespace Crystal_Editor
             newTree.Nodes.Add("2 Knight Warrior");
             newTree.Nodes.Add("HIDDEN Knight Fencer H");
             newTree.Nodes.Add("3 Knight Fencer A");
-
+            //ListOfLists.Add(newTree);            
+            if (ListE == 3)
+            {
+                ListEdit3.Add(new TreeView());
+            }
+            if (ListE == 2)
+            {
+                ListEdit2.Add(new TreeView());
+            }
+            if (ListE == 1)
+            {
+                ListEdit1.Add(new TreeView());
+            }
+            if (ListE == 0)
+            {
+                ListEdit0.Add(new TreeView());
+            }
             //ListOfEditorButtons.Add(newTree);
 
         }
@@ -692,10 +753,183 @@ namespace Crystal_Editor
             //panelCore.Controls.Add(newPanel);
             Controls.Find(SelectedEditor + "Panel", true)[0].Controls.Add(newPanel);
             newPanel.BringToFront();
+            MakeEditorRowNew();
+        }
+
+        private void MakeEditorRowNew() 
+        {
+            Panel newPanel = new Panel();
+
+            newPanel.Name = "Editor" + richTextBox1.Text + "Panel" + "Page1" + "Row1";
+            newPanel.Dock = DockStyle.Top;
+            newPanel.Size = new Size(0, 300);
+            newPanel.BackColor = Color.FromArgb(00, 0, 60);
+            newPanel.ForeColor = Color.Black;
+            newPanel.Click += delegate
+            {
+                // Your code                
+
+                //richTextBoxDocumentation.Text = File.ReadAllText(DictionaryOfStrings.CrystalPath + "\\Workshops\\" + GameLibrary.libraryNodeName + "\\Documentation\\" + newPanel.Text + "\\Text.txt");
+                //DocumentReset();
+                //SelectedDocument = newPanel.Text;
+                //SelectedDocumentName = newPanel.Name;
+            };
+
+            //ListOfDocumentButtons.Add(newPanel);
+            //panelCore.Controls.Add(newPanel);
+            Controls.Find(SelectedEditor + "Panel" + "Page1", true)[0].Controls.Add(newPanel);
+            MakeEditorColumnNew();
+        }
+
+        private void MakeEditorColumnNew()
+        {
+            Panel newPanel = new Panel();
+
+            newPanel.Name = "Editor" + richTextBox1.Text + "Panel" + "Page1" + "Row1" + "Column1";
+            newPanel.Dock = DockStyle.Left;
+            newPanel.Size = new Size(300, 0);
+            newPanel.BackColor = Color.FromArgb(60, 00, 0);
+            newPanel.ForeColor = Color.Black;
+            newPanel.Click += delegate
+            {
+                // Your code                
+
+                //richTextBoxDocumentation.Text = File.ReadAllText(DictionaryOfStrings.CrystalPath + "\\Workshops\\" + GameLibrary.libraryNodeName + "\\Documentation\\" + newPanel.Text + "\\Text.txt");
+                //DocumentReset();
+                //SelectedDocument = newPanel.Text;
+                //SelectedDocumentName = newPanel.Name;
+            };
+
+            //ListOfDocumentButtons.Add(newPanel);
+            //panelCore.Controls.Add(newPanel);
+            Controls.Find(SelectedEditor + "Panel" + "Page1" + "Row1", true)[0].Controls.Add(newPanel);
 
         }
 
-        
+
+
+        private void MakeNewEntry() //Right now this just makes the entrys, and adds a NameBox and a TextBox
+        {
+            int YPos = 0;
+            //var i = HexWidth;
+            for (int i = 0; i < HexWidth; i++)
+            {
+                Panel newEntry = new Panel();
+                //panel1
+
+                newEntry.Location = new Point(8, YPos + 8); //dictionary.Ex, dictionary.Ey
+                newEntry.Size = new Size(250, 37);
+                YPos = YPos + 42;
+                newEntry.BackColor = Color.FromArgb(48, 48, 48);
+                newEntry.ForeColor = Color.White;
+                newEntry.Font = new Font(newEntry.Font.FontFamily, 13, FontStyle.Regular);
+                newEntry.Click += delegate
+                {
+                    // Code goes here
+
+                };
+                Controls.Find("Editor" + richTextBox1.Text + "Panel" + "Page1" + "Row1" + "Column1", true)[0].Controls.Add(newEntry);
+                //tabControl1.TabPages[0].Controls.Add(newEntry);
+                //panel8.Controls.Add(newEntry);
+
+                EntryList.Add(newEntry);
+
+                richTextBox3.Text = "Entry trigger";
+            }
+
+            MakeEntryNameBoxes();
+            MakeEntryTextBoxes();
+        }
+
+
+        private void MakeEntryNameBoxes()
+        {
+            int EntryCount = 0;
+
+            foreach (Control EntryPanel in EntryList)
+            {
+
+                TextBox newTextBox = new TextBox();
+
+                newTextBox.Location = new Point(7, 7); //dictionary.Ex, dictionary.Ey
+                newTextBox.Size = new Size(100, 24);
+                //newTextBox.Name = ListOfEditorNames[i];
+                //newTextBox.Text = HexFile[0 + (enemyTree.SelectedNode.Index * HexWidth) + 0].ToString("D"); //#1 is offset, #2 is Row Width, #3 is byte in row.
+                newTextBox.BackColor = Color.FromArgb(38, 38, 38);
+                newTextBox.ForeColor = Color.White;
+                newTextBox.BorderStyle = BorderStyle.None;
+                newTextBox.Font = new Font(newTextBox.Font.FontFamily, 13, FontStyle.Regular);
+                //newTextBox.FlatStyle = FlatStyle.Flat;
+                //newTextBox.FlatAppearance.BorderColor = Color.FromArgb(150, 150, 150);
+                //newTextBox.FlatAppearance.MouseDownBackColor = Color.FromArgb(30, 30, 30);
+                //newTextBox.FlatAppearance.MouseOverBackColor = Color.FromArgb(45, 45, 45);
+                newTextBox.Click += delegate
+                {
+                    // Your code               
+
+
+                };
+
+                //panel1.Controls.Add(newTextBox);
+                EntryList[EntryCount].Controls.Add(newTextBox);
+                newTextBox.Text = "Entry " + EntryCount.ToString();
+                EntryCount++;
+                //TextBoxlist.Add(newTextBox);
+
+                //richTextBox4.AppendText("\nHeyo");
+                //TextBoxlist[EntryCount].Text = HexFile[0 + (enemyTree.SelectedNode.Index * HexWidth) + EntryCount].ToString("D"); //#1 is offset, #2 is Row Width, #3 is byte in row.
+                //EntryCount++;
+                richTextBox3.Text = "Namebox trigger";
+            }
+
+        }
+
+
+        private void MakeEntryTextBoxes()
+        {
+            int EntryCount = 0;
+
+            foreach (Control EntryPanel in EntryList)
+            {
+
+                TextBox newTextBox = new TextBox();
+
+                newTextBox.Location = new Point(128, 3); //dictionary.Ex, dictionary.Ey
+                newTextBox.Size = new Size(100, 24);
+                //newTextBox.Name = ListOfEditorNames[i];
+                //newTextBox.Text = HexFile[0 + (enemyTree.SelectedNode.Index * HexWidth) + 0].ToString("D"); //#1 is offset, #2 is Row Width, #3 is byte in row.
+                newTextBox.BackColor = Color.FromArgb(38, 38, 38);
+                newTextBox.ForeColor = Color.White;
+                newTextBox.Font = new Font(newTextBox.Font.FontFamily, 13, FontStyle.Regular);
+                //newTextBox.FlatStyle = FlatStyle.Flat;
+                //newTextBox.FlatAppearance.BorderColor = Color.FromArgb(150, 150, 150);
+                //newTextBox.FlatAppearance.MouseDownBackColor = Color.FromArgb(30, 30, 30);
+                //newTextBox.FlatAppearance.MouseOverBackColor = Color.FromArgb(45, 45, 45);
+                newTextBox.Click += delegate
+                {
+                    // Your code 
+
+                };
+
+                //panel1.Controls.Add(newTextBox);
+                EntryList[EntryCount].Controls.Add(newTextBox);
+                EntryCount++;
+                TextBoxlist.Add(newTextBox);
+
+
+
+                //richTextBox4.AppendText("\nHeyo");
+                //TextBoxlist[EntryCount].Text = HexFile[0 + (enemyTree.SelectedNode.Index * HexWidth) + EntryCount].ToString("D"); //#1 is offset, #2 is Row Width, #3 is byte in row.
+                //EntryCount++;
+                richTextBox3.Text = "Textbox trigger";
+            }
+
+        }
+
+
+
+
+
     }
 
     
