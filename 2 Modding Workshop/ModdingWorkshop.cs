@@ -548,9 +548,9 @@ namespace Crystal_Editor
             MakeEditorColumnNew();
             HexWidth = Convert.ToInt16(richTextBoxHexWidth.Text); //Used temporarily in loading a dummy file. Later this would be loaded from a file on the PC.
 
-            List<IList> ListOfListsEditor = new List<IList>();
-            List<IList> ListOfLists = new List<IList>();
-            ListOfLists.Add();
+            //List<IList> ListOfListsEditor = new List<IList>();
+            //List<IList> ListOfLists = new List<IList>();
+            //ListOfLists.Add();
         }
 
         private void MakeEditorPanelNew() 
@@ -1012,6 +1012,8 @@ namespace Crystal_Editor
                 TextBoxlist[ListInt].Text = HexFile[HexOffset + (CollectionTree.SelectedNode.Index * HexWidth) + ListInt].ToString("D"); //#1 is offset, #2 is Row Width, #3 is byte in row.
                 ListInt++;
 
+
+                //bug is caused by it selecting from latest textboxlist, instead of from a list from a spelected editor.
             }
         }
 
