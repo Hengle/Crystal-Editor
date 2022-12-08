@@ -439,6 +439,7 @@ namespace Crystal_Editor
 
         byte[] HexFile; //This will be the entire file that we are editing.
         int HexWidth;
+        int HexOffset = 0;
         List<Control> EntryList = new List<Control>(); //A list of all textboxes we make, that the user uses to edit the hex values.
         List<Control> TextBoxlist = new List<Control>(); //A list of all textboxes we make, that the user uses to edit the hex values.
 
@@ -627,9 +628,9 @@ namespace Crystal_Editor
         {
             Label newLabel = new Label();
 
-            newLabel.Text = richTextBox1.Text + "Editor";
+            newLabel.Text = richTextBox1.Text + " Editor";
             newLabel.Font = new Font("Microsoft Sans Serif", 13);
-            newLabel.Location = new Point(1000, 300);
+            newLabel.Location = new Point(850, 300);
             var thinggg = Controls.Find("Editor" + richTextBox1.Text + "Panel", true);
             thinggg[0].Controls.Add(newLabel);
 
@@ -698,6 +699,11 @@ namespace Crystal_Editor
                 richTextBox2.Text = newTree.Name;
 
 
+            };
+
+            newTree.AfterSelect += delegate
+            {
+                GiveEntrysHex2Dec();
             };
 
 
@@ -838,7 +844,7 @@ namespace Crystal_Editor
             }
 
             MakeEntryNameBoxes();
-            MakeEntryTextBoxes();
+            MakeEntryNumberBoxes();
         }
 
 
@@ -885,7 +891,7 @@ namespace Crystal_Editor
         }
 
 
-        private void MakeEntryTextBoxes()
+        private void MakeEntryNumberBoxes()
         {
             int EntryCount = 0;
 
@@ -923,10 +929,26 @@ namespace Crystal_Editor
                 //EntryCount++;
                 richTextBox3.Text = "Textbox trigger";
             }
-
+            
         }
 
+        private void GiveEntrysHex2Dec()
+        {
+            var CollectionTree = Controls.Find(SelectedEditor + "Panel" + "Tree", true)[0] as TreeView;
+            string hexpath = DictionaryOfStrings.CrystalPath + "\\HexFiles\\HexDummy1";  //This defines the path as a string, so i can refer to it by this string/name instead of the full path every time
+            int hexlength = (int)(new FileInfo(hexpath).Length);   //The leagth of the array?
+            HexFile = File.ReadAllBytes(hexpath);  //loads an array with whatever is in the path
+            int ListInt = 0;
+            //HexWidth = 1;
 
+            foreach (Control TextBox in TextBoxlist)
+            {
+                //richTextBox4.AppendText("\nHeyo");
+                TextBoxlist[ListInt].Text = HexFile[HexOffset + (CollectionTree.SelectedNode.Index * HexWidth) + ListInt].ToString("D"); //#1 is offset, #2 is Row Width, #3 is byte in row.
+                ListInt++;
+
+            }
+        }
 
 
 
