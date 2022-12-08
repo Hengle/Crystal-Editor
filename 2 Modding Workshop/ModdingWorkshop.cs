@@ -35,7 +35,9 @@ namespace Crystal_Editor
 
         string SelectedEditor = "";
         List<Button> ListOfEditorButtons = new List<Button>();
-        List<List<Control>> ListOfLists = new List<List<Control>>();
+        //List<List<Control>> ListOfLists = new List<List<Control>>();
+        List<IList> ListOfLists = new List<IList>();
+        //List<Control> ListOfNumberBoxes
         public List<Control> ListEdit0 = new List<Control>();
         public List<Control> ListEdit1 = new List<Control>();
         public List<Control> ListEdit2 = new List<Control>();
@@ -46,8 +48,11 @@ namespace Crystal_Editor
         public ModdingWorkshop()
         {
             InitializeComponent();
+
+            
             ListE = 0;
             SelectedEditor = "EditorHome";
+            richTextBoxHexWidth.Text = "3";
 
             richTextBoxDocumentName.Hide();
             pictureBoxDiscord.Image = Image.FromFile(DictionaryOfStrings.CrystalPath + "\\Other\\Images\\DiscordLogo.png");
@@ -56,22 +61,9 @@ namespace Crystal_Editor
             countDirectories = System.IO.Directory.GetDirectories(DictionaryOfStrings.CrystalPath + "\\Workshops\\" + GameLibrary.libraryNodeName + "\\Editors", "*", SearchOption.TopDirectoryOnly).Count();
             panelCore.BackColor = Color.FromArgb(32,32,32);
 
-            //string checkFileExist = DictionaryOfStrings.CrystalPath + "\\Workshops\\" + GameLibrary.libraryNodeName + "\\LibraryBanner.png";
-            //if (File.Exists(checkFileExist))
-            //{
-
-
-            //}
-            //if (!File.Exists(checkFileExist))
-            //{
-
-            //}
-
             CreateEditors();
             StartDocuments();
-
-
-            
+                        
         }
 
         private void StartDocuments() 
@@ -444,13 +436,23 @@ namespace Crystal_Editor
         List<Control> TextBoxlist = new List<Control>(); //A list of all textboxes we make, that the user uses to edit the hex values.
 
 
+        // //////////////////////////////////////////////////////////////////////////////////////////
+        // //////////////////////////////////////////////////////////////////////////////////////////
+        // //////////////////////////////////////////////////////////////////////////////////////////
         //
         //
         //
-        ///////////////////////General Things////////////////////////
+        //
+        // //////////////////////////////////////////////////////////////////////////////////////////
+        ///////////////////////////////////////General Things////////////////////////////////////////
+        // //////////////////////////////////////////////////////////////////////////////////////////
         //
         //
         //
+        //
+        // //////////////////////////////////////////////////////////////////////////////////////////
+        // //////////////////////////////////////////////////////////////////////////////////////////
+        // //////////////////////////////////////////////////////////////////////////////////////////
 
 
 
@@ -481,75 +483,56 @@ namespace Crystal_Editor
 
         }
 
-        private void button3_Click_1(object sender, EventArgs e) //Button: Load File
+        
+
+        
+        private void buttonNewTreeNode_Click(object sender, EventArgs e)
         {
-            string hexpath = DictionaryOfStrings.CrystalPath +  "\\HexFiles\\HexDummy1";  //This defines the path as a string, so i can refer to it by this string/name instead of the full path every time
-            int hexlength = (int)(new FileInfo(hexpath).Length);   //The leagth of the array?
-            HexFile = File.ReadAllBytes(hexpath);  //loads an array with whatever is in the path
-
-            //if (richTextBox1.Text == "0") 
-            //{
-            //    Controls.ListEdit0[0].Nodes
-            //}
-
             var CollectionTree = Controls.Find(SelectedEditor + "Panel" + "Tree", true)[0] as TreeView;
-            //Controls[SelectedEditor + "Panel" + "Tree"].Controls.Nodes.Add("1 Knight Guard");
-            //Controls[SelectedEditor + "Panel" + "Tree"].Nodes.Add("1 Knight Guard");
-
-            //Controls.Find(SelectedEditor + "Panel" + "Tree", true)[0].Controls.Nodes.Add("1 Knight Guard");
-            //Controls.Find(SelectedEditor + "Panel" + "Tree", true)[0].Nodes.Add("1 Knight Guard");
-            //CollectionTree.Controls.Nodes.Add("0 Knight Fencer"); //Used temporarily in loading a dummy file. Later this would be loaded from a file on the PC.
-            //Controls["EditorRedPanelTree"].Nodes.Add("1 Knight Guard");
-            //Controls.CollectionTree.Nodes.Add("1 Knight Guard");
-            //Controls.CollectionTree.Nodes.Add("1 Knight Guard");
-            CollectionTree.Nodes.Add(richTextBox1.Text);
-
-
-
-            //CollectionTree.Nodes.Add("2 Knight Warrior");
-            //CollectionTree.Nodes.Add("HIDDEN Knight Fencer H");
-            //CollectionTree.Nodes.Add("3 Knight Fencer A");
-
-            //Controls["EditortreeePanelTree"].Nodes.Add("1 Knight Guard");
-
-            TreeNodeCollection nodeCollect = CollectionTree.Nodes;
-            CollectionTree.SelectedNode = nodeCollect[0];
-
-            HexWidth = Convert.ToInt16(richTextBoxHexWidth.Text); //Used temporarily in loading a dummy file. Later this would be loaded from a file on the PC.
-            //MakeTextBoxes();
-            //MakeNewEntry();
+            CollectionTree.Nodes.Add(richTextBoxNewTreeNode.Text);
         }
 
+
+        // //////////////////////////////////////////////////////////////////////////////////////////
+        // //////////////////////////////////////////////////////////////////////////////////////////
+        // //////////////////////////////////////////////////////////////////////////////////////////
         //
         //
         //
-        ///////////////////////New Things////////////////////////
+        //
+        // //////////////////////////////////////////////////////////////////////////////////////////
+        /////////////////////////////////////////NEW THINGS//////////////////////////////////////////
+        // //////////////////////////////////////////////////////////////////////////////////////////
         //
         //
         //
+        //
+        // //////////////////////////////////////////////////////////////////////////////////////////
+        // //////////////////////////////////////////////////////////////////////////////////////////
+        // //////////////////////////////////////////////////////////////////////////////////////////
 
         private void button16_Click(object sender, EventArgs e) //Button Create New Editor (new)
         {
-            if (ListE == 3)
-            {
-                ListOfLists.Add(ListEdit0);
-                ListE++;
-            }
-            if (ListE == 2)
-            {
-                ListOfLists.Add(ListEdit0);
-                ListE++;
-            }
-            if (ListE == 1)
-            {
-                ListOfLists.Add(ListEdit0);
-                ListE++;
-            }
-            if (ListE == 0) 
-            {
-                ListOfLists.Add(ListEdit0);
-                ListE++;
-            }
+            //if (ListE == 3)
+            //{
+            //    ListOfLists.Add(ListEdit0);
+            //    ListE++;
+            //}
+            //if (ListE == 2)
+            //{
+            //    ListOfLists.Add(ListEdit0);
+            //    ListE++;
+            //}
+            //if (ListE == 1)
+            //{
+            //    ListOfLists.Add(ListEdit0);
+            //    ListE++;
+            //}
+            //if (ListE == 0) 
+            //{
+            //    ListOfLists.Add(ListEdit0);
+            //    ListE++;
+            //}
 
             
             //List<Button> ListOfEditorButtons = new List<Button>();
@@ -561,9 +544,13 @@ namespace Crystal_Editor
             MakeEditorLeftSidebarNew();
             MakeEditorCollectionTreeNew();
             MakeEditorPageNew();
+            MakeEditorRowNew();
+            MakeEditorColumnNew();
             HexWidth = Convert.ToInt16(richTextBoxHexWidth.Text); //Used temporarily in loading a dummy file. Later this would be loaded from a file on the PC.
 
-            MakeNewEntry();
+            List<IList> ListOfListsEditor = new List<IList>();
+            List<IList> ListOfLists = new List<IList>();
+            ListOfLists.Add();
         }
 
         private void MakeEditorPanelNew() 
@@ -707,11 +694,7 @@ namespace Crystal_Editor
             };
 
 
-            newTree.Nodes.Add("0 Knight Fencer"); //Used temporarily in loading a dummy file. Later this would be loaded from a file on the PC.
-            newTree.Nodes.Add("1 Knight Guard");            
-            newTree.Nodes.Add("2 Knight Warrior");
-            newTree.Nodes.Add("HIDDEN Knight Fencer H");
-            newTree.Nodes.Add("3 Knight Fencer A");
+            
             //ListOfLists.Add(newTree);            
             if (ListE == 3)
             {
@@ -759,7 +742,7 @@ namespace Crystal_Editor
             //panelCore.Controls.Add(newPanel);
             Controls.Find(SelectedEditor + "Panel", true)[0].Controls.Add(newPanel);
             newPanel.BringToFront();
-            MakeEditorRowNew();
+            
         }
 
         private void MakeEditorRowNew() 
@@ -784,7 +767,7 @@ namespace Crystal_Editor
             //ListOfDocumentButtons.Add(newPanel);
             //panelCore.Controls.Add(newPanel);
             Controls.Find(SelectedEditor + "Panel" + "Page1", true)[0].Controls.Add(newPanel);
-            MakeEditorColumnNew();
+            
         }
 
         private void MakeEditorColumnNew()
@@ -813,9 +796,90 @@ namespace Crystal_Editor
         }
 
 
+        // //////////////////////////////////////////////////////////////////////////////////////////
+        // //////////////////////////////////////////////////////////////////////////////////////////
+        // //////////////////////////////////////////////////////////////////////////////////////////
+        // //////////////////////////////////////////////////////////////////////////////////////////
+        // //////////////////////////////////////////////////////////////////////////////////////////
+        // //////////////////////////////////////////////////////////////////////////////////////////
+        //
+        //
+        //
+        // //////////////////////////////////////////////////////////////////////////////////////////
+        /////////////////////////////////Loading Things Into Editor//////////////////////////////////
+        // //////////////////////////////////////////////////////////////////////////////////////////
+        //
+        //
+        //
+        // //////////////////////////////////////////////////////////////////////////////////////////
+        // //////////////////////////////////////////////////////////////////////////////////////////
+        // //////////////////////////////////////////////////////////////////////////////////////////
+        // //////////////////////////////////////////////////////////////////////////////////////////
+        // //////////////////////////////////////////////////////////////////////////////////////////
+        // //////////////////////////////////////////////////////////////////////////////////////////
 
-        private void MakeNewEntry() //Right now this just makes the entrys, and adds a NameBox and a TextBox
+
+
+
+        private void buttonLoadRealFile_Click(object sender, EventArgs e)//Button: Load Real File
         {
+            string hexpath = DictionaryOfStrings.CrystalPath + "\\HexFiles\\HexDummy2";  //This defines the path as a string, so i can refer to it by this string/name instead of the full path every time
+            int hexlength = (int)(new FileInfo(hexpath).Length);   //The leagth of the array?
+            HexFile = File.ReadAllBytes(hexpath);  //loads an array with whatever is in the path
+            var CollectionTree = Controls.Find(SelectedEditor + "Panel" + "Tree", true)[0] as TreeView;
+            CollectionTree.Nodes.Clear();
+            CollectionTree.Nodes.Add("0 Knight Fencer"); //Used temporarily in loading a dummy file. Later this would be loaded from a file on the PC.
+            CollectionTree.Nodes.Add("1 Knight Guard");
+            CollectionTree.Nodes.Add("2 Knight Warrior");
+            CollectionTree.Nodes.Add("HIDDEN Knight Fencer H");
+            CollectionTree.Nodes.Add("3 Knight Fencer A");
+
+            TreeNodeCollection nodeCollect = CollectionTree.Nodes;
+            CollectionTree.SelectedNode = nodeCollect[0];
+
+            HexWidth = Convert.ToInt16(richTextBoxHexWidth.Text); //Used temporarily in loading a dummy file. Later this would be loaded from a file on the PC.
+
+
+            MakeEntryNew();
+            MakeEntryNameBoxes();
+            MakeEntryNumberBoxes();
+        }
+
+        private void button3_Click_1(object sender, EventArgs e) //Button: Load Dummy File
+        {
+            
+            string hexpath = DictionaryOfStrings.CrystalPath + "\\HexFiles\\HexDummy1";  //This defines the path as a string, so i can refer to it by this string/name instead of the full path every time
+            int hexlength = (int)(new FileInfo(hexpath).Length);   //The leagth of the array?
+            HexFile = File.ReadAllBytes(hexpath);  //loads an array with whatever is in the path
+            var CollectionTree = Controls.Find(SelectedEditor + "Panel" + "Tree", true)[0] as TreeView;
+            CollectionTree.Nodes.Clear();
+            CollectionTree.Nodes.Add("0 Knight Fencer"); //Used temporarily in loading a dummy file. Later this would be loaded from a file on the PC.
+            CollectionTree.Nodes.Add("1 Knight Guard");
+            CollectionTree.Nodes.Add("2 Knight Warrior");
+            CollectionTree.Nodes.Add("HIDDEN Knight Fencer H");
+            CollectionTree.Nodes.Add("3 Knight Fencer A");            
+
+            TreeNodeCollection nodeCollect = CollectionTree.Nodes;
+            CollectionTree.SelectedNode = nodeCollect[0];
+
+            HexWidth = Convert.ToInt16(richTextBoxHexWidth.Text); //Used temporarily in loading a dummy file. Later this would be loaded from a file on the PC.
+
+            MakeEntryList();
+            MakeEntryNew();
+            MakeEntryNameBoxes();
+            MakeEntryNumberBoxes();
+        }
+
+        private void MakeEntryList() 
+        {
+            
+        }
+
+
+
+        private void MakeEntryNew() //Right now this just makes the entrys, and adds a NameBox and a TextBox
+        {
+            EntryList.Clear();
             int YPos = 0;
             //var i = HexWidth;
             for (int i = 0; i < HexWidth; i++)
@@ -824,8 +888,10 @@ namespace Crystal_Editor
                 //panel1
 
                 newEntry.Location = new Point(8, YPos + 8); //dictionary.Ex, dictionary.Ey
+                newEntry.Dock = DockStyle.Top;
                 newEntry.Size = new Size(250, 37);
                 YPos = YPos + 42;
+                newEntry.BorderStyle = BorderStyle.FixedSingle;
                 newEntry.BackColor = Color.FromArgb(48, 48, 48);
                 newEntry.ForeColor = Color.White;
                 newEntry.Font = new Font(newEntry.Font.FontFamily, 13, FontStyle.Regular);
@@ -838,13 +904,14 @@ namespace Crystal_Editor
                 //tabControl1.TabPages[0].Controls.Add(newEntry);
                 //panel8.Controls.Add(newEntry);
 
+                
                 EntryList.Add(newEntry);
+                newEntry.BringToFront();
 
                 richTextBox3.Text = "Entry trigger";
             }
 
-            MakeEntryNameBoxes();
-            MakeEntryNumberBoxes();
+            
         }
 
 
@@ -893,6 +960,7 @@ namespace Crystal_Editor
 
         private void MakeEntryNumberBoxes()
         {
+            TextBoxlist.Clear();
             int EntryCount = 0;
 
             foreach (Control EntryPanel in EntryList)
@@ -929,15 +997,12 @@ namespace Crystal_Editor
                 //EntryCount++;
                 richTextBox3.Text = "Textbox trigger";
             }
-            
+
         }
 
         private void GiveEntrysHex2Dec()
         {
             var CollectionTree = Controls.Find(SelectedEditor + "Panel" + "Tree", true)[0] as TreeView;
-            string hexpath = DictionaryOfStrings.CrystalPath + "\\HexFiles\\HexDummy1";  //This defines the path as a string, so i can refer to it by this string/name instead of the full path every time
-            int hexlength = (int)(new FileInfo(hexpath).Length);   //The leagth of the array?
-            HexFile = File.ReadAllBytes(hexpath);  //loads an array with whatever is in the path
             int ListInt = 0;
             //HexWidth = 1;
 
@@ -950,9 +1015,8 @@ namespace Crystal_Editor
             }
         }
 
-
-
+        
     }
 
-    
+
 }
