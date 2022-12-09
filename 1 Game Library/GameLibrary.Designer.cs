@@ -741,7 +741,7 @@
             this.Controls.Add(this.panel2);
             this.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.Name = "GameLibrary";
-            this.Text = "GameLibrary";
+            this.Text = "S";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel1.ResumeLayout(false);

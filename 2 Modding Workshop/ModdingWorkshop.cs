@@ -22,15 +22,13 @@ namespace Crystal_Editor
         DictionaryOfStrings dictionary = new DictionaryOfStrings();
         public int i = 0;
         public int i2 = 0;
-        int countDirectories = 0;
-        List<string> ListOfEditorNames = new List<string>();
         List<string> ListOfDocumentNames = new List<string>();
         List<Button> ListOfDocumentButtons = new List<Button>();
         string CurrentDocumentMode = ""; //Used for Edit/Save button, and swapping between the modes.
         string SelectedDocument = ""; //when the user clicks on a document, it becomed the selected document.
         string SelectedDocumentName = ""; //when the user clicks on a document, it becomes the selected document name.
         int DySpace = 35;
-
+        public static string savePath = "";
 
 
         string SelectedEditor = "";
@@ -58,10 +56,9 @@ namespace Crystal_Editor
             pictureBoxDiscord.Image = Image.FromFile(DictionaryOfStrings.CrystalPath + "\\Other\\Images\\DiscordLogo.png");
 
             //This counts how many editor folders there are, we later display this as buttons to open those editors.
-            countDirectories = System.IO.Directory.GetDirectories(DictionaryOfStrings.CrystalPath + "\\Workshops\\" + GameLibrary.libraryNodeName + "\\Editors", "*", SearchOption.TopDirectoryOnly).Count();
             panelCore.BackColor = Color.FromArgb(32,32,32);
 
-            CreateEditors();
+            
             StartDocuments();
                         
         }
@@ -74,62 +71,9 @@ namespace Crystal_Editor
         }
                 
 
-        public static string savePath = "";
+        
 
 
-
-        // //////////////// START OF GENERATORS ////////////////////////////////////////////////////////
-
-        private void CreateEditors() 
-        {
-            string[] subdirs = Directory.GetDirectories(DictionaryOfStrings.CrystalPath + "\\Workshops\\" + GameLibrary.libraryNodeName + "\\Editors");
-            dictionary.Ex = 8;
-            dictionary.Ey = 8;
-            for (int i = 0; i < subdirs.Length; i++)
-            {
-                
-                ListOfEditorNames.Add(Path.GetFileName(subdirs[i]).ToString());
-                CreateEditors2();
-            }
-            //CreateEditors2();
-
-        }
-        public void CreateEditors2() 
-        {
-            
-
-            Button newButton = new Button();
-            
-            newButton.Location = new Point(dictionary.Ex, dictionary.Ey);
-            newButton.Size = new Size(190, 30);            
-            dictionary.Ey = dictionary.Ey + 35;
-            newButton.Name = ListOfEditorNames[i];
-            newButton.Text = ListOfEditorNames[i];
-            newButton.BackColor = Color.FromArgb(38, 38, 38);
-            newButton.ForeColor = Color.White;
-            newButton.FlatStyle = FlatStyle.Flat;
-            newButton.FlatAppearance.BorderColor = Color.FromArgb(150, 150, 150);
-            newButton.FlatAppearance.MouseDownBackColor = Color.FromArgb(30, 30, 30);
-            newButton.FlatAppearance.MouseOverBackColor = Color.FromArgb(45, 45, 45);
-            newButton.Click += delegate
-            {
-                // Your code                
-
-                //var _form = new Form1();************************************************************************************************************************************************************************************************************************************************************************************************************************************************************
-                DictionaryOfStrings.SelectedEditorDirectory = DictionaryOfStrings.CrystalPath + "\\Workshops\\" + GameLibrary.libraryNodeName + "\\Editors\\" + newButton.Name; //in real setup, final addition is 'Selected Editor Name' aka the folder.
-                //var loadTest = _form.LoadEditorFully();
-            };
-
-            panelEditors.Controls.Add(newButton);
-            i = i + 1;
-        }
-
-
-        //
-        //
-        ///////////////////////// DOCUMENTATION  V   ////////////// EDITORS ^   ///////////////////////////////
-        //
-        //
 
 
         private void CreateDocumentation()
@@ -184,21 +128,6 @@ namespace Crystal_Editor
         }
 
 
-
-        // /////////////////  END OF GENERATORS ////////////////////////////////////
-
-
-
-        
-        
-
-        private void button10_Click(object sender, EventArgs e) //Button: Create New Editor
-        {
-            
-            Directory.CreateDirectory(DictionaryOfStrings.CrystalPath + "\\Workshops\\" + GameLibrary.libraryNodeName + "\\Editors\\" + richTextBox1.Text);
-            DictionaryOfStrings.CreateEditorFolder = DictionaryOfStrings.CrystalPath + "\\Workshops\\" + GameLibrary.libraryNodeName + "\\Editors\\" + richTextBox1.Text + "\\";
-            
-        }
 
         private void button2_Click(object sender, EventArgs e) //Button: New Document
         {
@@ -331,27 +260,9 @@ namespace Crystal_Editor
         }
 
         
+        
 
-
-        private void buttonProject_Click(object sender, EventArgs e) //Button: Set Project Folder
-        {
-            SaveFileDialog sf = new SaveFileDialog();
-            sf.FileName = "Save Here"; // Feed a name to the dialog that appears.
-
-            if (sf.ShowDialog() == DialogResult.OK)
-            {
-                // Now here's our save folder
-                savePath = Path.GetDirectoryName(sf.FileName);
-                // Do whatever
-
-                using (StreamWriter writer = new StreamWriter(DictionaryOfStrings.CrystalPath + "\\Settings\\Workshops\\" + GameLibrary.libraryNodeName + "\\Project Location.txt", false)) //// true to append data to the file
-                {
-                    writer.Write(savePath);
-                }
-            }
-                        
-
-        }
+        // ///////////////////////////////v Top Bar stuff v  - - - ^ Documentation Stuff ^ /////////////////////////////////
 
         
         private void pictureBoxDiscord_Click(object sender, EventArgs e) //Image Button: Discord
@@ -401,6 +312,21 @@ namespace Crystal_Editor
             EditorBoard f2 = new EditorBoard();
             f2.Show();
         }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
