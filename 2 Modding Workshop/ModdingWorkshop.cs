@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Diagnostics;
+using System.Diagnostics.CodeAnalysis;
 using System.Drawing;
 using System.IO;
 using System.Linq;
@@ -30,17 +31,10 @@ namespace Crystal_Editor
         int DySpace = 35;
         public static string savePath = "";
 
-
         string SelectedEditor = "";
         List<Button> ListOfEditorButtons = new List<Button>();
         //List<List<Control>> ListOfLists = new List<List<Control>>();
         List<IList> ListOfLists = new List<IList>();
-        //List<Control> ListOfNumberBoxes
-        public List<Control> ListEdit0 = new List<Control>();
-        public List<Control> ListEdit1 = new List<Control>();
-        public List<Control> ListEdit2 = new List<Control>();
-        public List<Control> ListEdit3 = new List<Control>();
-        int ListE = 0;
 
 
         public ModdingWorkshop()
@@ -48,7 +42,6 @@ namespace Crystal_Editor
             InitializeComponent();
 
             
-            ListE = 0;
             SelectedEditor = "EditorHome";
             richTextBoxHexWidth.Text = "3";
 
@@ -119,7 +112,9 @@ namespace Crystal_Editor
                 richTextBoxDocumentation.Text = File.ReadAllText(DictionaryOfStrings.CrystalPath + "\\Workshops\\" + GameLibrary.libraryNodeName + "\\Documentation\\" + newButton.Text + "\\Text.txt");
                 DocumentReset();
                 SelectedDocument = newButton.Text;
-                SelectedDocumentName = newButton.Name;                
+                SelectedDocumentName = newButton.Name;
+
+
             };
             
             ListOfDocumentButtons.Add(newButton);
@@ -140,6 +135,7 @@ namespace Crystal_Editor
             richTextBoxDocumentName.BackColor = Color.FromArgb(55, 55, 55);
         }
 
+        
         private void buttonDocumentMode_Click(object sender, EventArgs e)
         {
             if (CurrentDocumentMode == "Edit") 
@@ -472,7 +468,7 @@ namespace Crystal_Editor
             MakeEditorPageNew();
             MakeEditorRowNew();
             MakeEditorColumnNew();
-            HexWidth = Convert.ToInt16(richTextBoxHexWidth.Text); //Used temporarily in loading a dummy file. Later this would be loaded from a file on the PC.
+            //HexWidth = Convert.ToInt16(richTextBoxHexWidth.Text); //Used temporarily in loading a dummy file. Later this would be loaded from a file on the PC.
 
             //List<IList> ListOfListsEditor = new List<IList>();
             //List<IList> ListOfLists = new List<IList>();
@@ -622,22 +618,7 @@ namespace Crystal_Editor
 
             
             //ListOfLists.Add(newTree);            
-            if (ListE == 3)
-            {
-                ListEdit3.Add(new TreeView());
-            }
-            if (ListE == 2)
-            {
-                ListEdit2.Add(new TreeView());
-            }
-            if (ListE == 1)
-            {
-                ListEdit1.Add(new TreeView());
-            }
-            if (ListE == 0)
-            {
-                ListEdit0.Add(new TreeView());
-            }
+            
             //ListOfEditorButtons.Add(newTree);
 
         }
@@ -749,7 +730,7 @@ namespace Crystal_Editor
 
         private void buttonLoadRealFile_Click(object sender, EventArgs e)//Button: Load Real File
         {
-            string hexpath = DictionaryOfStrings.CrystalPath + "\\HexFiles\\HexDummy2";  //This defines the path as a string, so i can refer to it by this string/name instead of the full path every time
+            string hexpath = DictionaryOfStrings.CrystalPath + "\\HexFiles\\HexDummy10x10";  //This defines the path as a string, so i can refer to it by this string/name instead of the full path every time
             int hexlength = (int)(new FileInfo(hexpath).Length);   //The leagth of the array?
             HexFile = File.ReadAllBytes(hexpath);  //loads an array with whatever is in the path
             var CollectionTree = Controls.Find(SelectedEditor + "Panel" + "Tree", true)[0] as TreeView;
@@ -769,12 +750,13 @@ namespace Crystal_Editor
             MakeEntryNew();
             MakeEntryNameBoxes();
             MakeEntryNumberBoxes();
+            GiveEntrysHex2Dec();
         }
 
         private void button3_Click_1(object sender, EventArgs e) //Button: Load Dummy File
         {
             
-            string hexpath = DictionaryOfStrings.CrystalPath + "\\HexFiles\\HexDummy1";  //This defines the path as a string, so i can refer to it by this string/name instead of the full path every time
+            string hexpath = DictionaryOfStrings.CrystalPath + "\\HexFiles\\HexDummy3x5";  //This defines the path as a string, so i can refer to it by this string/name instead of the full path every time
             int hexlength = (int)(new FileInfo(hexpath).Length);   //The leagth of the array?
             HexFile = File.ReadAllBytes(hexpath);  //loads an array with whatever is in the path
             var CollectionTree = Controls.Find(SelectedEditor + "Panel" + "Tree", true)[0] as TreeView;
@@ -790,17 +772,14 @@ namespace Crystal_Editor
 
             HexWidth = Convert.ToInt16(richTextBoxHexWidth.Text); //Used temporarily in loading a dummy file. Later this would be loaded from a file on the PC.
 
-            MakeEntryList();
+            
             MakeEntryNew();
             MakeEntryNameBoxes();
             MakeEntryNumberBoxes();
+            GiveEntrysHex2Dec();
         }
 
-        private void MakeEntryList() 
-        {
-            
-        }
-
+        
 
 
         private void MakeEntryNew() //Right now this just makes the entrys, and adds a NameBox and a TextBox
@@ -813,10 +792,8 @@ namespace Crystal_Editor
                 Panel newEntry = new Panel();
                 //panel1
 
-                newEntry.Location = new Point(8, YPos + 8); //dictionary.Ex, dictionary.Ey
                 newEntry.Dock = DockStyle.Top;
-                newEntry.Size = new Size(250, 37);
-                YPos = YPos + 42;
+                newEntry.Size = new Size(250, 37);                
                 newEntry.BorderStyle = BorderStyle.FixedSingle;
                 newEntry.BackColor = Color.FromArgb(48, 48, 48);
                 newEntry.ForeColor = Color.White;
@@ -833,7 +810,6 @@ namespace Crystal_Editor
                 
                 EntryList.Add(newEntry);
                 newEntry.BringToFront();
-
                 richTextBox3.Text = "Entry trigger";
             }
 
