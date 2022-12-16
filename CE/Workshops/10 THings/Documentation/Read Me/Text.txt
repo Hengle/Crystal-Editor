@@ -1,0 +1,1 @@
+Users can type all kinds of things here, save them, and other users will be able to read that information. Making it sort of like a public Wiki. Because edits to a workshop send to the main Crystal Editor developer must be manually approved, it will be shielded from bad actors destroying wikis for fun.

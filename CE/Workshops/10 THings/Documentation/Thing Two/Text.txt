@@ -1,5 +1,1 @@
-Example text for
-
-use in creating the program
-
-to make sure font looks nice
+I am Thing Two!(The SEQUAL to Thing One!)

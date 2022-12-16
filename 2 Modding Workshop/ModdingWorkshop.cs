@@ -29,20 +29,19 @@ namespace Crystal_Editor
 {
     public partial class ModdingWorkshop : Form
     {
-        DictionaryOfStrings dictionary = new DictionaryOfStrings();
-        public int i = 0;
-        public int i2 = 0;
+        //DictionaryOfStrings dictionary = new DictionaryOfStrings();        
+        int NoSave = 0; //Used to make sure only the first selection of a document doesn't save.
         List<string> ListOfDocumentNames = new List<string>();
-        List<Button> ListOfDocumentButtons = new List<Button>();
-        string CurrentDocumentMode = ""; //Used for Edit/Save button, and swapping between the modes.
+        List<Button> ListOfDocumentButtons = new List<Button>();        
         string SelectedDocument = ""; //when the user clicks on a document, it becomed the selected document.
         string SelectedDocumentName = ""; //when the user clicks on a document, it becomes the selected document name.
         int PixelsBetweenDocuments = 29;
-        public static string savePath = "";
-
+        Button SelectedDoc;
         string SelectedEditor = "";
+        
         List<Button> ListOfEditorButtons = new List<Button>();
         string HomeCoreName = "Home"; //The name of the Home's Core Panel (So its easy to change globally)
+
 
         public ModdingWorkshop()
         {
@@ -50,38 +49,20 @@ namespace Crystal_Editor
                         
             SelectedEditor = HomeCoreName;
             richTextBoxHexWidth.Text = "3";
-
-            richTextBoxDocumentName.Hide();
             pictureBoxDiscord.Image = Image.FromFile(DictionaryOfStrings.CrystalPath + "\\Other\\Images\\DiscordLogo.png");
 
-
-            LoadDocumentation();
-                        
+            LoadDocumentation();                        
         }
-
         
-
-        private void button3_Click_1(object sender, EventArgs e) //Button: New Class Test
-        {
-            Documents CSDocuments = new Documents();
-            CSDocuments.TextClass(richTextBoxNewClass);
-            CSDocuments.TextClass2(); //(richTextBoxNewClass);
-        }
-
-        private void button14_Click(object sender, EventArgs e) //Z Button
-        {
-
-        }
 
         private void LoadDocumentation()
         {
-            
+                        
             string[] DocNames = Directory.GetDirectories(DictionaryOfStrings.CrystalPath + "\\Workshops\\" + GameLibrary.libraryNodeName + "\\Documentation");
-            dictionary.Ex = 6;
-            dictionary.Ey = 6;
             ListOfDocumentNames.Clear();
             ListOfDocumentButtons.Clear();
             panelDocumentation.Controls.Clear();
+
             for (int i2 = 0; i2 < DocNames.Length; i2++)
             {
                            
@@ -91,8 +72,7 @@ namespace Crystal_Editor
 
                 DocumentButton.Text = ListOfDocumentNames[i2];
                 DocumentButton.Name = File.ReadAllText(DictionaryOfStrings.CrystalPath + "\\Workshops\\" + GameLibrary.libraryNodeName + "\\Documentation\\" + DocumentButton.Text + "\\Order.txt");
-                dictionary.Ey = Convert.ToInt16(DocumentButton.Name);
-
+                
                 DocumentButton.Location = new Point(0, ((Convert.ToInt16(DocumentButton.Name) * PixelsBetweenDocuments) + 0));
 
                 DocumentButton.Size = new Size(216, 30);
@@ -106,14 +86,13 @@ namespace Crystal_Editor
 
                 DocumentButton.Click += delegate
                 {
-                    // Your code                
-                    
+                    SaveDoc();
+                    DocumentButton.BackColor = Color.FromArgb(33, 33, 33);                                                      
+                    SelectedDoc = DocumentButton;
                     richTextBoxDocumentation.Text = File.ReadAllText(DictionaryOfStrings.CrystalPath + "\\Workshops\\" + GameLibrary.libraryNodeName + "\\Documentation\\" + DocumentButton.Text + "\\Text.txt");
-                    DocumentReset();
                     SelectedDocument = DocumentButton.Text;
                     SelectedDocumentName = DocumentButton.Name;
                     richTextBoxDocumentName.Text = DocumentButton.Text;
-
 
                 };
 
@@ -125,68 +104,33 @@ namespace Crystal_Editor
 
         }
 
-
-
-        private void button2_Click(object sender, EventArgs e) //Button: New Document
+        private void SaveDoc() //Button: Save Document
         {
-            button2.Hide(); 
-            richTextBoxDocumentName.Show();
-            DocumentEdit();
-            richTextBoxDocumentName.Text = "New Document Name";
-            CurrentDocumentMode = "SaveNew";
-            richTextBoxDocumentName.ReadOnly = false;
-            richTextBoxDocumentName.BackColor = Color.FromArgb(55, 55, 55);
-        }
+            if (NoSave == 1) 
+            {
+                SelectedDoc.BackColor = Color.FromArgb(38, 38, 38);
+                string OldDocumentDirName = DictionaryOfStrings.CrystalPath + "\\Workshops\\" + GameLibrary.libraryNodeName + "\\Documentation\\" + SelectedDocument;
+                string NewDocumentDirName = DictionaryOfStrings.CrystalPath + "\\Workshops\\" + GameLibrary.libraryNodeName + "\\Documentation\\" + richTextBoxDocumentName.Text;
+                try
+                {
+                    Directory.Move(OldDocumentDirName, NewDocumentDirName);
+                }
+                catch (IOException exp)
+                {
+                    Console.WriteLine(exp.Message);
+                }
+                SelectedDocument = richTextBoxDocumentName.Text;
 
+
+                File.WriteAllText(DictionaryOfStrings.CrystalPath + "\\Workshops\\" + GameLibrary.libraryNodeName + "\\Documentation\\" + richTextBoxDocumentName.Text + "\\Text.txt", richTextBoxDocumentation.Text); //Overwrites, Or creates file if it does not exist. Needs location permissions for admin folders.
+                SelectedDoc.Text = richTextBoxDocumentName.Text;
+            }
+
+            NoSave = 1;
+        }
         
-        private void buttonDocumentMode_Click(object sender, EventArgs e) //Button: Edit/Save for documents
+        private void button16_Click(object sender, EventArgs e) //Button: Save as New Document
         {
-            if (CurrentDocumentMode == "Edit") 
-            {
-                DocumentEdit();
-                button2.Hide();
-                richTextBoxDocumentName.Show();
-            }
-            else if (CurrentDocumentMode == "Save") 
-            {
-                DocumentSave();
-            }
-            else if (CurrentDocumentMode == "SaveNew")
-            {
-                DocumentSaveNew();
-            }
-        }
-
-        private void DocumentEdit()
-        {
-            
-            richTextBoxDocumentation.ReadOnly = false;
-            richTextBoxDocumentation.BackColor = Color.FromArgb(45,45,45);
-            CurrentDocumentMode = "Save";
-            buttonDocumentMode.Text = "Save";
-
-        }
-
-        private void DocumentSave()
-        {
-            string oldDocumentName = DictionaryOfStrings.CrystalPath + "\\Workshops\\" + GameLibrary.libraryNodeName + "\\Documentation\\" + SelectedDocument;
-            string newDocumentName = DictionaryOfStrings.CrystalPath + "\\Workshops\\" + GameLibrary.libraryNodeName + "\\Documentation\\" + richTextBoxDocumentName.Text;
-            try
-            {
-                Directory.Move(oldDocumentName, newDocumentName);
-            }
-            catch (IOException exp)
-            {
-                Console.WriteLine(exp.Message);
-            }
-            SelectedDocument = richTextBoxDocumentName.Text;
-
-
-            File.WriteAllText(DictionaryOfStrings.CrystalPath + "\\Workshops\\" + GameLibrary.libraryNodeName + "\\Documentation\\" + richTextBoxDocumentName.Text + "\\Text.txt", richTextBoxDocumentation.Text); //Overwrites, Or creates file if it does not exist. Needs location permissions for admin folders.
-            DocumentReset();
-        }
-        private void DocumentSaveNew() 
-        {            
             //Make the OrderText
             //Clear the document list
             //remake the document list
@@ -194,75 +138,53 @@ namespace Crystal_Editor
             // If directory does not exist, create it
             if (!Directory.Exists(dir))
             {
-                Directory.CreateDirectory(dir);                
+                Directory.CreateDirectory(dir);
                 File.WriteAllText(DictionaryOfStrings.CrystalPath + "\\Workshops\\" + GameLibrary.libraryNodeName + "\\Documentation\\" + richTextBoxDocumentName.Text + "\\Text.txt", richTextBoxDocumentation.Text);
                 File.WriteAllText(DictionaryOfStrings.CrystalPath + "\\Workshops\\" + GameLibrary.libraryNodeName + "\\Documentation\\" + richTextBoxDocumentName.Text + "\\Order.txt", Convert.ToString(ListOfDocumentButtons.Count));
-                richTextBoxDocumentName.Clear();
-
+                
             }
-            
-            DocumentReset();
+
             LoadDocumentation();
         }
-
-        private void DocumentReset() 
-        {
-            richTextBoxDocumentation.ReadOnly = true;
-            richTextBoxDocumentation.BackColor = Color.FromArgb(35, 35, 35);
-            CurrentDocumentMode = "Edit";
-            buttonDocumentMode.Text = "Edit Document";
-            button2.Show();
-            richTextBoxDocumentName.Hide();
-            panelDocumentation.Controls.Clear();
-            LoadDocumentation();
-        }
-
-
-
-
-
-
-
 
 
 
         // ///////////////////////////Document Movement Controls v///////////////////
-        int BOne = 0;
-        int BTwo = 0;
-        private void button6_Click(object sender, EventArgs e) //Button Up (Move Documenet)
-        {
-            if (SelectedDocumentName != "0") 
-            {
-                BTwo = Convert.ToInt16(ListOfDocumentButtons[Convert.ToInt16(SelectedDocumentName)].Name);
-                BOne = BTwo - 1;
-                Swap();
-                SelectedDocumentName = (BTwo - 1).ToString();
-            }
-            
-        }
+
         private void button7_Click(object sender, EventArgs e) //Button Down (Move Documenet)
         {
-            if (SelectedDocumentName != Convert.ToString(ListOfDocumentButtons.Count()-1)) //  "0"
+            if (SelectedDocumentName != Convert.ToString(ListOfDocumentButtons.Count() - 1)) //  "0"
             {
-                BOne = Convert.ToInt16(ListOfDocumentButtons[Convert.ToInt16(SelectedDocumentName)].Name);
-                BTwo = BOne + 1;
-                Swap();
-                SelectedDocumentName = (BOne + 1).ToString();
+                int DOne = Convert.ToInt16(ListOfDocumentButtons[Convert.ToInt16(SelectedDocumentName)].Name);
+                int DTwo = DOne + 1;
+                Swap(DOne, DTwo);
+                SelectedDocumentName = (DOne + 1).ToString();
                 //ListOfDocumentButtons[0].Text = "Some text";
 
             }
 
         }
+        private void button6_Click(object sender, EventArgs e) //Button Up (Move Documenet)
+        {
+            if (SelectedDocumentName != "0") 
+            {
+                int DTwo = Convert.ToInt16(ListOfDocumentButtons[Convert.ToInt16(SelectedDocumentName)].Name);
+                int DOne = DTwo - 1;
+                Swap(DOne, DTwo);
+                SelectedDocumentName = (DTwo - 1).ToString();
+            }
+            
+        }        
 
-        private void Swap() 
+        private void Swap(int DOne, int DTwo) 
         {
             
-            ListOfDocumentButtons[BOne].Location = new Point(0, (BOne * PixelsBetweenDocuments) + 0 + PixelsBetweenDocuments);
-            ListOfDocumentButtons[BTwo].Location = new Point(0, (BTwo * PixelsBetweenDocuments) + 0 - PixelsBetweenDocuments);
-            System.IO.File.WriteAllText(DictionaryOfStrings.CrystalPath + "\\Workshops\\" + GameLibrary.libraryNodeName + "\\Documentation\\" + ListOfDocumentButtons[BOne].Text + "\\Order.txt", (BOne + 1).ToString()); //Overwrites, Or creates file if it does not exist. Needs location permissions for admin folders.
-            System.IO.File.WriteAllText(DictionaryOfStrings.CrystalPath + "\\Workshops\\" + GameLibrary.libraryNodeName + "\\Documentation\\" + ListOfDocumentButtons[BTwo].Text + "\\Order.txt", (BTwo - 1).ToString()); //Overwrites, Or creates file if it does not exist. Needs location permissions for admin folders.
-            ListOfDocumentButtons[BOne].Name = (BOne + 1).ToString();
-            ListOfDocumentButtons[BTwo].Name = (BTwo - 1).ToString();            
+            ListOfDocumentButtons[DOne].Location = new Point(0, (DOne * PixelsBetweenDocuments) + 0 + PixelsBetweenDocuments);
+            ListOfDocumentButtons[DTwo].Location = new Point(0, (DTwo * PixelsBetweenDocuments) + 0 - PixelsBetweenDocuments);
+            System.IO.File.WriteAllText(DictionaryOfStrings.CrystalPath + "\\Workshops\\" + GameLibrary.libraryNodeName + "\\Documentation\\" + ListOfDocumentButtons[DOne].Text + "\\Order.txt", (DOne + 1).ToString()); //Overwrites, Or creates file if it does not exist. Needs location permissions for admin folders.
+            System.IO.File.WriteAllText(DictionaryOfStrings.CrystalPath + "\\Workshops\\" + GameLibrary.libraryNodeName + "\\Documentation\\" + ListOfDocumentButtons[DTwo].Text + "\\Order.txt", (DTwo - 1).ToString()); //Overwrites, Or creates file if it does not exist. Needs location permissions for admin folders.
+            ListOfDocumentButtons[DOne].Name = (DOne + 1).ToString();
+            ListOfDocumentButtons[DTwo].Name = (DTwo - 1).ToString();            
             ListOfDocumentButtons.Sort((x, y) => String.Compare(x.Name, y.Name)); //Sort the Document Buttons list by Order
         }
 
@@ -314,7 +236,6 @@ namespace Crystal_Editor
             yourProcess.Start();
         }
 
-        
 
 
 
@@ -333,36 +254,6 @@ namespace Crystal_Editor
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-        byte[] HexFile; //This will be the entire file that we are editing.
-        int HexWidth;
-        int HexOffset = 0;
-        List<Control> EntryList = new List<Control>(); //A list of all textboxes we make, that the user uses to edit the hex values.
-        List<Control> TextBoxlist = new List<Control>(); //A list of all textboxes we make, that the user uses to edit the hex values.
 
 
         // //////////////////////////////////////////////////////////////////////////////////////////
@@ -371,17 +262,16 @@ namespace Crystal_Editor
         //
         //
         //
-        //
         // //////////////////////////////////////////////////////////////////////////////////////////
-        ///////////////////////////////////////General Things////////////////////////////////////////
+        ///////////////////////////////////////Core Controls/////////////////////////////////////////
         // //////////////////////////////////////////////////////////////////////////////////////////
-        //
         //
         //
         //
         // //////////////////////////////////////////////////////////////////////////////////////////
         // //////////////////////////////////////////////////////////////////////////////////////////
         // //////////////////////////////////////////////////////////////////////////////////////////
+
 
 
 
@@ -408,20 +298,9 @@ namespace Crystal_Editor
             Controls.Find(SelectedEditor, true)[0].Show();
         }
 
-        private void button17_Click(object sender, EventArgs e) //Button: Load Core?
-        {
-
-        }
-
         
-
         
-        private void buttonNewTreeNode_Click(object sender, EventArgs e)
-        {
-            var CollectionTree = Controls.Find(SelectedEditor + "Panel" + "Tree", true)[0] as TreeView;
-            CollectionTree.Nodes.Add(richTextBoxNewTreeNode.Text);
-        }
-
+        /////////////////XML EXAMPLE////////////////////
         private void buttonSaveWorkshop_Click(object sender, EventArgs e)
         {
             XmlWriterSettings settings = new XmlWriterSettings();
@@ -432,31 +311,28 @@ namespace Crystal_Editor
             using (XmlWriter writer = XmlWriter.Create(DictionaryOfStrings.CrystalPath + "\\Workshops\\" + GameLibrary.libraryNodeName + "\\Core.xml", settings))
             {
                 writer.WriteStartElement("Root");//Start Root
+                  writer.WriteStartElement("Furrys");
+                    writer.WriteElementString("Tubble", "Furry");
+                    writer.WriteElementString("Dawn", "Furry");
+                  writer.WriteEndElement();
+                  writer.WriteStartElement("Toys");
+                    writer.WriteElementString("Hood", "Yes");
+                    writer.WriteElementString("Bone", "Yes");
+                    writer.WriteElementString("Chocolate", "No");
+                  writer.WriteEndElement();
+                  writer.WriteStartElement("Thing1");
+                    writer.WriteStartElement("Thing2");
+                      writer.WriteElementString("Thingis", "Cotton");
+                    writer.WriteEndElement();
+                  writer.WriteEndElement();
+                writer.WriteEndElement(); //End Root               
 
-                writer.WriteStartElement("Furrys");
-                  writer.WriteElementString("Tubble", "Furry");
-                     writer.WriteElementString("Dawn", "Furry");
-                     writer.WriteEndElement();
-                writer.WriteStartElement("Toys");
-                writer.WriteElementString("Hood", "Yes");
-                writer.WriteElementString("Bone", "Yes");
-                writer.WriteElementString("Chocolate", "No");
-                writer.WriteEndElement();
-                writer.WriteStartElement("Thing1");
-                writer.WriteStartElement("Thing2");
-                writer.WriteElementString("Thingis", "Cotton");
-                writer.WriteEndElement();
-                writer.WriteEndElement();
-
-                writer.WriteEndElement(); //End Root
-                
-
-                writer.Flush();
+                writer.Flush(); //Ends the XML File
             }
         }
 
 
-        //private void LoadXML()
+        //private void LoadXML()  //Example of loading a XML file
         //{
         //    XmlDocument EditXml = new XmlDocument();
         //    EditXml.Load(DictionaryOfStrings.CrystalPath + "Debug\\net7.0-windows\\Core.xml");
@@ -546,9 +422,7 @@ namespace Crystal_Editor
             editorSelectionButton.FlatAppearance.BorderColor = Color.FromArgb(150, 150, 150);
             editorSelectionButton.FlatAppearance.MouseDownBackColor = Color.FromArgb(30, 30, 30);
             editorSelectionButton.FlatAppearance.MouseOverBackColor = Color.FromArgb(45, 45, 45);
-            editorSelectionButton.Size = new Size(10, 35);
-
-            
+            editorSelectionButton.Size = new Size(10, 35);            
             
 
             editorSelectionButton.Click += delegate
@@ -644,31 +518,21 @@ namespace Crystal_Editor
 
 
 
-
-
-
+        
         // //////////////////////////////////////////////////////////////////////////////////////////
         // //////////////////////////////////////////////////////////////////////////////////////////
         // //////////////////////////////////////////////////////////////////////////////////////////
         // //////////////////////////////////////////////////////////////////////////////////////////
         // //////////////////////////////////////////////////////////////////////////////////////////
         // //////////////////////////////////////////////////////////////////////////////////////////
-        //
-        //
-        //
-        // //////////////////////////////////////////////////////////////////////////////////////////
-        /////////////////////////////////OLD REFERENCE MATERIAL//////////////////////////////////
-        // //////////////////////////////////////////////////////////////////////////////////////////
-        //
-        //
-        //
+        // ///////////////////////////////OLD REFERENCE MATERIAL/////////////////////////////////////
         // //////////////////////////////////////////////////////////////////////////////////////////
         // //////////////////////////////////////////////////////////////////////////////////////////
         // //////////////////////////////////////////////////////////////////////////////////////////
         // //////////////////////////////////////////////////////////////////////////////////////////
         // //////////////////////////////////////////////////////////////////////////////////////////
         // //////////////////////////////////////////////////////////////////////////////////////////
-
+        
 
 
         //PanelHide();
@@ -682,15 +546,12 @@ namespace Crystal_Editor
         //MakeEditorColumnNew();
 
 
-
-
         //DocumentButton.ForeColor = Color.FromArgb(224,224,224);
         //    DocumentButton.BackColor = Color.FromArgb(35,35,35);
         //    DocumentButton.FlatStyle= FlatStyle.Flat;
         //    DocumentButton.FlatAppearance.BorderColor = Color.FromArgb(150, 150, 150);
         //    DocumentButton.FlatAppearance.MouseDownBackColor = Color.FromArgb(30,30,30);
         //    DocumentButton.FlatAppearance.MouseOverBackColor = Color.FromArgb(45, 45, 45);
-
 
 
         //newTree.ForeColor = Color.FromArgb(224, 224, 224);
@@ -708,9 +569,11 @@ namespace Crystal_Editor
         //    GiveEntrysHex2Dec();
         //};
 
-
-
-
+        //Unused, but kept to preserve the ExampleLoadFile and Hex2Dec Examples
+        byte[] HexFile; //This will be the entire file that we are editing.
+        int HexWidth;
+        int HexOffset = 0;
+        List<Control> TextBoxlist = new List<Control>();
 
         private void ExampleLoadFile() 
         {
@@ -734,13 +597,13 @@ namespace Crystal_Editor
             
         }
 
-
-
         private void GiveEntrysHex2Dec()
         {
             var CollectionTree = Controls.Find(SelectedEditor + "Panel" + "Tree", true)[0] as TreeView;
             int ListInt = 0;
             //HexWidth = 1;
+
+            
 
             foreach (Control TextBox in TextBoxlist)
             {
@@ -753,7 +616,6 @@ namespace Crystal_Editor
             }
         }
 
-        
 
 
 
@@ -764,7 +626,14 @@ namespace Crystal_Editor
 
 
 
-
+        private void button3_Click_1(object sender, EventArgs e) //Button: New Class Test
+        {
+            //im using this to practise moving info between classes.
+            //It Doesn't do anything relevant right now.
+            Documents CSDocuments = new Documents();
+            CSDocuments.TextClass(richTextBoxNewClass);
+            CSDocuments.TextClass2(); //(richTextBoxNewClass);
+        }
 
 
 

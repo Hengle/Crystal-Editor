@@ -57,24 +57,4 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="label1.Text" xml:space="preserve">
-    <value>Tools
-(Coming soon)
-
-Tools will let users
-add programs to
-a workshop.
-
-That way, stuff that 
-is required to work 
-with a game can 
-be easily shared.
-
-A much clearer
-explanation
-about tools and
-tool types will be
-added to the
-tutorials menu later.</value>
-  </data>
 </root>
