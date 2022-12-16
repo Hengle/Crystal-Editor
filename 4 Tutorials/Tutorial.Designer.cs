@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Tutorial));
-            System.Windows.Forms.TreeNode treeNode1 = new System.Windows.Forms.TreeNode("Chapter 1 - Welcome to Crystal Editor!");
+            System.Windows.Forms.TreeNode treeNode1 = new System.Windows.Forms.TreeNode("Chapter 1 - Welcome to Crystal Core!");
             System.Windows.Forms.TreeNode treeNode2 = new System.Windows.Forms.TreeNode("Chapter 1 - Categories");
             System.Windows.Forms.TreeNode treeNode3 = new System.Windows.Forms.TreeNode("Chapter 1 - -----");
             System.Windows.Forms.TreeNode treeNode4 = new System.Windows.Forms.TreeNode("Chapter 1 - -----");
@@ -45,7 +45,7 @@
             System.Windows.Forms.TreeNode treeNode14 = new System.Windows.Forms.TreeNode("Chapter 3 - Editors (Part 2) Lists");
             System.Windows.Forms.TreeNode treeNode15 = new System.Windows.Forms.TreeNode("Final - The Advanced Course");
             System.Windows.Forms.TreeNode treeNode16 = new System.Windows.Forms.TreeNode("Chapter 5 - Making a Workshop");
-            System.Windows.Forms.TreeNode treeNode17 = new System.Windows.Forms.TreeNode("Chapter 5 - Making an Editor");
+            System.Windows.Forms.TreeNode treeNode17 = new System.Windows.Forms.TreeNode("Chapter 5 - Making an Core");
             System.Windows.Forms.TreeNode treeNode18 = new System.Windows.Forms.TreeNode("Chapter 5 - Art Banner and Icons");
             System.Windows.Forms.TreeNode treeNode19 = new System.Windows.Forms.TreeNode("Chapter 5 - Sharing your Creations");
             System.Windows.Forms.TreeNode treeNode20 = new System.Windows.Forms.TreeNode("Chapter 6 - What is Hex?");
@@ -66,17 +66,17 @@
             System.Windows.Forms.TreeNode treeNode35 = new System.Windows.Forms.TreeNode("Data Mine");
             System.Windows.Forms.TreeNode treeNode36 = new System.Windows.Forms.TreeNode("Dictionary");
             System.Windows.Forms.TreeNode treeNode37 = new System.Windows.Forms.TreeNode("Code");
-            System.Windows.Forms.TreeNode treeNode38 = new System.Windows.Forms.TreeNode("Editor");
+            System.Windows.Forms.TreeNode treeNode38 = new System.Windows.Forms.TreeNode("Core");
             System.Windows.Forms.TreeNode treeNode39 = new System.Windows.Forms.TreeNode("Endianese");
             System.Windows.Forms.TreeNode treeNode40 = new System.Windows.Forms.TreeNode("Folder Search");
             System.Windows.Forms.TreeNode treeNode41 = new System.Windows.Forms.TreeNode("Google");
             System.Windows.Forms.TreeNode treeNode42 = new System.Windows.Forms.TreeNode("Hex");
-            System.Windows.Forms.TreeNode treeNode43 = new System.Windows.Forms.TreeNode("Hex Editor");
+            System.Windows.Forms.TreeNode treeNode43 = new System.Windows.Forms.TreeNode("Hex Core");
             System.Windows.Forms.TreeNode treeNode44 = new System.Windows.Forms.TreeNode("Mod");
             System.Windows.Forms.TreeNode treeNode45 = new System.Windows.Forms.TreeNode("RAM");
             System.Windows.Forms.TreeNode treeNode46 = new System.Windows.Forms.TreeNode("Spreadsheet");
             System.Windows.Forms.TreeNode treeNode47 = new System.Windows.Forms.TreeNode("Template");
-            System.Windows.Forms.TreeNode treeNode48 = new System.Windows.Forms.TreeNode("Text Editor");
+            System.Windows.Forms.TreeNode treeNode48 = new System.Windows.Forms.TreeNode("Text Core");
             this.tabControlTutorials = new System.Windows.Forms.TabControl();
             this.tabDUMMY = new System.Windows.Forms.TabPage();
             this.panel4 = new System.Windows.Forms.Panel();
@@ -84,6 +84,8 @@
             this.label11 = new System.Windows.Forms.Label();
             this.tabB11 = new System.Windows.Forms.TabPage();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.button1 = new System.Windows.Forms.Button();
+            this.richTextBox1 = new System.Windows.Forms.RichTextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.tabB12 = new System.Windows.Forms.TabPage();
@@ -243,7 +245,7 @@
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(222, 22);
             this.label11.TabIndex = 38;
-            this.label11.Text = "Welcome to Crystal Editor!";
+            this.label11.Text = "Welcome to Crystal Core!";
             // 
             // tabB11
             // 
@@ -259,6 +261,8 @@
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(35)))), ((int)(((byte)(35)))));
+            this.panel2.Controls.Add(this.button1);
+            this.panel2.Controls.Add(this.richTextBox1);
             this.panel2.Controls.Add(this.label1);
             this.panel2.Controls.Add(this.label2);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -267,6 +271,29 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(754, 885);
             this.panel2.TabIndex = 7;
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(585, 648);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.TabIndex = 41;
+            this.button1.Text = "button1";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // richTextBox1
+            // 
+            this.richTextBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.richTextBox1.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.richTextBox1.ForeColor = System.Drawing.Color.White;
+            this.richTextBox1.Location = new System.Drawing.Point(34, 712);
+            this.richTextBox1.Name = "richTextBox1";
+            this.richTextBox1.Size = new System.Drawing.Size(637, 232);
+            this.richTextBox1.TabIndex = 40;
+            this.richTextBox1.Text = "This is a test to see if links work\nand also test triggers\nprobably testing a lot" +
+    " of things.\nlets Test everything";
+            this.richTextBox1.TextChanged += new System.EventHandler(this.richTextBox1_TextChanged);
             // 
             // label1
             // 
@@ -290,7 +317,7 @@
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(222, 22);
             this.label2.TabIndex = 38;
-            this.label2.Text = "Welcome to Crystal Editor!";
+            this.label2.Text = "Welcome to Crystal Core!";
             // 
             // tabB12
             // 
@@ -467,7 +494,7 @@
             this.label16.Name = "label16";
             this.label16.Size = new System.Drawing.Size(222, 22);
             this.label16.TabIndex = 38;
-            this.label16.Text = "Welcome to Crystal Editor!";
+            this.label16.Text = "Welcome to Crystal Core!";
             // 
             // tabPage2
             // 
@@ -545,7 +572,7 @@
             this.treeViewBasic.Name = "treeViewBasic";
             treeNode1.Name = "tabB11";
             treeNode1.Tag = "tabPage1";
-            treeNode1.Text = "Chapter 1 - Welcome to Crystal Editor!";
+            treeNode1.Text = "Chapter 1 - Welcome to Crystal Core!";
             treeNode2.Name = "tabB12";
             treeNode2.Tag = "tabPage2";
             treeNode2.Text = "Chapter 1 - Categories";
@@ -627,7 +654,7 @@
             treeNode16.Name = "Node0";
             treeNode16.Text = "Chapter 5 - Making a Workshop";
             treeNode17.Name = "Node0";
-            treeNode17.Text = "Chapter 5 - Making an Editor";
+            treeNode17.Text = "Chapter 5 - Making an Core";
             treeNode18.Name = "Node1";
             treeNode18.Text = "Chapter 5 - Art Banner and Icons";
             treeNode19.Name = "Node2";
@@ -750,7 +777,7 @@
             treeNode37.Name = "tabCode";
             treeNode37.Text = "Code";
             treeNode38.Name = "tabEditor";
-            treeNode38.Text = "Editor";
+            treeNode38.Text = "Core";
             treeNode39.ForeColor = System.Drawing.Color.Red;
             treeNode39.Name = "Node5";
             treeNode39.Text = "Endianese";
@@ -765,7 +792,7 @@
             treeNode42.Text = "Hex";
             treeNode43.ForeColor = System.Drawing.Color.Red;
             treeNode43.Name = "Node1";
-            treeNode43.Text = "Hex Editor";
+            treeNode43.Text = "Hex Core";
             treeNode44.Name = "tabMod";
             treeNode44.Text = "Mod";
             treeNode45.ForeColor = System.Drawing.Color.Red;
@@ -779,7 +806,7 @@
             treeNode47.Text = "Template";
             treeNode48.ForeColor = System.Drawing.Color.Red;
             treeNode48.Name = "Node2";
-            treeNode48.Text = "Text Editor";
+            treeNode48.Text = "Text Core";
             this.treeViewDictionary.Nodes.AddRange(new System.Windows.Forms.TreeNode[] {
             treeNode34,
             treeNode35,
@@ -866,7 +893,7 @@
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(222, 22);
             this.label8.TabIndex = 38;
-            this.label8.Text = "Welcome to Crystal Editor!";
+            this.label8.Text = "Welcome to Crystal Core!";
             // 
             // tabPage5
             // 
@@ -935,7 +962,7 @@
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(222, 22);
             this.label13.TabIndex = 38;
-            this.label13.Text = "Welcome to Crystal Editor!";
+            this.label13.Text = "Welcome to Crystal Core!";
             // 
             // tabCode
             // 
@@ -1042,7 +1069,7 @@
             this.tabEditor.Name = "tabEditor";
             this.tabEditor.Size = new System.Drawing.Size(612, 885);
             this.tabEditor.TabIndex = 4;
-            this.tabEditor.Text = "Editor";
+            this.tabEditor.Text = "Core";
             // 
             // panel10
             // 
@@ -1359,5 +1386,7 @@
         private System.Windows.Forms.Label label22;
         private System.Windows.Forms.Label label23;
         private System.Windows.Forms.Label label24;
+        private Button button1;
+        private RichTextBox richTextBox1;
     }
 }

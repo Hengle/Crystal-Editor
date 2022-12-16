@@ -62,6 +62,8 @@
             this.tabControlWorkshopInfo = new System.Windows.Forms.TabControl();
             this.tabPagePatchNotes = new System.Windows.Forms.TabPage();
             this.tabPageWorkshopMaker = new System.Windows.Forms.TabPage();
+            this.label3 = new System.Windows.Forms.Label();
+            this.comboBoxLoadingMode = new System.Windows.Forms.ComboBox();
             this.comboBoxGamePlatform = new System.Windows.Forms.ComboBox();
             this.comboBoxBestEmulator = new System.Windows.Forms.ComboBox();
             this.comboBoxGameRegion = new System.Windows.Forms.ComboBox();
@@ -223,7 +225,7 @@
             this.panel3.Location = new System.Drawing.Point(456, 116);
             this.panel3.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(489, 26);
+            this.panel3.Size = new System.Drawing.Size(315, 26);
             this.panel3.TabIndex = 23;
             // 
             // labelGamePlatform
@@ -475,8 +477,8 @@
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(574, 40);
             this.label1.TabIndex = 28;
-            this.label1.Text = "Welcome to the closed beta of Crystal Editor. You may share it with friends,\r\nbut" +
-    " please let them know about the discord to join! Also, READ THE TUTORIAL!";
+            this.label1.Text = "Welcome to the closed beta of Crystal Core. You may share it with friends,\r\nbut p" +
+    "lease let them know about the discord to join! Also, READ THE TUTORIAL!";
             // 
             // tabControlWorkshopInfo
             // 
@@ -504,6 +506,8 @@
             // tabPageWorkshopMaker
             // 
             this.tabPageWorkshopMaker.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(33)))), ((int)(((byte)(33)))));
+            this.tabPageWorkshopMaker.Controls.Add(this.label3);
+            this.tabPageWorkshopMaker.Controls.Add(this.comboBoxLoadingMode);
             this.tabPageWorkshopMaker.Controls.Add(this.comboBoxGamePlatform);
             this.tabPageWorkshopMaker.Controls.Add(this.comboBoxBestEmulator);
             this.tabPageWorkshopMaker.Controls.Add(this.comboBoxGameRegion);
@@ -521,6 +525,36 @@
             this.tabPageWorkshopMaker.Size = new System.Drawing.Size(633, 377);
             this.tabPageWorkshopMaker.TabIndex = 1;
             this.tabPageWorkshopMaker.Text = "WorkshopMaker";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label3.ForeColor = System.Drawing.SystemColors.Control;
+            this.label3.Location = new System.Drawing.Point(37, 309);
+            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(110, 20);
+            this.label3.TabIndex = 40;
+            this.label3.Text = "Loading Mode";
+            // 
+            // comboBoxLoadingMode
+            // 
+            this.comboBoxLoadingMode.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(34)))), ((int)(((byte)(34)))));
+            this.comboBoxLoadingMode.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBoxLoadingMode.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.comboBoxLoadingMode.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.comboBoxLoadingMode.ForeColor = System.Drawing.Color.White;
+            this.comboBoxLoadingMode.FormattingEnabled = true;
+            this.comboBoxLoadingMode.Items.AddRange(new object[] {
+            "Auto",
+            "Semi-Auto",
+            "Manual"});
+            this.comboBoxLoadingMode.Location = new System.Drawing.Point(208, 307);
+            this.comboBoxLoadingMode.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.comboBoxLoadingMode.Name = "comboBoxLoadingMode";
+            this.comboBoxLoadingMode.Size = new System.Drawing.Size(372, 26);
+            this.comboBoxLoadingMode.TabIndex = 39;
             // 
             // comboBoxGamePlatform
             // 
@@ -810,5 +844,7 @@
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.Label label15;
+        private Label label3;
+        private ComboBox comboBoxLoadingMode;
     }
 }

@@ -123,6 +123,7 @@ namespace Crystal_Editor
             comboBoxGamePlatform.Text = File.ReadAllText(DictionaryOfStrings.CrystalPath + "\\Workshops\\" + libraryNodeName + "\\Game Platform.txt");
             comboBoxGameRegion.Text = File.ReadAllText(DictionaryOfStrings.CrystalPath + "\\Workshops\\" + libraryNodeName + "\\Game Region.txt");
             comboBoxBestEmulator.Text = File.ReadAllText(DictionaryOfStrings.CrystalPath + "\\Workshops\\" + libraryNodeName + "\\Best Emulator.txt");
+            comboBoxLoadingMode.Text = File.ReadAllText(DictionaryOfStrings.CrystalPath + "\\Workshops\\" + libraryNodeName + "\\Loading Mode.txt");
 
         }
 
@@ -132,6 +133,7 @@ namespace Crystal_Editor
             comboBoxGamePlatform.Text = null;
             comboBoxGameRegion.Text = null;
             comboBoxBestEmulator.Text = null;
+            comboBoxLoadingMode.Text = null;
             labelGamePlatform.Text = null;
             labelGameRegion.Text = null;
             labelBestEmulator.Text = null;
@@ -180,6 +182,7 @@ namespace Crystal_Editor
             File.WriteAllText(DictionaryOfStrings.CrystalPath + "\\Workshops\\" + richTextBoxGameName.Text + "\\Game Platform.txt", comboBoxGamePlatform.Text); //Overwrites, Or creates file if it does not exist. Needs location permissions for admin folders.
             File.WriteAllText(DictionaryOfStrings.CrystalPath + "\\Workshops\\" + richTextBoxGameName.Text + "\\Game Region.txt", comboBoxGameRegion.Text); //Overwrites, Or creates file if it does not exist. Needs location permissions for admin folders.
             File.WriteAllText(DictionaryOfStrings.CrystalPath + "\\Workshops\\" + richTextBoxGameName.Text + "\\Best Emulator.txt", comboBoxBestEmulator.Text); //Overwrites, Or creates file if it does not exist. Needs location permissions for admin folders.
+            File.WriteAllText(DictionaryOfStrings.CrystalPath + "\\Workshops\\" + richTextBoxGameName.Text + "\\Loading Mode.txt", comboBoxLoadingMode.Text); //Overwrites, Or creates file if it does not exist. Needs location permissions for admin folders.
             tabControlWorkshopInfo.SelectedTab = tabControlWorkshopInfo.TabPages["tabPagePatchNotes"];
             ScanForWorkshops();
         }

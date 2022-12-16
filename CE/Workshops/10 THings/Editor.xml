@@ -1,0 +1,16 @@
+﻿<Root>
+    <Furrys>
+        <Tubble>Furry</Tubble>
+        <Dawn>Furry</Dawn>
+    </Furrys>
+    <Toys>
+        <Hood>Yes</Hood>
+        <Bone>Yes</Bone>
+        <Chocolate>No</Chocolate>
+    </Toys>
+    <Thing1>
+        <Thing2>
+            <Thingis>Cotton</Thingis>
+        </Thing2>
+    </Thing1>
+</Root>

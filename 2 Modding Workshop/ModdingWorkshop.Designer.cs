@@ -31,11 +31,11 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ModdingWorkshop));
             this.panelDocumentation = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.button2 = new System.Windows.Forms.Button();
             this.buttonDocumentMode = new System.Windows.Forms.Button();
             this.richTextBoxDocumentName = new System.Windows.Forms.RichTextBox();
             this.button7 = new System.Windows.Forms.Button();
             this.button6 = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
             this.panel3 = new System.Windows.Forms.Panel();
             this.button11 = new System.Windows.Forms.Button();
             this.button9 = new System.Windows.Forms.Button();
@@ -51,40 +51,49 @@
             this.buttonNotepadPlusPlus = new System.Windows.Forms.Button();
             this.richTextBox1 = new System.Windows.Forms.RichTextBox();
             this.button8 = new System.Windows.Forms.Button();
-            this.button14 = new System.Windows.Forms.Button();
             this.panelEditorList = new System.Windows.Forms.Panel();
             this.panel5 = new System.Windows.Forms.Panel();
             this.label2 = new System.Windows.Forms.Label();
             this.TextBox1 = new System.Windows.Forms.TextBox();
             this.panel6 = new System.Windows.Forms.Panel();
-            this.button18 = new System.Windows.Forms.Button();
+            this.buttonSaveWorkshop = new System.Windows.Forms.Button();
             this.button17 = new System.Windows.Forms.Button();
             this.button15 = new System.Windows.Forms.Button();
             this.panel7 = new System.Windows.Forms.Panel();
+            this.panel4 = new System.Windows.Forms.Panel();
+            this.buttonCreateTubbleEditor = new System.Windows.Forms.Button();
+            this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
+            this.EditorHome = new System.Windows.Forms.Button();
             this.richTextBoxNewTreeNode = new System.Windows.Forms.RichTextBox();
             this.buttonNewTreeNode = new System.Windows.Forms.Button();
-            this.label5 = new System.Windows.Forms.Label();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button16 = new System.Windows.Forms.Button();
-            this.EditorHome = new System.Windows.Forms.Button();
             this.label4 = new System.Windows.Forms.Label();
             this.richTextBoxHexWidth = new System.Windows.Forms.RichTextBox();
             this.panel8 = new System.Windows.Forms.Panel();
             this.panelCore = new System.Windows.Forms.Panel();
-            this.EditorHomePanel = new System.Windows.Forms.Panel();
+            this.Home = new System.Windows.Forms.Panel();
+            this.richTextBoxNewClass = new System.Windows.Forms.RichTextBox();
+            this.button3 = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
             this.richTextBox2 = new System.Windows.Forms.RichTextBox();
             this.richTextBox3 = new System.Windows.Forms.RichTextBox();
-            this.buttonLoadRealFile = new System.Windows.Forms.Button();
+            this.panel9 = new System.Windows.Forms.Panel();
+            this.button10 = new System.Windows.Forms.Button();
+            this.label13 = new System.Windows.Forms.Label();
+            this.panel10 = new System.Windows.Forms.Panel();
+            this.label7 = new System.Windows.Forms.Label();
+            this.button14 = new System.Windows.Forms.Button();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxDiscord)).BeginInit();
             this.panel1.SuspendLayout();
             this.panel6.SuspendLayout();
             this.panel7.SuspendLayout();
+            this.panel4.SuspendLayout();
             this.panelCore.SuspendLayout();
-            this.EditorHomePanel.SuspendLayout();
+            this.Home.SuspendLayout();
+            this.panel9.SuspendLayout();
+            this.panel10.SuspendLayout();
             this.SuspendLayout();
             // 
             // panelDocumentation
@@ -99,7 +108,6 @@
             // panel2
             // 
             this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel2.Controls.Add(this.button2);
             this.panel2.Controls.Add(this.buttonDocumentMode);
             this.panel2.Controls.Add(this.richTextBoxDocumentName);
             this.panel2.Controls.Add(this.button7);
@@ -109,24 +117,6 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(218, 88);
             this.panel2.TabIndex = 28;
-            // 
-            // button2
-            // 
-            this.button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(35)))), ((int)(((byte)(35)))));
-            this.button2.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(150)))), ((int)(((byte)(150)))), ((int)(((byte)(150)))));
-            this.button2.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
-            this.button2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(45)))));
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.button2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.button2.Location = new System.Drawing.Point(4, 44);
-            this.button2.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(175, 39);
-            this.button2.TabIndex = 39;
-            this.button2.Text = "Create New Document";
-            this.button2.UseVisualStyleBackColor = false;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // buttonDocumentMode
             // 
@@ -196,6 +186,24 @@
             this.button6.Text = "↑";
             this.button6.UseVisualStyleBackColor = false;
             this.button6.Click += new System.EventHandler(this.button6_Click);
+            // 
+            // button2
+            // 
+            this.button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(35)))), ((int)(((byte)(35)))));
+            this.button2.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(150)))), ((int)(((byte)(150)))), ((int)(((byte)(150)))));
+            this.button2.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
+            this.button2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(45)))));
+            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.button2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.button2.Location = new System.Drawing.Point(1292, 516);
+            this.button2.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(175, 39);
+            this.button2.TabIndex = 39;
+            this.button2.Text = "Create New Document";
+            this.button2.UseVisualStyleBackColor = false;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // panel3
             // 
@@ -403,10 +411,10 @@
             this.richTextBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(35)))), ((int)(((byte)(35)))));
             this.richTextBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.richTextBox1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.richTextBox1.Location = new System.Drawing.Point(5, 398);
+            this.richTextBox1.Location = new System.Drawing.Point(4, 38);
             this.richTextBox1.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.richTextBox1.Name = "richTextBox1";
-            this.richTextBox1.Size = new System.Drawing.Size(178, 37);
+            this.richTextBox1.Size = new System.Drawing.Size(169, 37);
             this.richTextBox1.TabIndex = 40;
             this.richTextBox1.Text = "";
             // 
@@ -428,24 +436,6 @@
             this.button8.UseVisualStyleBackColor = false;
             this.button8.Click += new System.EventHandler(this.button8_Click);
             // 
-            // button14
-            // 
-            this.button14.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(35)))), ((int)(((byte)(35)))));
-            this.button14.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(150)))), ((int)(((byte)(150)))), ((int)(((byte)(150)))));
-            this.button14.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
-            this.button14.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(45)))));
-            this.button14.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button14.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.button14.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.button14.Location = new System.Drawing.Point(1029, 3);
-            this.button14.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.button14.Name = "button14";
-            this.button14.Size = new System.Drawing.Size(95, 35);
-            this.button14.TabIndex = 48;
-            this.button14.Text = "Alpha";
-            this.button14.UseVisualStyleBackColor = false;
-            this.button14.Click += new System.EventHandler(this.button14_Click);
-            // 
             // panelEditorList
             // 
             this.panelEditorList.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(20)))), ((int)(((byte)(20)))));
@@ -459,7 +449,7 @@
             // panel5
             // 
             this.panel5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(20)))), ((int)(((byte)(20)))));
-            this.panel5.Location = new System.Drawing.Point(76, 162);
+            this.panel5.Location = new System.Drawing.Point(90, 212);
             this.panel5.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(206, 648);
@@ -491,7 +481,8 @@
             // 
             this.panel6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(22)))), ((int)(((byte)(32)))));
             this.panel6.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel6.Controls.Add(this.button18);
+            this.panel6.Controls.Add(this.button14);
+            this.panel6.Controls.Add(this.buttonSaveWorkshop);
             this.panel6.Controls.Add(this.button17);
             this.panel6.Controls.Add(this.button15);
             this.panel6.Controls.Add(this.button12);
@@ -501,7 +492,6 @@
             this.panel6.Controls.Add(this.TextBox1);
             this.panel6.Controls.Add(this.button5);
             this.panel6.Controls.Add(this.pictureBoxDiscord);
-            this.panel6.Controls.Add(this.button14);
             this.panel6.Controls.Add(this.buttonNotepadPlusPlus);
             this.panel6.Controls.Add(this.button8);
             this.panel6.Dock = System.Windows.Forms.DockStyle.Top;
@@ -510,22 +500,23 @@
             this.panel6.Size = new System.Drawing.Size(1920, 45);
             this.panel6.TabIndex = 51;
             // 
-            // button18
+            // buttonSaveWorkshop
             // 
-            this.button18.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(35)))), ((int)(((byte)(35)))));
-            this.button18.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(150)))), ((int)(((byte)(150)))), ((int)(((byte)(150)))));
-            this.button18.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
-            this.button18.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(45)))));
-            this.button18.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button18.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.button18.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.button18.Location = new System.Drawing.Point(1577, 3);
-            this.button18.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.button18.Name = "button18";
-            this.button18.Size = new System.Drawing.Size(120, 35);
-            this.button18.TabIndex = 53;
-            this.button18.Text = "Save Editor?";
-            this.button18.UseVisualStyleBackColor = false;
+            this.buttonSaveWorkshop.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(35)))), ((int)(((byte)(35)))));
+            this.buttonSaveWorkshop.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(150)))), ((int)(((byte)(150)))), ((int)(((byte)(150)))));
+            this.buttonSaveWorkshop.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
+            this.buttonSaveWorkshop.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(45)))));
+            this.buttonSaveWorkshop.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonSaveWorkshop.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.buttonSaveWorkshop.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.buttonSaveWorkshop.Location = new System.Drawing.Point(6, 4);
+            this.buttonSaveWorkshop.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.buttonSaveWorkshop.Name = "buttonSaveWorkshop";
+            this.buttonSaveWorkshop.Size = new System.Drawing.Size(120, 35);
+            this.buttonSaveWorkshop.TabIndex = 53;
+            this.buttonSaveWorkshop.Text = "Save Workshop";
+            this.buttonSaveWorkshop.UseVisualStyleBackColor = false;
+            this.buttonSaveWorkshop.Click += new System.EventHandler(this.buttonSaveWorkshop_Click);
             // 
             // button17
             // 
@@ -541,7 +532,7 @@
             this.button17.Name = "button17";
             this.button17.Size = new System.Drawing.Size(120, 35);
             this.button17.TabIndex = 52;
-            this.button17.Text = "Load Editor?";
+            this.button17.Text = "Load Core?";
             this.button17.UseVisualStyleBackColor = false;
             this.button17.Click += new System.EventHandler(this.button17_Click);
             // 
@@ -559,7 +550,7 @@
             this.button15.Name = "button15";
             this.button15.Size = new System.Drawing.Size(206, 35);
             this.button15.TabIndex = 51;
-            this.button15.Text = "Hide Selected Editor";
+            this.button15.Text = "Hide Selected Core";
             this.button15.UseVisualStyleBackColor = false;
             this.button15.Click += new System.EventHandler(this.button15_Click);
             // 
@@ -567,20 +558,57 @@
             // 
             this.panel7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(32)))), ((int)(((byte)(52)))));
             this.panel7.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel7.Controls.Add(this.panel4);
             this.panel7.Controls.Add(this.label6);
-            this.panel7.Controls.Add(this.richTextBoxNewTreeNode);
-            this.panel7.Controls.Add(this.buttonNewTreeNode);
-            this.panel7.Controls.Add(this.label5);
-            this.panel7.Controls.Add(this.button3);
-            this.panel7.Controls.Add(this.button16);
             this.panel7.Controls.Add(this.panelEditorList);
             this.panel7.Controls.Add(this.EditorHome);
-            this.panel7.Controls.Add(this.richTextBox1);
             this.panel7.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel7.Location = new System.Drawing.Point(0, 45);
             this.panel7.Name = "panel7";
             this.panel7.Size = new System.Drawing.Size(191, 929);
             this.panel7.TabIndex = 52;
+            // 
+            // panel4
+            // 
+            this.panel4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel4.Controls.Add(this.buttonCreateTubbleEditor);
+            this.panel4.Controls.Add(this.richTextBox1);
+            this.panel4.Controls.Add(this.label5);
+            this.panel4.Location = new System.Drawing.Point(4, 355);
+            this.panel4.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(179, 444);
+            this.panel4.TabIndex = 28;
+            // 
+            // buttonCreateTubbleEditor
+            // 
+            this.buttonCreateTubbleEditor.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(35)))), ((int)(((byte)(35)))));
+            this.buttonCreateTubbleEditor.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(150)))), ((int)(((byte)(150)))), ((int)(((byte)(150)))));
+            this.buttonCreateTubbleEditor.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
+            this.buttonCreateTubbleEditor.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(45)))));
+            this.buttonCreateTubbleEditor.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonCreateTubbleEditor.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.buttonCreateTubbleEditor.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.buttonCreateTubbleEditor.Location = new System.Drawing.Point(7, 92);
+            this.buttonCreateTubbleEditor.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.buttonCreateTubbleEditor.Name = "buttonCreateTubbleEditor";
+            this.buttonCreateTubbleEditor.Size = new System.Drawing.Size(166, 42);
+            this.buttonCreateTubbleEditor.TabIndex = 59;
+            this.buttonCreateTubbleEditor.Text = "Create Tuuble Core";
+            this.buttonCreateTubbleEditor.UseVisualStyleBackColor = false;
+            this.buttonCreateTubbleEditor.Click += new System.EventHandler(this.buttonCreateTubbleEditor_Click);
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Segoe UI", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.label5.Location = new System.Drawing.Point(9, 8);
+            this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(147, 25);
+            this.label5.TabIndex = 55;
+            this.label5.Text = "Core Name (Any)";
             // 
             // label6
             // 
@@ -593,84 +621,6 @@
             this.label6.Size = new System.Drawing.Size(144, 25);
             this.label6.TabIndex = 57;
             this.label6.Text = "Tree Node Name";
-            // 
-            // richTextBoxNewTreeNode
-            // 
-            this.richTextBoxNewTreeNode.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(35)))), ((int)(((byte)(35)))));
-            this.richTextBoxNewTreeNode.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.richTextBoxNewTreeNode.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.richTextBoxNewTreeNode.Location = new System.Drawing.Point(6, 787);
-            this.richTextBoxNewTreeNode.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.richTextBoxNewTreeNode.Name = "richTextBoxNewTreeNode";
-            this.richTextBoxNewTreeNode.Size = new System.Drawing.Size(178, 37);
-            this.richTextBoxNewTreeNode.TabIndex = 58;
-            this.richTextBoxNewTreeNode.Text = "";
-            // 
-            // buttonNewTreeNode
-            // 
-            this.buttonNewTreeNode.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(35)))), ((int)(((byte)(35)))));
-            this.buttonNewTreeNode.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(150)))), ((int)(((byte)(150)))), ((int)(((byte)(150)))));
-            this.buttonNewTreeNode.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
-            this.buttonNewTreeNode.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(45)))));
-            this.buttonNewTreeNode.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonNewTreeNode.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.buttonNewTreeNode.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.buttonNewTreeNode.Location = new System.Drawing.Point(5, 830);
-            this.buttonNewTreeNode.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.buttonNewTreeNode.Name = "buttonNewTreeNode";
-            this.buttonNewTreeNode.Size = new System.Drawing.Size(179, 29);
-            this.buttonNewTreeNode.TabIndex = 56;
-            this.buttonNewTreeNode.Text = "Add New Tree Node";
-            this.buttonNewTreeNode.UseVisualStyleBackColor = false;
-            this.buttonNewTreeNode.Click += new System.EventHandler(this.buttonNewTreeNode_Click);
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Segoe UI", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.label5.Location = new System.Drawing.Point(-2, 368);
-            this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(198, 25);
-            this.label5.TabIndex = 55;
-            this.label5.Text = "Editor Name (Anything)";
-            // 
-            // button3
-            // 
-            this.button3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(35)))), ((int)(((byte)(35)))));
-            this.button3.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(150)))), ((int)(((byte)(150)))), ((int)(((byte)(150)))));
-            this.button3.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
-            this.button3.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(45)))));
-            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.button3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.button3.Location = new System.Drawing.Point(6, 566);
-            this.button3.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(179, 29);
-            this.button3.TabIndex = 53;
-            this.button3.Text = "Load Dummy File for new editor";
-            this.button3.UseVisualStyleBackColor = false;
-            this.button3.Click += new System.EventHandler(this.button3_Click_1);
-            // 
-            // button16
-            // 
-            this.button16.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(35)))), ((int)(((byte)(35)))));
-            this.button16.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(150)))), ((int)(((byte)(150)))), ((int)(((byte)(150)))));
-            this.button16.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
-            this.button16.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(45)))));
-            this.button16.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button16.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.button16.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.button16.Location = new System.Drawing.Point(5, 441);
-            this.button16.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.button16.Name = "button16";
-            this.button16.Size = new System.Drawing.Size(179, 42);
-            this.button16.TabIndex = 52;
-            this.button16.Text = "Create New Editor New";
-            this.button16.UseVisualStyleBackColor = false;
-            this.button16.Click += new System.EventHandler(this.button16_Click);
             // 
             // EditorHome
             // 
@@ -691,12 +641,42 @@
             this.EditorHome.UseVisualStyleBackColor = false;
             this.EditorHome.Click += new System.EventHandler(this.button3_Click);
             // 
+            // richTextBoxNewTreeNode
+            // 
+            this.richTextBoxNewTreeNode.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(35)))), ((int)(((byte)(35)))));
+            this.richTextBoxNewTreeNode.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.richTextBoxNewTreeNode.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.richTextBoxNewTreeNode.Location = new System.Drawing.Point(1299, 869);
+            this.richTextBoxNewTreeNode.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.richTextBoxNewTreeNode.Name = "richTextBoxNewTreeNode";
+            this.richTextBoxNewTreeNode.Size = new System.Drawing.Size(178, 37);
+            this.richTextBoxNewTreeNode.TabIndex = 58;
+            this.richTextBoxNewTreeNode.Text = "";
+            // 
+            // buttonNewTreeNode
+            // 
+            this.buttonNewTreeNode.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(35)))), ((int)(((byte)(35)))));
+            this.buttonNewTreeNode.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(150)))), ((int)(((byte)(150)))), ((int)(((byte)(150)))));
+            this.buttonNewTreeNode.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
+            this.buttonNewTreeNode.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(45)))));
+            this.buttonNewTreeNode.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonNewTreeNode.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.buttonNewTreeNode.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.buttonNewTreeNode.Location = new System.Drawing.Point(1298, 912);
+            this.buttonNewTreeNode.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.buttonNewTreeNode.Name = "buttonNewTreeNode";
+            this.buttonNewTreeNode.Size = new System.Drawing.Size(179, 29);
+            this.buttonNewTreeNode.TabIndex = 56;
+            this.buttonNewTreeNode.Text = "Add New Tree Node";
+            this.buttonNewTreeNode.UseVisualStyleBackColor = false;
+            this.buttonNewTreeNode.Click += new System.EventHandler(this.buttonNewTreeNode_Click);
+            // 
             // label4
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Segoe UI", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.label4.Location = new System.Drawing.Point(1332, 583);
+            this.label4.Location = new System.Drawing.Point(1334, 710);
             this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(120, 25);
@@ -708,7 +688,7 @@
             this.richTextBoxHexWidth.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(35)))), ((int)(((byte)(35)))));
             this.richTextBoxHexWidth.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.richTextBoxHexWidth.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.richTextBoxHexWidth.Location = new System.Drawing.Point(1296, 612);
+            this.richTextBoxHexWidth.Location = new System.Drawing.Point(1298, 739);
             this.richTextBoxHexWidth.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.richTextBoxHexWidth.Name = "richTextBoxHexWidth";
             this.richTextBoxHexWidth.Size = new System.Drawing.Size(178, 37);
@@ -729,21 +709,50 @@
             // 
             this.panelCore.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(16)))), ((int)(((byte)(16)))));
             this.panelCore.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panelCore.Controls.Add(this.EditorHomePanel);
+            this.panelCore.Controls.Add(this.Home);
             this.panelCore.Dock = System.Windows.Forms.DockStyle.Left;
             this.panelCore.Location = new System.Drawing.Point(191, 45);
             this.panelCore.Name = "panelCore";
             this.panelCore.Size = new System.Drawing.Size(1092, 929);
             this.panelCore.TabIndex = 3;
             // 
-            // EditorHomePanel
+            // Home
             // 
-            this.EditorHomePanel.Controls.Add(this.panel5);
-            this.EditorHomePanel.Controls.Add(this.label3);
-            this.EditorHomePanel.Location = new System.Drawing.Point(74, 64);
-            this.EditorHomePanel.Name = "EditorHomePanel";
-            this.EditorHomePanel.Size = new System.Drawing.Size(809, 692);
-            this.EditorHomePanel.TabIndex = 52;
+            this.Home.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(76)))), ((int)(((byte)(26)))));
+            this.Home.Controls.Add(this.richTextBoxNewClass);
+            this.Home.Controls.Add(this.button3);
+            this.Home.Controls.Add(this.panel5);
+            this.Home.Controls.Add(this.label3);
+            this.Home.Location = new System.Drawing.Point(74, 64);
+            this.Home.Name = "Home";
+            this.Home.Size = new System.Drawing.Size(942, 796);
+            this.Home.TabIndex = 52;
+            // 
+            // richTextBoxNewClass
+            // 
+            this.richTextBoxNewClass.Location = new System.Drawing.Point(466, 238);
+            this.richTextBoxNewClass.Name = "richTextBoxNewClass";
+            this.richTextBoxNewClass.Size = new System.Drawing.Size(206, 73);
+            this.richTextBoxNewClass.TabIndex = 61;
+            this.richTextBoxNewClass.Text = "";
+            // 
+            // button3
+            // 
+            this.button3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(35)))), ((int)(((byte)(35)))));
+            this.button3.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(150)))), ((int)(((byte)(150)))), ((int)(((byte)(150)))));
+            this.button3.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
+            this.button3.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(45)))));
+            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.button3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.button3.Location = new System.Drawing.Point(466, 178);
+            this.button3.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(206, 35);
+            this.button3.TabIndex = 54;
+            this.button3.Text = "New Class Test";
+            this.button3.UseVisualStyleBackColor = false;
+            this.button3.Click += new System.EventHandler(this.button3_Click_1);
             // 
             // label3
             // 
@@ -773,30 +782,95 @@
             this.richTextBox3.TabIndex = 55;
             this.richTextBox3.Text = "";
             // 
-            // buttonLoadRealFile
+            // panel9
             // 
-            this.buttonLoadRealFile.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(35)))), ((int)(((byte)(35)))));
-            this.buttonLoadRealFile.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(150)))), ((int)(((byte)(150)))), ((int)(((byte)(150)))));
-            this.buttonLoadRealFile.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
-            this.buttonLoadRealFile.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(45)))));
-            this.buttonLoadRealFile.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonLoadRealFile.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.buttonLoadRealFile.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.buttonLoadRealFile.Location = new System.Drawing.Point(1296, 681);
-            this.buttonLoadRealFile.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.buttonLoadRealFile.Name = "buttonLoadRealFile";
-            this.buttonLoadRealFile.Size = new System.Drawing.Size(179, 29);
-            this.buttonLoadRealFile.TabIndex = 59;
-            this.buttonLoadRealFile.Text = "Load Real File for new editor";
-            this.buttonLoadRealFile.UseVisualStyleBackColor = false;
-            this.buttonLoadRealFile.Click += new System.EventHandler(this.buttonLoadRealFile_Click);
+            this.panel9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(44)))));
+            this.panel9.Controls.Add(this.button10);
+            this.panel9.Controls.Add(this.label13);
+            this.panel9.Controls.Add(this.panel10);
+            this.panel9.Location = new System.Drawing.Point(1290, 66);
+            this.panel9.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.panel9.Name = "panel9";
+            this.panel9.Size = new System.Drawing.Size(217, 419);
+            this.panel9.TabIndex = 60;
+            // 
+            // button10
+            // 
+            this.button10.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(35)))), ((int)(((byte)(35)))));
+            this.button10.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.button10.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.button10.Location = new System.Drawing.Point(46, 6);
+            this.button10.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.button10.Name = "button10";
+            this.button10.Size = new System.Drawing.Size(164, 30);
+            this.button10.TabIndex = 29;
+            this.button10.Text = "Show / Hide Column";
+            this.button10.UseVisualStyleBackColor = false;
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label13.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.label13.Location = new System.Drawing.Point(2, 10);
+            this.label13.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(46, 22);
+            this.label13.TabIndex = 29;
+            this.label13.Text = "Row";
+            // 
+            // panel10
+            // 
+            this.panel10.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(64)))), ((int)(((byte)(44)))));
+            this.panel10.Controls.Add(this.label7);
+            this.panel10.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.panel10.Location = new System.Drawing.Point(0, 43);
+            this.panel10.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.panel10.Name = "panel10";
+            this.panel10.Padding = new System.Windows.Forms.Padding(40);
+            this.panel10.Size = new System.Drawing.Size(217, 376);
+            this.panel10.TabIndex = 8;
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.label7.Location = new System.Drawing.Point(61, 111);
+            this.label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(71, 22);
+            this.label7.TabIndex = 30;
+            this.label7.Text = "Column";
+            // 
+            // button14
+            // 
+            this.button14.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(35)))), ((int)(((byte)(35)))));
+            this.button14.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(150)))), ((int)(((byte)(150)))), ((int)(((byte)(150)))));
+            this.button14.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
+            this.button14.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(45)))));
+            this.button14.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button14.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.button14.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.button14.Location = new System.Drawing.Point(1594, 4);
+            this.button14.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.button14.Name = "button14";
+            this.button14.Padding = new System.Windows.Forms.Padding(0, 0, 0, 5);
+            this.button14.Size = new System.Drawing.Size(33, 37);
+            this.button14.TabIndex = 39;
+            this.button14.Text = "Z↑";
+            this.button14.UseVisualStyleBackColor = false;
+            this.button14.Click += new System.EventHandler(this.button14_Click);
             // 
             // ModdingWorkshop
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(32)))), ((int)(((byte)(12)))));
             this.ClientSize = new System.Drawing.Size(1920, 1017);
-            this.Controls.Add(this.buttonLoadRealFile);
+            this.Controls.Add(this.button2);
+            this.Controls.Add(this.panel9);
+            this.Controls.Add(this.richTextBoxNewTreeNode);
+            this.Controls.Add(this.buttonNewTreeNode);
             this.Controls.Add(this.richTextBox3);
             this.Controls.Add(this.richTextBox2);
             this.Controls.Add(this.panelCore);
@@ -822,9 +896,15 @@
             this.panel6.PerformLayout();
             this.panel7.ResumeLayout(false);
             this.panel7.PerformLayout();
+            this.panel4.ResumeLayout(false);
+            this.panel4.PerformLayout();
             this.panelCore.ResumeLayout(false);
-            this.EditorHomePanel.ResumeLayout(false);
-            this.EditorHomePanel.PerformLayout();
+            this.Home.ResumeLayout(false);
+            this.Home.PerformLayout();
+            this.panel9.ResumeLayout(false);
+            this.panel9.PerformLayout();
+            this.panel10.ResumeLayout(false);
+            this.panel10.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -851,9 +931,7 @@
         private System.Windows.Forms.PictureBox pictureBoxDiscord;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Button buttonNotepadPlusPlus;
-        private System.Windows.Forms.RichTextBox richTextBox1;
         private System.Windows.Forms.Button button8;
-        private System.Windows.Forms.Button button14;
         private Panel panelEditorList;
         private Panel panel5;
         internal Label label2;
@@ -863,13 +941,11 @@
         private Panel panel8;
         internal Label label3;
         private Panel panelCore;
-        private Panel EditorHomePanel;
+        private Panel Home;
         private Button EditorHome;
         private Button button15;
-        private Button button16;
         private Button button17;
-        private Button button18;
-        private Button button3;
+        private Button buttonSaveWorkshop;
         private RichTextBox richTextBox2;
         internal Label label4;
         private RichTextBox richTextBoxHexWidth;
@@ -878,6 +954,16 @@
         internal Label label6;
         private RichTextBox richTextBoxNewTreeNode;
         private Button buttonNewTreeNode;
-        private Button buttonLoadRealFile;
+        private Button buttonCreateTubbleEditor;
+        private Panel panel4;
+        public RichTextBox richTextBox1;
+        private Panel panel9;
+        private Button button10;
+        private Label label13;
+        private Panel panel10;
+        private Button button3;
+        public RichTextBox richTextBoxNewClass;
+        private Label label7;
+        private Button button14;
     }
 }
