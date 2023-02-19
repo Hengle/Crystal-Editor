@@ -65,7 +65,7 @@ namespace Crystal_Editor
 
             for (int i2 = 0; i2 < DocNames.Length; i2++)
             {
-                           
+                //Send to front loop in order of name?
                 ListOfDocumentNames.Add(Path.GetFileName(DocNames[i2]).ToString());
                 Button DocumentButton = new Button();
 
